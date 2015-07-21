@@ -6,172 +6,42 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-  <link href="assets/css/main.css" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  <script src="assets/js/main.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <style>body{padding-top:30px;}</style>
  </head>
 
  <body>
 
-  <div class="navbar navbar-default navbar-fixed-top">
-   <div class="container">
-    <div class="navbar-header">
-     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-     </button>
-     <a class="navbar-brand" href="#"><i class="fa fa-bolt"></i></a>
-    </div>
-   </div>
-  </div><!-- /navbar -->
-
-  <div id="hello">
-   <div class="container">
-    <div class="row">
-     <div class="col-lg-8 col-lg-offset-2 centered">
-      <h1>Hiroto-K</h1>
-      <h2>This is a github pages of <a href="https://github.com/Hiroto-K">Hiroto-K</a>.</h2>
-     </div>
-    </div>
-   </div>
-  </div><!-- /hello -->
-
   <div class="container">
-   <div class="row centered mt grid">
-    <h3>Works</h3>
-     <div class="mt"></div>
-     <div class="col-lg-4">
-      <a href="https://github.com/Hiroto-K/Anime-push" title="Anime-push"><img src="assets/img/ruby.png" alt="Ruby" height="250" width="250"></a>
-     </div>
-     <div class="col-lg-4">
-      <a href="https://github.com/Hiroto-K/hk_sub_" title="hk_sub_"><img src="assets/img/ruby.png" alt="Ruby" height="250" width="250"></a>
-     </div>
-     <div class="col-lg-4">
-      <a href="https://github.com/Hiroto-K/jQuery-QR-Code" title="jQuery-QR-Code"><img src="assets/img/jquery.png" alt="jQuery" height="250" width="250"></a>
-     </div>
-
-     <div class="mt"></div>
-     <div class="col-lg-4">
-      <a href="https://github.com/Hiroto-K/dotfiles" title="dotfiles"><img src="https://avatars3.githubusercontent.com/u/12016555?v=3&amp;s=460" alt="dotfiles" height="250" width="250"></a>
-     </div>
-     <div class="col-lg-4">
-      <a href="https://github.com/Hiroto-K/Hiroto-K.github.io" title="Hiroto-K.github.io"><img src="https://avatars3.githubusercontent.com/u/12016555?v=3&amp;s=460" alt="Hiroto-K.github.io" height="250" width="250"></a>
-     </div>
-<!--
-     <div class="col-lg-4">
-      <a href="#"><img src="" alt="jQuery"></a>
-     </div>
--->
-   </div>
-  </div>
-
-  <div id="skills">
-   <div class="container">
-    <div class="row centered">
-     <h3>Skill</h3>
-
-     <div class="col-lg-3 mt">
-      <canvas id="Ruby" height="130" width="130"></canvas>
-      <p>Ruby</p>
-      <br>
-      <script>
-       var doughnutData = [
-        {
-         value: 80,
-         color:"#74cfae"
-        },
-        {
-         value : 10,
-         color : "#3c3c3c"
-        }
-       ];
-       var myDoughnut = new Chart(document.getElementById("Ruby").getContext("2d")).Doughnut(doughnutData);
-      </script>
-     </div>
-
-     <div class="col-lg-3 mt">
-      <canvas id="PHP" height="130" width="130"></canvas>
-      <p>PHP</p>
-      <br>
-      <script>
-       var doughnutData = [
-        {
-         value: 90,
-         color:"#74cfae"
-        },
-        {
-         value : 10,
-         color : "#3c3c3c"
-        }
-       ];
-       var myDoughnut = new Chart(document.getElementById("PHP").getContext("2d")).Doughnut(doughnutData);
-      </script>
-     </div>
-
-     <div class="col-lg-3 mt">
-      <canvas id="Javascript" height="130" width="130"></canvas>
-      <p>Javascript</p>
-      <br>
-      <script>
-       var doughnutData = [
-        {
-         value: 65,
-         color:"#74cfae"
-        },
-        {
-         value : 35,
-         color : "#3c3c3c"
-         }
-       ];
-       var myDoughnut = new Chart(document.getElementById("Javascript").getContext("2d")).Doughnut(doughnutData);
-      </script>
-     </div>
-
-     <div class="col-lg-3 mt">
-      <canvas id="jQuery" height="130" width="130"></canvas>
-      <p>jQuery</p>
-      <br>
-      <script>
-       var doughnutData = [
-        {
-         value: 50,
-         color:"#74cfae"
-        },
-        {
-         value : 50,
-         color : "#3c3c3c"
-        }
-       ];
-       var myDoughnut = new Chart(document.getElementById("jQuery").getContext("2d")).Doughnut(doughnutData);
-      </script>
-     </div>
-    </div>
-   </div>
-  </div><!-- /skills -->
-
-   <section id="contact"></section>
-   <div id="social">
+   <div class="jumbotron">
     <div class="container">
-     <div class="row centered">
-      <div class="col-lg-8 col-lg-offset-2">
-       <div class="col-md-3">
-        <a href="https://twitter.com/hirotoyoyo"><i class="fa fa-twitter"></i></a>
-       </div>
-       <div class="col-md-3">
-        <a href="https://www.facebook.com/kitazawa.hiroto"><i class="fa fa-facebook"></i></a>
-       </div>
-       <div class="col-md-3">
-        <a href="https://github.com/Hiroto-K"><i class="fa fa-github"></i></a>
-       </div>
-       <div class="col-md-3">
-        <a href="https://bitbucket.org/Hiroto-K/"><i class="fa fa-bitbucket"></i></a>
-       </div>
-      </div>
-     </div>
-    </div><!-- /container -->
-   </div><!-- /social -->
 
-  </body>
+     <h1>Hiroto-K.github.io</h1>
+      <p>This is a web pages of <a href="https://github.com/Hiroto-K">Hiroto-K</a>.</p>
+
+     <h2>All Repos <span class="label label-primary">1</span></h2>
+      <div class="list-group">
+       <a href="https://github.com/Hiroto-K/Anime-push" class="list-group-item">Hiroto-K/Anime-push</a>
+       <a href="https://github.com/Hiroto-K/hk_sub_" class="list-group-item">Hiroto-K/hk_sub_</a>
+       <a href="https://github.com/Hiroto-K/ShortURL" class="list-group-item">Hiroto-K/ShortURL</a>
+       <a href="https://github.com/Hiroto-K/jQuery-QR-Code" class="list-group-item">Hiroto-K/jQuery-QR-Code</a>
+       <a href="https://github.com/Hiroto-K/dotfiles" class="list-group-item">Hiroto-K/dotfiles</a>
+       <a href="https://github.com/Hiroto-K/Hiroto-K.github.io" class="list-group-item">Hiroto-K/Hiroto-K.github.io</a>
+
+      </div>
+
+     <h2>Contact</h2>
+      <div class="list-group">
+       <a href="https://twitter.com/hirotoyoyo" class="list-group-item"><span class="fa fa-twitter"></span> Twitter</a>
+       <a href="https://www.facebook.com/kitazawa.hiroto" class="list-group-item"><span class="fa fa-facebook"></span> FaceBook</a>
+       <a href="https://github.com/Hiroto-K" class="list-group-item"><span class="fa fa-github"></span> GitHub</a>
+       <a href="https://bitbucket.org/Hiroto-K/" class="list-group-item"><span class="fa fa-bitbucket"></span> Bitbucket</a>
+      </div>
+
+    </div><!-- container -->
+   </div><!-- jumbotron -->
+  </div><!-- container -->
+ </body>
 </html>
