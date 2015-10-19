@@ -12,5 +12,4 @@ Thumbs.db
 *~
 *.css
 *.css.map
-*.js
 !.gitkeep
