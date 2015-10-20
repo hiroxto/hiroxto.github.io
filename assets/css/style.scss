@@ -1,31 +1,6 @@
 ---
 ---
 
-.to-top {
-  margin: 0;
-  padding: 0;
-  p {
-    margin: 0;
-    padding: 0;
-    position: fixed;
-    right: 16px;
-    bottom: 16px;
-  }
-}
-
-.to-top-button {
-  display: block;
-  background: #E0FFFF;
-  width: 40px;
-  height: 40px;
-  color: #000000;
-  line-height: 40px;
-  text-decoration: none;
-  text-align: center;
-  -webkit-transition:all 0.3s;
-  -moz-transition:all 0.3s;
-  transition:all 0.3s;
-  :hover {
-    opacity: 0.85 ;
-  }
+body {
+  padding-top:30px;
 }
