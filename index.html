@@ -11,8 +11,14 @@
   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <script src="https://hiroto-k.github.io/assets/js/to-top.js"></script>
+  <script src="/assets/js/get-repo.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta name="google-site-verification" content="5-Oc6FC6uhyZawiHpuki_x09iG5cJ1cvtb19ScgNRp4">
+  <style>
+  .github-error {
+    display: none;
+  }
+  </style>
  </head>
 
  <body>
@@ -24,28 +30,19 @@
      <h1>Hiroto-K.github.io</h1>
       <p>This is a web pages of <a href="https://github.com/Hiroto-K">Hiroto-K</a>.</p>
 
-     <h2>All Repos <span class="label label-primary">9</span></h2>
-      <div class="list-group">
-       <a href="https://github.com/Hiroto-K/Anime-push" class="list-group-item">Hiroto-K/Anime-push</a>
-       <a href="https://github.com/Hiroto-K/Record-push" class="list-group-item">Hiroto-K/Record-push</a>
-       <a href="https://github.com/Hiroto-K/hk_sub_" class="list-group-item">Hiroto-K/hk_sub_</a>
-       <a href="https://github.com/Hiroto-K/ShortURL" class="list-group-item">Hiroto-K/ShortURL</a>
-       <a href="https://github.com/Hiroto-K/SaveTweet" class="list-group-item">Hiroto-K/SaveTweet</a>
-       <a href="https://github.com/Hiroto-K/L5-Bookmarker" class="list-group-item">Hiroto-K/L5-Bookmarker</a>
-       <a href="https://github.com/Hiroto-K/team-graphical-graphics" class="list-group-item">Hiroto-K/team-graphical-graphics</a>
-       <a href="https://github.com/Hiroto-K/dotfiles" class="list-group-item">Hiroto-K/dotfiles</a>
-       <a href="https://github.com/Hiroto-K/Hiroto-K.github.io" class="list-group-item">Hiroto-K/Hiroto-K.github.io</a>
+     <div class="github-main">
+      <h2>All Repos <span class="label label-primary repo-count"></span></h2>
+      <div class="list-group repo-list">
       </div>
 
-     <h2>GitHub Pages</h2>
-      <div class="list-group">
-       <a href="https://hiroto-k.github.io/Anime-push/" class="list-group-item">Anime-push</a>
-       <a href="https://hiroto-k.github.io/Record-push/" class="list-group-item">Record-push</a>
-       <a href="https://hiroto-k.github.io/hk_sub_/" class="list-group-item">hk_sub_</a>
-       <a href="https://hiroto-k.github.io/ShortURL/" class="list-group-item">ShortURL</a>
-       <a href="https://hiroto-k.github.io/SaveTweet/" class="list-group-item">SaveTweet</a>
-       <a href="https://hiroto-k.github.io/L5-Bookmarker/" class="list-group-item">L5-Bookmarker</a>
+      <h2>GitHub Pages</h2>
+      <div class="list-group pages-list">
       </div>
+     </div>
+
+     <div class="github-error">
+      <h2>Error</h2>
+     </div>
 
      <h2>Links</h2>
       <div class="list-group">
