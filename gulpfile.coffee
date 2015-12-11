@@ -12,5 +12,5 @@ gulp.task "compile:scss", ->
   sass("./assets/css/**.scss").pipe(gulp.dest("./assets/css"))
 
 gulp.task "watch", ->
-  gulp.watch("./assets/css/**.scss", ["compile:scss"])
   gulp.watch("./assets/js/**.coffee", ["compile:coffee"])
+  gulp.watch("./assets/css/**.scss", ["compile:scss"])
