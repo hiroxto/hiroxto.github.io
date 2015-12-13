@@ -1,14 +1,12 @@
 .to-top {
   margin: 0;
-  padding: 0;
-  p {
+  padding: 0; }
+  .to-top p {
     margin: 0;
     padding: 0;
     position: fixed;
     right: 16px;
-    bottom: 16px;
-  }
-}
+    bottom: 16px; }
 
 .to-top-button {
   display: block;
@@ -19,10 +17,8 @@
   line-height: 40px;
   text-decoration: none;
   text-align: center;
-  -webkit-transition:all 0.3s;
-  -moz-transition:all 0.3s;
-  transition:all 0.3s;
-  :hover {
-    opacity: 0.85 ;
-  }
-}
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s; }
+  .to-top-button :hover {
+    opacity: 0.85; }

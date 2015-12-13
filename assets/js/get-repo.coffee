@@ -1,6 +1,3 @@
----
----
-
 $ ->
   $.getJSON "https://api.github.com/users/Hiroto-K/repos", {per_page: "100"}, (data, status, xhr) ->
     if status == "success"
