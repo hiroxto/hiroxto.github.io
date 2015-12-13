@@ -12,8 +12,5 @@ ehthumbs.db
 Thumbs.db
 *.swp
 *~
-/assets/css/*.css
-/assets/css/*.css.map
-/assets/js/*.js
 !/bower_components/
 !.gitkeep
