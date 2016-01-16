@@ -1,4 +1,4 @@
-# Hiroto-K/Hiroto-K.github.io
+# Hiroto-K.github.io
 
 ![](https://img.shields.io/travis/Hiroto-K/Hiroto-K.github.io/master.svg?style=flat-square)
 ![](https://img.shields.io/github/license/Hiroto-K/Hiroto-K.github.io.svg?style=flat-square)
