@@ -69,9 +69,15 @@ $sites = [
     "changefreq" => "monthly",
     "priority" => "0.8",
   ],
+  [
+    "loc" => get_url("/dotfiles/"),
+    "lastmod" => get_time("/dotfiles/"),
+    "changefreq" => "monthly",
+    "priority" => "0.8",
+  ],
 ];
 
-$sitemap = new DOMDocument('1.0', 'UTF-8');
+$sitemap = new DOMDocument("1.0", "UTF-8");
 $sitemap->preserveWhiteSpace = false;
 $sitemap->formatOutput = true;
 $urlset = $sitemap->appendChild($sitemap->createElement("urlset"));
