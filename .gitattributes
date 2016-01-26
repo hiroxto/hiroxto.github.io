@@ -1,0 +1,6 @@
+*.jpg -diff -text
+*.jpeg -diff -text
+*.png -diff -text
+*.ico -diff -text
+*.ico -diff -text
+*.icns -diff -text
