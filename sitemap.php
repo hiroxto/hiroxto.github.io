@@ -3,9 +3,6 @@
 Sitemap generator
 Use:php sitemap-github.php > sitemap-github.xml
 */
-function h($str) {
-  return htmlspecialchars($str, ENT_QUOTES, "utf-8");
-}
 
 function get_url($file) {
   return "http://hiroto-k.github.io{$file}";
@@ -96,5 +93,4 @@ foreach ($sites as $site) {
         }
     }
 }
-header("Content-Type: text/xml; charset=utf-8");
 echo $sitemap->saveXML();
