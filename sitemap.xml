@@ -43,6 +43,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>http://hiroto-k.github.io/MP3-Downloader/</loc>
+    <lastmod>2016-02-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>http://hiroto-k.github.io/L5-Bookmarker/</loc>
     <lastmod>2016-01-08</lastmod>
     <changefreq>monthly</changefreq>
