@@ -64,6 +64,12 @@ $sites = [
     "priority" => "0.8",
   ],
   [
+    "loc" => get_url("/MP3-Downloader/"),
+    "lastmod" => get_time("/MP3-Downloader/"),
+    "changefreq" => "monthly",
+    "priority" => "0.8",
+  ],
+  [
     "loc" => get_url("/L5-Bookmarker/"),
     "lastmod" => get_time("/L5-Bookmarker/"),
     "changefreq" => "monthly",
