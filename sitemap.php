@@ -67,6 +67,12 @@ $sites = [
     "priority" => "0.8",
   ],
   [
+    "loc" => get_url("/Tw-Cron/"),
+    "lastmod" => get_time("/Tw-Cron/"),
+    "changefreq" => "monthly",
+    "priority" => "0.8",
+  ],
+  [
     "loc" => get_url("/L5-Bookmarker/"),
     "lastmod" => get_time("/L5-Bookmarker/"),
     "changefreq" => "monthly",
