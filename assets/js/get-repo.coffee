@@ -1,6 +1,6 @@
 $ ->
   $.getJSON "https://api.github.com/users/Hiroto-K/repos", {per_page: "100"}, (data, status, xhr) ->
-    if status == "success"
+    if status is "success"
       $(".repo-count").html(data.length)
       data.forEach (obj) ->
         $(".repo-list").append("<a href=\"#{obj.html_url}\" class=\"list-group-item\">#{obj.full_name}</a>")
