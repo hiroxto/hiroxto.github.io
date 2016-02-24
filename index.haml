@@ -1,0 +1,47 @@
+!!!
+%html{:lang => "ja"}
+  %head
+    %meta{:charset => "utf-8"}/
+    %title Hiroto-K.github.io
+    %link{:href => "/bower_components/bootstrap/dist/css/bootstrap.min.css", :rel => "stylesheet"}
+    %link{:href => "/bower_components/bootstrap/dist/css/bootstrap-theme.min.css", :rel => "stylesheet"}
+    %link{:href => "/bower_components/font-awesome/css/font-awesome.min.css", :rel => "stylesheet"}
+    %link{:href => "/assets/css/style.css", :rel => "stylesheet"}
+    %link{:href => "/assets/css/main.css", :rel => "stylesheet"}
+    %link{:href => "/assets/css/to-top.css", :rel => "stylesheet"}
+    %script{:src => "/bower_components/jquery/dist/jquery.min.js"}
+    %script{:src => "/bower_components/bootstrap/dist/js/bootstrap.min.js"}
+    %script{:src => "/assets/js/to-top.js"}
+    %script{:src => "/assets/js/get-repo.js"}
+    %meta{:content => "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no", :name => "viewport"}/
+    %meta{:content => "5-Oc6FC6uhyZawiHpuki_x09iG5cJ1cvtb19ScgNRp4", :name => "google-site-verification"}/
+  %body
+    .container
+      .jumbotron
+        .container
+          %h1 Hiroto-K.github.io
+          %p
+            This is a web pages of
+            = succeed "." do
+              %a{:href => "https://github.com/Hiroto-K"} Hiroto-K
+          .github-main
+            %h2
+              Public Repositories
+              %span.label.label-primary.repo-count
+            .list-group.repo-list
+            %h2 GitHub Pages
+            .list-group.pages-list
+          .github-error
+            %h2 Public Repositories
+            %h3 Error
+            %p.text-warning Sorry, An error has occurred.
+          %h2 Links
+          .list-group
+            %a.list-group-item{:href => "https://hiroto-k.sakura.ne.jp/"} Home Page
+            %a.list-group-item{:href => "https://hiroto-k.sakura.ne.jp/profile"} Profile
+            %a.list-group-item{:href => "https://hiroto-k.sakura.ne.jp/work"} Work
+            %a.list-group-item{:href => "https://hiroto-k.sakura.ne.jp/blog/"} Blog
+            %a.list-group-item{:href => "https://hiroto-k.sakura.ne.jp/contact"} Contact
+      .to-top
+        %p.to-top-button
+          %a.fa.fa-angle-up.fa-lg{:href => "#"}
