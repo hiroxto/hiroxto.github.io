@@ -46,19 +46,19 @@ $sites = [
     "loc" => get_url("/SaveTweet/"),
     "lastmod" => get_time("/SaveTweet/"),
     "changefreq" => "monthly",
-    "priority" => "0.8",
+    "priority" => "0.5",
   ],
   [
     "loc" => get_url("/ShortURL/"),
     "lastmod" => get_time("/ShortURL/"),
     "changefreq" => "monthly",
-    "priority" => "0.8",
+    "priority" => "0.5",
   ],
   [
     "loc" => get_url("/EncryptionHelper/"),
     "lastmod" => get_time("/EncryptionHelper/"),
     "changefreq" => "monthly",
-    "priority" => "0.8",
+    "priority" => "0.4",
   ],
   [
     "loc" => get_url("/MP3-Downloader/"),
@@ -70,19 +70,31 @@ $sites = [
     "loc" => get_url("/Tw-Cron/"),
     "lastmod" => get_time("/Tw-Cron/"),
     "changefreq" => "monthly",
-    "priority" => "0.8",
+    "priority" => "0.5",
+  ],
+  [
+    "loc" => get_url("/TeamGraphicalGraphics/"),
+    "lastmod" => get_time("/TeamGraphicalGraphics/"),
+    "changefreq" => "monthly",
+    "priority" => "0.4",
+  ],
+  [
+    "loc" => get_url("/CC-Lemon/"),
+    "lastmod" => get_time("/CC-Lemon/"),
+    "changefreq" => "monthly",
+    "priority" => "0.4",
   ],
   [
     "loc" => get_url("/L5-Bookmarker/"),
     "lastmod" => get_time("/L5-Bookmarker/"),
     "changefreq" => "monthly",
-    "priority" => "0.8",
+    "priority" => "0.3",
   ],
   [
     "loc" => get_url("/dotfiles/"),
     "lastmod" => get_time("/dotfiles/"),
     "changefreq" => "monthly",
-    "priority" => "0.8",
+    "priority" => "0.3",
   ],
 ];
 
