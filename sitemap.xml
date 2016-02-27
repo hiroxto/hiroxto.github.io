@@ -8,62 +8,74 @@
   </url>
   <url>
     <loc>http://hiroto-k.github.io/Anime-push/</loc>
-    <lastmod>2016-01-08</lastmod>
+    <lastmod>2016-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>http://hiroto-k.github.io/hk_sub_/</loc>
-    <lastmod>2016-01-08</lastmod>
+    <lastmod>2016-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>http://hiroto-k.github.io/HkApps/</loc>
-    <lastmod>2016-01-08</lastmod>
+    <lastmod>2016-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>http://hiroto-k.github.io/SaveTweet/</loc>
-    <lastmod>2016-01-08</lastmod>
+    <lastmod>2016-02-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>http://hiroto-k.github.io/ShortURL/</loc>
-    <lastmod>2016-01-08</lastmod>
+    <lastmod>2016-02-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>http://hiroto-k.github.io/EncryptionHelper/</loc>
-    <lastmod>2016-01-08</lastmod>
+    <lastmod>2016-02-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.4</priority>
   </url>
   <url>
     <loc>http://hiroto-k.github.io/MP3-Downloader/</loc>
-    <lastmod>2016-02-02</lastmod>
+    <lastmod>2016-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>http://hiroto-k.github.io/Tw-Cron/</loc>
-    <lastmod>2016-01-11</lastmod>
+    <lastmod>2016-02-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://hiroto-k.github.io/TeamGraphicalGraphics/</loc>
+    <lastmod>2016-02-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>http://hiroto-k.github.io/CC-Lemon/</loc>
+    <lastmod>2016-02-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
   </url>
   <url>
     <loc>http://hiroto-k.github.io/L5-Bookmarker/</loc>
-    <lastmod>2016-01-08</lastmod>
+    <lastmod>2016-02-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>http://hiroto-k.github.io/dotfiles/</loc>
-    <lastmod>2016-01-08</lastmod>
+    <lastmod>2016-02-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.3</priority>
   </url>
 </urlset>
