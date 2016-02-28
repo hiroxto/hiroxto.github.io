@@ -85,12 +85,6 @@ $sites = [
     "priority" => "0.4",
   ],
   [
-    "loc" => get_url("/L5-Bookmarker/"),
-    "lastmod" => get_time("/L5-Bookmarker/"),
-    "changefreq" => "monthly",
-    "priority" => "0.3",
-  ],
-  [
     "loc" => get_url("/dotfiles/"),
     "lastmod" => get_time("/dotfiles/"),
     "changefreq" => "monthly",
