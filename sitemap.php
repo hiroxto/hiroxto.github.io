@@ -5,13 +5,13 @@ Use:php sitemap-github.php > sitemap-github.xml
 */
 
 function get_url($file) {
-  return "http://hiroto-k.github.io{$file}";
+  return "https://hiroto-k.github.io{$file}";
 }
 
 function get_time($file) {
   $headers = get_headers(get_url($file));
   $header = array_values(array_filter($headers, function ($s) {
-    return preg_match("/Last-Modified:\s+(.+)/i", $s) === 0 ? false : true;;
+    return preg_match("/Last-Modified:\s+(.+)/i", $s) === 0 ? false : true;
   }));
   preg_match("/Last-Modified:\s+(.+)/i", $header[0], $matches);
   return date("Y-m-d", strtotime($matches[1]));
