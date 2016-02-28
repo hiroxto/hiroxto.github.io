@@ -67,12 +67,6 @@
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://hiroto-k.github.io/L5-Bookmarker/</loc>
-    <lastmod>2016-02-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
     <loc>https://hiroto-k.github.io/dotfiles/</loc>
     <lastmod>2016-02-28</lastmod>
     <changefreq>monthly</changefreq>
