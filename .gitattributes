@@ -2,5 +2,9 @@
 *.jpeg -diff -text
 *.png -diff -text
 *.ico -diff -text
-*.ico -diff -text
-*.icns -diff -text
+*.otf -diff -text
+*.eot -diff -text
+*.svg -diff -text
+*.woff -diff -text
+*.woff2 -diff -text
+*.ttf -diff -text
