@@ -40,6 +40,7 @@ gulp.task "js", ["compile:coffee"], ->
   gulp.src([
     "./bower_components/jquery/dist/jquery.min.js"
     "./bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"
+    "./assets/js/to-top.js"
   ])
   .pipe(sourcemaps.init())
   .pipe(uglify())

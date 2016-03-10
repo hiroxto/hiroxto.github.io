@@ -1,5 +1,6 @@
 /.sass-cache/
 /node_modules/
+/bower_components/
 npm-debug.log
 .DS_Store
 .DS_Store?
@@ -12,5 +13,4 @@ ehthumbs.db
 Thumbs.db
 *.swp
 *~
-!/bower_components/
 !.gitkeep
