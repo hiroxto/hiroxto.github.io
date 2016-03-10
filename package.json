@@ -4,6 +4,8 @@
   "scripts": {
     "gulp": "gulp",
     "gulp:watch": "gulp watch",
+    "gulp:js": "gulp js",
+    "gulp:css": "gulp css",
     "compile": "gulp compile",
     "compile:coffee": "gulp compile:coffee",
     "compile:scss": "gulp compile:scss",
