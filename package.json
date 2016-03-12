@@ -1,6 +1,22 @@
 {
   "name": "Hiroto-K.github.io",
   "version": "0.0.1",
+  "description": "GitHub pages.",
+  "homepage": "https://hiroto-k.sakura.ne.jp/",
+  "author": {
+    "name": "Hiroto-K",
+    "email": "hiro.yo.yo1610@gmail.com",
+    "url": "https://hiroto-k.sakura.ne.jp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Hiroto-K/Hiroto-K.github.io.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Hiroto-K/SaveTweet/issues"
+  },
+  "license": "MIT",
+  "private": true,
   "scripts": {
     "gulp": "gulp",
     "gulp:watch": "gulp watch",
@@ -11,15 +27,6 @@
     "compile:scss": "gulp compile:scss",
     "compile:haml": "gulp compile:haml",
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "homepage": "https://hiroto-k.sakura.ne.jp/",
-  "author": {
-    "name": "Hiroto-K",
-    "email": "hiro.yo.yo1610@gmail.com"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/Hiroto-K/Hiroto-K.github.io.git"
   },
   "devDependencies": {
     "gulp": "^3.9.0",
