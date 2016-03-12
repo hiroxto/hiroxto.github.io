@@ -8,7 +8,7 @@ cssmin = require("gulp-cssmin")
 sourcemaps = require("gulp-sourcemaps")
 
 gulp.task("default", ["compile"])
-gulp.task("compile", ["compile:coffee", "compile:scss"])
+gulp.task("compile", ["js", "css"])
 
 gulp.task "compile:coffee", ->
   gulp.src("./assets/js/**.coffee")
@@ -32,8 +32,8 @@ gulp.task "compile:haml", ->
   .pipe(gulp.dest("./"))
 
 gulp.task "watch", ->
-  gulp.watch("./assets/js/**.coffee", ["compile:coffee"])
-  gulp.watch("./assets/css/**.scss", ["compile:scss"])
+  gulp.watch("./assets/js/**.coffee", ["js"])
+  gulp.watch("./assets/css/**.scss", ["css"])
   gulp.watch("./**.haml", ["compile:haml"])
 
 gulp.task "js", ["compile:coffee"], ->
