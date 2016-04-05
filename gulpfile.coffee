@@ -26,9 +26,7 @@ gulp.task "compile:scss", ->
 
 gulp.task "compile:haml", ->
   gulp.src("./**.haml")
-  .pipe(sourcemaps.init())
   .pipe(haml())
-  .pipe(sourcemaps.write(".map"))
   .pipe(gulp.dest("./"))
 
 gulp.task "watch", ->
