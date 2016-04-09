@@ -2,18 +2,18 @@
   "name": "Hiroto-K.github.io",
   "version": "0.0.1",
   "description": "GitHub pages.",
-  "homepage": "https://hiroto-k.sakura.ne.jp/",
+  "homepage": "https://hiroto-k.net",
   "author": {
     "name": "Hiroto-K",
     "email": "hiro.yo.yo1610@gmail.com",
-    "url": "https://hiroto-k.sakura.ne.jp"
+    "url": "https://hiroto-k.net"
   },
   "repository": {
     "type": "git",
     "url": "git://github.com/Hiroto-K/Hiroto-K.github.io.git"
   },
   "bugs": {
-    "url": "https://github.com/Hiroto-K/SaveTweet/issues"
+    "url": "https://github.com/Hiroto-K/Hiroto-K.github.io/issues"
   },
   "license": "MIT",
   "private": true,
