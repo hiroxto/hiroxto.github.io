@@ -2,11 +2,11 @@
   "name": "Hiroto-K.github.io",
   "version": "0.0.1",
   "description": "GitHub pages.",
-  "homepage": "https://hiroto-k.net",
+  "homepage": "https://hiroto-k.github.io/",
   "author": {
     "name": "Hiroto-K",
     "email": "hiro.yo.yo1610@gmail.com",
-    "url": "https://hiroto-k.net"
+    "url": "https://hiroto-k.net/"
   },
   "repository": {
     "type": "git",
