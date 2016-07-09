@@ -17,6 +17,18 @@ function get_time($file) {
   return date("Y-m-d", strtotime($matches[1]));
 }
 
+function get_apigen_pages($file) {
+  $url = get_url($file);
+  $content = file_get_contents($url);
+  preg_match_all('/<a href="(.+)">/', $content, $m);
+  $m = $m[1];
+  array_pop($m);
+  $urls = array_map(function ($u) use ($file) {
+    return $file.$u;
+  }, $m);
+  return $urls;
+}
+
 $sites = [
   [
     "loc" => get_url("/"),
@@ -85,6 +97,17 @@ $sites = [
     "priority" => "0.4",
   ],
 ];
+
+foreach (["StringBuilder"] as $name) {
+  foreach (get_apigen_pages("/{$name}/") as $link) {
+    $sites[] = [
+      "loc" => get_url($link),
+      "lastmod" => get_time($link),
+      "changefreq" => "yearly",
+      "priority" => "0.6",
+    ];
+  }
+}
 
 $sitemap = new DOMDocument("1.0", "UTF-8");
 $sitemap->preserveWhiteSpace = false;
