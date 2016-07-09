@@ -98,7 +98,7 @@ $sites = [
   ],
 ];
 
-foreach (["StringBuilder"] as $name) {
+foreach (["StringBuilder", "JSON5-php"] as $name) {
   foreach (get_apigen_pages("/{$name}/") as $link) {
     $sites[] = [
       "loc" => get_url($link),
