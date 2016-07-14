@@ -39,61 +39,61 @@ $sites = [
   [
     "loc" => get_url("/Anime-push/"),
     "lastmod" => get_time("/Anime-push/"),
-    "changefreq" => "monthly",
+    "changefreq" => "yearly",
     "priority" => "0.8",
   ],
   [
     "loc" => get_url("/hk_sub_/"),
     "lastmod" => get_time("/hk_sub_/"),
-    "changefreq" => "monthly",
+    "changefreq" => "yearly",
     "priority" => "0.8",
   ],
   [
     "loc" => get_url("/HkApps/"),
     "lastmod" => get_time("/HkApps/"),
-    "changefreq" => "monthly",
+    "changefreq" => "yearly",
     "priority" => "0.8",
   ],
   [
     "loc" => get_url("/SaveTweet/"),
     "lastmod" => get_time("/SaveTweet/"),
-    "changefreq" => "monthly",
+    "changefreq" => "yearly",
     "priority" => "0.5",
   ],
   [
     "loc" => get_url("/ShortURL/"),
     "lastmod" => get_time("/ShortURL/"),
-    "changefreq" => "monthly",
+    "changefreq" => "yearly",
     "priority" => "0.5",
   ],
   [
     "loc" => get_url("/EncryptionHelper/"),
     "lastmod" => get_time("/EncryptionHelper/"),
-    "changefreq" => "monthly",
+    "changefreq" => "yearly",
     "priority" => "0.4",
   ],
   [
     "loc" => get_url("/MP3-Downloader/"),
     "lastmod" => get_time("/MP3-Downloader/"),
-    "changefreq" => "monthly",
+    "changefreq" => "yearly",
     "priority" => "0.8",
   ],
   [
     "loc" => get_url("/Tw-Cron/"),
     "lastmod" => get_time("/Tw-Cron/"),
-    "changefreq" => "monthly",
+    "changefreq" => "yearly",
     "priority" => "0.5",
   ],
   [
     "loc" => get_url("/TeamGraphicalGraphics/"),
     "lastmod" => get_time("/TeamGraphicalGraphics/"),
-    "changefreq" => "monthly",
+    "changefreq" => "yearly",
     "priority" => "0.4",
   ],
   [
     "loc" => get_url("/CC-Lemon/"),
     "lastmod" => get_time("/CC-Lemon/"),
-    "changefreq" => "monthly",
+    "changefreq" => "yearly",
     "priority" => "0.4",
   ],
 ];
@@ -103,7 +103,7 @@ foreach (["StringBuilder", "JSON5-php"] as $name) {
     $sites[] = [
       "loc" => get_url($link),
       "lastmod" => get_time($link),
-      "changefreq" => "yearly",
+      "changefreq" => "monthly",
       "priority" => "0.6",
     ];
   }
