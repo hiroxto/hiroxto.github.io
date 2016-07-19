@@ -19,14 +19,17 @@
   "private": true,
   "scripts": {
     "gulp": "gulp",
-    "gulp:watch": "gulp watch",
-    "gulp:js": "gulp js",
-    "gulp:css": "gulp css",
+    "all": "gulp all",
     "compile": "gulp compile",
     "compile:coffee": "gulp compile:coffee",
     "compile:scss": "gulp compile:scss",
     "compile:haml": "gulp compile:haml",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lib": "gulp lib",
+    "lib:js": "gulp lib:js",
+    "watch": "gulp watch",
+    "watch:coffee": "gulp watch:coffee",
+    "watch:scss": "gulp watch:scss",
+    "watch:haml": "gulp watch:haml"
   },
   "devDependencies": {
     "gulp": "^3.9.0",
