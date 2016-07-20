@@ -15,7 +15,7 @@ config =
   dist :
     js    : "./assets/js"
     css   : "./assets/css"
-    haml  : "./"
+    html  : "./"
     fonts : "./assets/fonts"
 
   map : "./.map"

@@ -10,4 +10,4 @@ gulp.task "lib:js", ->
   .pipe($.uglify())
   .pipe($.concat(config.lib.js))
   .pipe($.sourcemaps.write(config.map))
-  .pipe(gulp.dest(config.dest.js))
+  .pipe(gulp.dest(config.dist.js))
