@@ -99,12 +99,18 @@ $sites = [
 ];
 
 foreach (["StringBuilder", "JSON5-php"] as $name) {
+  $sites[] = [
+    "loc" => get_url("/$name/"),
+    "lastmod" => get_time("/$name/"),
+    "changefreq" => "yearly",
+    "priority" => "0.6",
+  ];
   foreach (get_apigen_pages("/{$name}/") as $link) {
     $sites[] = [
       "loc" => get_url($link),
       "lastmod" => get_time($link),
       "changefreq" => "monthly",
-      "priority" => "0.6",
+      "priority" => "0.5",
     ];
   }
 }
