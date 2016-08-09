@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
 Sitemap: https://hiroto-k.github.io/sitemap.xml
+Sitemap: https://hiroto-k.github.io/blog/sitemap.xml
