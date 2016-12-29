@@ -5,11 +5,14 @@ config =
       "./assets/css/**/*.scss"
     ]
     haml   : "./**/*.haml"
-    fonts  : "./bower_components/**/fonts/**"
+    fonts  : [
+      "./node_modules/bootstrap-sass/assets/fonts/bootstrap/**"
+      "./node_modules/font-awesome/fonts/**"
+    ]
     lib    :
       js : [
-        "./bower_components/jquery/dist/jquery.min.js"
-        "./bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"
+        "./node_modules/jquery/dist/jquery.min.js"
+        "./node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js"
       ]
 
   dist :
