@@ -8,6 +8,7 @@ gulp.task "compile:coffee", ->
   gulp.src(config.src.coffee)
   .pipe($.sourcemaps.init())
   .pipe($.coffee())
+  .pipe($.uglify())
   .pipe($.sourcemaps.write(config.map))
   .pipe(gulp.dest(config.dist.js))
 
