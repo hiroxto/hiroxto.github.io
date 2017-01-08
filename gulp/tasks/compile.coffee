@@ -4,7 +4,7 @@ $      = config.plugins
 
 gulp.task("compile", ["compile:coffee", "compile:scss", "compile:haml"])
 
-gulp.task "compile:coffee", ->
+gulp.task "compile:coffee", ["lint:coffee"], ->
   gulp.src(config.src.coffee)
   .pipe($.sourcemaps.init())
   .pipe($.coffee())
