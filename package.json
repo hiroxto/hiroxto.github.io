@@ -32,6 +32,8 @@
     "compile:haml": "gulp compile:haml",
     "lib": "gulp lib",
     "lib:js": "gulp lib:js",
+    "lint": "gulp lint",
+    "lint:coffee": "gulp lint:coffee",
     "watch": "gulp watch",
     "watch:coffee": "gulp watch:coffee",
     "watch:scss": "gulp watch:scss",
