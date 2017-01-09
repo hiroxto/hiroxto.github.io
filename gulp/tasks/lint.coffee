@@ -1,3 +1,4 @@
+gulp   = require("gulp")
 config = require("../config")
 $      = config.plugins
 
