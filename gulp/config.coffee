@@ -1,8 +1,8 @@
 config =
   src :
-    coffee : "./assets/js/**/*.coffee"
+    coffee : "./assets-src/coffee/**/*.coffee"
     scss   : [
-      "./assets/css/**/*.scss"
+      "./assets-src/scss/**/*.scss"
     ]
     haml   : "./**/*.haml"
     fonts  : [
