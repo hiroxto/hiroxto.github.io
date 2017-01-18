@@ -1,9 +1,7 @@
 config =
   src :
     coffee : "./assets-src/coffee/**/*.coffee"
-    scss   : [
-      "./assets-src/scss/**/*.scss"
-    ]
+    scss   : "./assets-src/scss/**/*.scss"
     haml   : "./**/*.haml"
     fonts  : [
       "./node_modules/bootstrap-sass/assets/fonts/bootstrap/**"
