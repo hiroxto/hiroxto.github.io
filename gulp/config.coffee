@@ -25,6 +25,10 @@ config =
   lib   :
     js : "lib.js"
 
+  options :
+    eslint :
+      configFile : ".eslintrc.yml"
+
   plugins : require("gulp-load-plugins")({
     rename :
       "gulp-ruby-sass" : "sass"
