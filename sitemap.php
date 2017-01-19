@@ -215,7 +215,5 @@ foreach (["StringBuilder", "JSON5-php"] as $name) {
   }
 }
 
-foreach ($sites as $info) {
-  $siteMap->addUrl($info);
-}
+$siteMap->addUrls($sites);
 echo $siteMap->saveXML();
