@@ -58,6 +58,19 @@ class SiteMapGenerator {
   }
 
   /**
+   * Add urls to sitemap
+   * @param array $urls
+   * @return $this
+   */
+  public function addUrls(array $urls) {
+      foreach ($urls as $info) {
+          $this->addUrl($info);
+      }
+
+      return $this;
+  }
+
+  /**
    * Return xml string
    * @return string
    */
