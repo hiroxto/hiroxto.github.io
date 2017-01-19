@@ -16,3 +16,4 @@ Thumbs.db
 *.swp
 *~
 !.gitkeep
+.php_cs.cache
