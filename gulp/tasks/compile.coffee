@@ -4,7 +4,7 @@ $      = config.plugins
 
 gulp.task("compile", ["compile:babel", "compile:coffee", "compile:scss", "compile:haml"])
 
-gulp.task "compile:babel", ->
+gulp.task "compile:babel", ["lint:es"], ->
   gulp.src(config.src.babel)
     .pipe($.plumber())
     .pipe($.sourcemaps.init())
