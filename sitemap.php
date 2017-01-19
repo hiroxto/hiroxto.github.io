@@ -4,95 +4,182 @@ Sitemap generator
 Use:php sitemap-github.php > sitemap-github.xml
 */
 
-function get_url($file) {
-  return "https://hiroto-k.github.io{$file}";
+/**
+ * Class SiteMapGenerator
+ */
+class SiteMapGenerator {
+
+  /**
+   * DOMDocument instance.
+   *
+   * @var DOMDocument
+   */
+  protected $domDocument;
+
+  /**
+   * \DOMElement instance.
+   *
+   * @var \DOMElement
+   */
+  protected $domElement;
+
+  /**
+   * SiteMapGenerator constructor.
+   */
+  public function __construct(){
+    $this->domDocument = new DOMDocument("1.0", "UTF-8");
+    $this->domDocument->preserveWhiteSpace = false;
+    $this->domDocument->formatOutput = true;
+    $this->domElement = $this->domDocument->appendChild($this->domDocument->createElement("urlset"));
+    $this->domElement->setAttribute("xmlns", "http://www.sitemaps.org/schemas/sitemap/0.9");
+  }
+
+  /**
+   * Alias of '__construct()'
+   * @return SiteMapGenerator
+   */
+  public static function make(){
+    return new self();
+  }
+
+  /**
+   * Add url to sitemap
+   * @param array $info
+   * @return $this
+   */
+  public function addUrl(array $info){
+    $url = $this->domDocument->appendChild($this->domDocument->createElement("url"));
+    foreach($info as $key => $value){
+      if(is_string($key) && is_string($value)){
+        $url->appendChild($this->domDocument->createElement($key, $value));
+      }
+    }
+    return $this;
+  }
+
+  /**
+   * Return xml string
+   * @return string
+   */
+  public function saveXML(){
+    return $this->domDocument->saveXML();
+  }
+
+  /**
+   * Return GitHub Pages url
+   * @param string $path
+   * @return string
+   */
+  public function getUrl($path) {
+    return "https://hiroto-k.github.io{$path}";
+  }
+
+  /**
+   * Get last modified
+   * @param string $path
+   * @return string
+   */
+  public function getLastModified($path) {
+    $headers = get_headers($this->getUrl($path));
+    $header = array_values(array_filter($headers, function ($s) {
+      return preg_match("/Last-Modified:\s+(.+)/i", $s) === 0 ? false : true;
+    }));
+    preg_match("/Last-Modified:\s+(.+)/i", $header[0], $matches);
+    return date("Y-m-d", strtotime($matches[1]));
+  }
+
+  /**
+   * Get api gen document pages
+   * @param string $repoName
+   * @return array
+   */
+  public function getApiGenPages($repoName) {
+    $url = $this->getUrl($repoName);
+    $content = file_get_contents($url);
+    preg_match_all('/<a href="(.+)">/', $content, $m);
+    $m = $m[1];
+    array_pop($m);
+    $urls = array_map(function ($u) use ($repoName) {
+      return $repoName.$u;
+    }, $m);
+    return $urls;
+  }
+
+  /**
+   * Return xml string
+   * @return string
+   */
+  public function __toString(){
+    return $this->saveXML();
+  }
 }
 
-function get_time($file) {
-  $headers = get_headers(get_url($file));
-  $header = array_values(array_filter($headers, function ($s) {
-    return preg_match("/Last-Modified:\s+(.+)/i", $s) === 0 ? false : true;
-  }));
-  preg_match("/Last-Modified:\s+(.+)/i", $header[0], $matches);
-  return date("Y-m-d", strtotime($matches[1]));
-}
-
-function get_apigen_pages($file) {
-  $url = get_url($file);
-  $content = file_get_contents($url);
-  preg_match_all('/<a href="(.+)">/', $content, $m);
-  $m = $m[1];
-  array_pop($m);
-  $urls = array_map(function ($u) use ($file) {
-    return $file.$u;
-  }, $m);
-  return $urls;
-}
+$siteMap = new SiteMapGenerator();
 
 $sites = [
   [
-    "loc" => get_url("/"),
-    "lastmod" => get_time("/"),
+    "loc" => $siteMap->getUrl("/"),
+    "lastmod" => $siteMap->getLastModified("/"),
     "changefreq" => "monthly",
     "priority" => "1.0",
   ],
   [
-    "loc" => get_url("/Anime-push/"),
-    "lastmod" => get_time("/Anime-push/"),
+    "loc" => $siteMap->getUrl("/Anime-push/"),
+    "lastmod" => $siteMap->getLastModified("/Anime-push/"),
     "changefreq" => "yearly",
     "priority" => "0.8",
   ],
   [
-    "loc" => get_url("/hk_sub_/"),
-    "lastmod" => get_time("/hk_sub_/"),
+    "loc" => $siteMap->getUrl("/hk_sub_/"),
+    "lastmod" => $siteMap->getLastModified("/hk_sub_/"),
     "changefreq" => "yearly",
     "priority" => "0.8",
   ],
   [
-    "loc" => get_url("/HkApps/"),
-    "lastmod" => get_time("/HkApps/"),
+    "loc" => $siteMap->getUrl("/HkApps/"),
+    "lastmod" => $siteMap->getLastModified("/HkApps/"),
     "changefreq" => "yearly",
     "priority" => "0.8",
   ],
   [
-    "loc" => get_url("/SaveTweet/"),
-    "lastmod" => get_time("/SaveTweet/"),
+    "loc" => $siteMap->getUrl("/SaveTweet/"),
+    "lastmod" => $siteMap->getLastModified("/SaveTweet/"),
     "changefreq" => "yearly",
     "priority" => "0.5",
   ],
   [
-    "loc" => get_url("/ShortURL/"),
-    "lastmod" => get_time("/ShortURL/"),
+    "loc" => $siteMap->getUrl("/ShortURL/"),
+    "lastmod" => $siteMap->getLastModified("/ShortURL/"),
     "changefreq" => "yearly",
     "priority" => "0.5",
   ],
   [
-    "loc" => get_url("/EncryptionHelper/"),
-    "lastmod" => get_time("/EncryptionHelper/"),
+    "loc" => $siteMap->getUrl("/EncryptionHelper/"),
+    "lastmod" => $siteMap->getLastModified("/EncryptionHelper/"),
     "changefreq" => "yearly",
     "priority" => "0.4",
   ],
   [
-    "loc" => get_url("/MP3-Downloader/"),
-    "lastmod" => get_time("/MP3-Downloader/"),
+    "loc" => $siteMap->getUrl("/MP3-Downloader/"),
+    "lastmod" => $siteMap->getLastModified("/MP3-Downloader/"),
     "changefreq" => "yearly",
     "priority" => "0.8",
   ],
   [
-    "loc" => get_url("/Tw-Cron/"),
-    "lastmod" => get_time("/Tw-Cron/"),
+    "loc" => $siteMap->getUrl("/Tw-Cron/"),
+    "lastmod" => $siteMap->getLastModified("/Tw-Cron/"),
     "changefreq" => "yearly",
     "priority" => "0.5",
   ],
   [
-    "loc" => get_url("/TeamGraphicalGraphics/"),
-    "lastmod" => get_time("/TeamGraphicalGraphics/"),
+    "loc" => $siteMap->getUrl("/TeamGraphicalGraphics/"),
+    "lastmod" => $siteMap->getLastModified("/TeamGraphicalGraphics/"),
     "changefreq" => "yearly",
     "priority" => "0.4",
   ],
   [
-    "loc" => get_url("/CC-Lemon/"),
-    "lastmod" => get_time("/CC-Lemon/"),
+    "loc" => $siteMap->getUrl("/CC-Lemon/"),
+    "lastmod" => $siteMap->getLastModified("/CC-Lemon/"),
     "changefreq" => "yearly",
     "priority" => "0.4",
   ],
@@ -100,32 +187,22 @@ $sites = [
 
 foreach (["StringBuilder", "JSON5-php"] as $name) {
   $sites[] = [
-    "loc" => get_url("/$name/"),
-    "lastmod" => get_time("/$name/"),
+    "loc" => $siteMap->getUrl("/$name/"),
+    "lastmod" => $siteMap->getLastModified("/$name/"),
     "changefreq" => "yearly",
     "priority" => "0.6",
   ];
-  foreach (get_apigen_pages("/{$name}/") as $link) {
+  foreach ($siteMap->getApiGenPages("/{$name}/") as $link) {
     $sites[] = [
-      "loc" => get_url($link),
-      "lastmod" => get_time($link),
+      "loc" => $siteMap->getUrl($link),
+      "lastmod" => $siteMap->getLastModified($link),
       "changefreq" => "monthly",
       "priority" => "0.5",
     ];
   }
 }
 
-$sitemap = new DOMDocument("1.0", "UTF-8");
-$sitemap->preserveWhiteSpace = false;
-$sitemap->formatOutput = true;
-$urlset = $sitemap->appendChild($sitemap->createElement("urlset"));
-$urlset->setAttribute("xmlns", "http://www.sitemaps.org/schemas/sitemap/0.9");
-foreach ($sites as $site) {
-    $url = $urlset->appendChild($sitemap->createElement("url"));
-    foreach($site as $key => $value){
-        if(is_string($key) && is_string($value)){
-            $url->appendChild($sitemap->createElement($key, $value));
-        }
-    }
+foreach ($sites as $info) {
+  $siteMap->addUrl($info);
 }
-echo $sitemap->saveXML();
+echo $siteMap->saveXML();
