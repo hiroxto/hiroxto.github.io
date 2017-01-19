@@ -154,90 +154,91 @@ class SiteMap
 $siteMap = new SiteMap();
 
 $sites = [
-  [
-    "loc" => $siteMap->getUrl("/"),
-    "lastmod" => $siteMap->getLastModified("/"),
-    "changefreq" => "monthly",
-    "priority" => "1.0",
-  ],
-  [
-    "loc" => $siteMap->getUrl("/Anime-push/"),
-    "lastmod" => $siteMap->getLastModified("/Anime-push/"),
-    "changefreq" => "yearly",
-    "priority" => "0.8",
-  ],
-  [
-    "loc" => $siteMap->getUrl("/hk_sub_/"),
-    "lastmod" => $siteMap->getLastModified("/hk_sub_/"),
-    "changefreq" => "yearly",
-    "priority" => "0.8",
-  ],
-  [
-    "loc" => $siteMap->getUrl("/HkApps/"),
-    "lastmod" => $siteMap->getLastModified("/HkApps/"),
-    "changefreq" => "yearly",
-    "priority" => "0.8",
-  ],
-  [
-    "loc" => $siteMap->getUrl("/SaveTweet/"),
-    "lastmod" => $siteMap->getLastModified("/SaveTweet/"),
-    "changefreq" => "yearly",
-    "priority" => "0.5",
-  ],
-  [
-    "loc" => $siteMap->getUrl("/ShortURL/"),
-    "lastmod" => $siteMap->getLastModified("/ShortURL/"),
-    "changefreq" => "yearly",
-    "priority" => "0.5",
-  ],
-  [
-    "loc" => $siteMap->getUrl("/EncryptionHelper/"),
-    "lastmod" => $siteMap->getLastModified("/EncryptionHelper/"),
-    "changefreq" => "yearly",
-    "priority" => "0.4",
-  ],
-  [
-    "loc" => $siteMap->getUrl("/MP3-Downloader/"),
-    "lastmod" => $siteMap->getLastModified("/MP3-Downloader/"),
-    "changefreq" => "yearly",
-    "priority" => "0.8",
-  ],
-  [
-    "loc" => $siteMap->getUrl("/Tw-Cron/"),
-    "lastmod" => $siteMap->getLastModified("/Tw-Cron/"),
-    "changefreq" => "yearly",
-    "priority" => "0.5",
-  ],
-  [
-    "loc" => $siteMap->getUrl("/TeamGraphicalGraphics/"),
-    "lastmod" => $siteMap->getLastModified("/TeamGraphicalGraphics/"),
-    "changefreq" => "yearly",
-    "priority" => "0.4",
-  ],
-  [
-    "loc" => $siteMap->getUrl("/CC-Lemon/"),
-    "lastmod" => $siteMap->getLastModified("/CC-Lemon/"),
-    "changefreq" => "yearly",
-    "priority" => "0.4",
-  ],
+    [
+        "loc" => $siteMap->getUrl("/"),
+        "lastmod" => $siteMap->getLastModified("/"),
+        "changefreq" => "monthly",
+        "priority" => "1.0",
+    ],
+    [
+        "loc" => $siteMap->getUrl("/Anime-push/"),
+        "lastmod" => $siteMap->getLastModified("/Anime-push/"),
+        "changefreq" => "yearly",
+        "priority" => "0.8",
+    ],
+    [
+        "loc" => $siteMap->getUrl("/hk_sub_/"),
+        "lastmod" => $siteMap->getLastModified("/hk_sub_/"),
+        "changefreq" => "yearly",
+        "priority" => "0.8",
+    ],
+    [
+        "loc" => $siteMap->getUrl("/HkApps/"),
+        "lastmod" => $siteMap->getLastModified("/HkApps/"),
+        "changefreq" => "yearly",
+        "priority" => "0.8",
+    ],
+    [
+        "loc" => $siteMap->getUrl("/SaveTweet/"),
+        "lastmod" => $siteMap->getLastModified("/SaveTweet/"),
+        "changefreq" => "yearly",
+        "priority" => "0.5",
+    ],
+    [
+        "loc" => $siteMap->getUrl("/ShortURL/"),
+        "lastmod" => $siteMap->getLastModified("/ShortURL/"),
+        "changefreq" => "yearly",
+        "priority" => "0.5",
+    ],
+    [
+        "loc" => $siteMap->getUrl("/EncryptionHelper/"),
+        "lastmod" => $siteMap->getLastModified("/EncryptionHelper/"),
+        "changefreq" => "yearly",
+        "priority" => "0.4",
+    ],
+    [
+        "loc" => $siteMap->getUrl("/MP3-Downloader/"),
+        "lastmod" => $siteMap->getLastModified("/MP3-Downloader/"),
+        "changefreq" => "yearly",
+        "priority" => "0.8",
+    ],
+    [
+        "loc" => $siteMap->getUrl("/Tw-Cron/"),
+        "lastmod" => $siteMap->getLastModified("/Tw-Cron/"),
+        "changefreq" => "yearly",
+        "priority" => "0.5",
+    ],
+    [
+        "loc" => $siteMap->getUrl("/TeamGraphicalGraphics/"),
+        "lastmod" => $siteMap->getLastModified("/TeamGraphicalGraphics/"),
+        "changefreq" => "yearly",
+        "priority" => "0.4",
+    ],
+    [
+        "loc" => $siteMap->getUrl("/CC-Lemon/"),
+        "lastmod" => $siteMap->getLastModified("/CC-Lemon/"),
+        "changefreq" => "yearly",
+        "priority" => "0.4",
+    ],
 ];
 
 foreach (["StringBuilder", "JSON5-php"] as $name) {
-  $sites[] = [
-    "loc" => $siteMap->getUrl("/$name/"),
-    "lastmod" => $siteMap->getLastModified("/$name/"),
-    "changefreq" => "yearly",
-    "priority" => "0.6",
-  ];
-  foreach ($siteMap->getApiGenPages("/{$name}/") as $link) {
     $sites[] = [
-      "loc" => $siteMap->getUrl($link),
-      "lastmod" => $siteMap->getLastModified($link),
-      "changefreq" => "monthly",
-      "priority" => "0.5",
+        "loc" => $siteMap->getUrl("/$name/"),
+        "lastmod" => $siteMap->getLastModified("/$name/"),
+        "changefreq" => "yearly",
+        "priority" => "0.6",
     ];
-  }
+    foreach ($siteMap->getApiGenPages("/{$name}/") as $link) {
+        $sites[] = [
+            "loc" => $siteMap->getUrl($link),
+            "lastmod" => $siteMap->getLastModified($link),
+            "changefreq" => "monthly",
+            "priority" => "0.5",
+        ];
+    }
 }
 
 $siteMap->addUrls($sites);
+
 echo $siteMap->saveXML();
