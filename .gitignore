@@ -2,6 +2,7 @@
 /.sass-cache/
 /node_modules/
 /bower_components/
+/vendor/
 npm-debug.log
 .DS_Store
 .DS_Store?
