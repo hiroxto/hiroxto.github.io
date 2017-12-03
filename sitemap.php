@@ -40,10 +40,10 @@ class SiteMap
      */
     public function __construct()
     {
-        $this->domDocument                     = new DOMDocument('1.0', 'UTF-8');
+        $this->domDocument = new DOMDocument('1.0', 'UTF-8');
         $this->domDocument->preserveWhiteSpace = false;
-        $this->domDocument->formatOutput       = true;
-        $this->domElement                      = $this->domDocument->appendChild($this->domDocument->createElement('urlset'));
+        $this->domDocument->formatOutput = true;
+        $this->domElement = $this->domDocument->appendChild($this->domDocument->createElement('urlset'));
         $this->domElement->setAttribute('xmlns', 'http://www.sitemaps.org/schemas/sitemap/0.9');
     }
 
@@ -124,8 +124,8 @@ class SiteMap
     public function getLastModified($path)
     {
         $headers = get_headers($this->getUrl($path));
-        $header  = array_values(array_filter($headers, function ($s) {
-            return preg_match("/Last-Modified:\s+(.+)/i", $s) === 0 ? false : true;
+        $header = array_values(array_filter($headers, function ($s) {
+            return 0 === preg_match("/Last-Modified:\s+(.+)/i", $s) ? false : true;
         }));
         preg_match("/Last-Modified:\s+(.+)/i", $header[0], $matches);
 
@@ -141,7 +141,7 @@ class SiteMap
      */
     public function getApiGenPages($repoName)
     {
-        $url     = $this->getUrl($repoName);
+        $url = $this->getUrl($repoName);
         $content = file_get_contents($url);
         preg_match_all('/<a href="(.+)">/', $content, $m);
         $m = $m[1];
