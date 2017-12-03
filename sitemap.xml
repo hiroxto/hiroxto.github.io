@@ -1,22 +1,8 @@
-
-Notice: Undefined offset: 0 in /Users/hiroto/GitHub/Hiroto-K.github.io/sitemap.php on line 130
-
-Call Stack:
-    0.0005     385712   1. {main}() /Users/hiroto/GitHub/Hiroto-K.github.io/sitemap.php:0
-    1.3141     394016   2. SiteMap->getLastModified() /Users/hiroto/GitHub/Hiroto-K.github.io/sitemap.php:220
-
-
-Notice: Undefined offset: 1 in /Users/hiroto/GitHub/Hiroto-K.github.io/sitemap.php on line 132
-
-Call Stack:
-    0.0005     385712   1. {main}() /Users/hiroto/GitHub/Hiroto-K.github.io/sitemap.php:0
-    1.3141     394016   2. SiteMap->getLastModified() /Users/hiroto/GitHub/Hiroto-K.github.io/sitemap.php:220
-
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://hiroto-k.github.io/</loc>
-    <lastmod>2017-04-17</lastmod>
+    <lastmod>2017-12-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -61,12 +47,6 @@ Call Stack:
     <lastmod>2016-04-29</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://hiroto-k.github.io/Tw-Cron/</loc>
-    <lastmod>1970-01-01</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://hiroto-k.github.io/TeamGraphicalGraphics/</loc>
