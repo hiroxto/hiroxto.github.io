@@ -1,18 +1,7 @@
 <?php
 
-/*
- * This file is part of "Hiroto-K.github.io".
- *
- * (c) Hiroto Kitazawa <hiro.yo.yo1610@gmail.com>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
-
-use Symfony\CS\Config;
-use Symfony\CS\Finder;
-use Symfony\CS\Fixer\Contrib\HeaderCommentFixer;
-use Symfony\CS\FixerInterface;
+use PhpCsFixer\Config;
+use PhpCsFixer\Finder;
 
 $header = <<<'EOS'
 This file is part of "Hiroto-K.github.io".
@@ -23,25 +12,22 @@ For the full copyright and license information, please view the LICENSE
 file that was distributed with this source code.
 EOS;
 
-HeaderCommentFixer::setHeader($header);
-
-$fixers = [
-    '-phpdoc_no_package',
-    '-psr0',
-    'align_equals',
-    'encoding',
-    'ereg_to_preg',
-    'header_comment',
-    'php4_constructor',
-    'php_unit_construct',
-    'short_array_syntax',
-    'short_echo_tag',
-    'ordered_use',
-    'newline_after_open_tag',
+$rules = [
+    '@PSR2' => true,
+    '@Symfony' => true,
+    'phpdoc_no_package' => false,
+    'psr0' => false,
+    'binary_operator_spaces' => true,
+    'encoding' => true,
+    'header_comment' => ['header' => $header],
+    'array_syntax' => ['syntax' => 'short'],
+    'no_short_echo_tag' => true,
+    'ordered_imports' => true,
+    'linebreak_after_opening_tag' => true,
 ];
 
 $finder = Finder::create()
-    ->files()
+    ->ignoreDotFiles(false)
     ->name('.php_cs')
     ->exclude([
         'node_modules',
@@ -50,8 +36,6 @@ $finder = Finder::create()
     ->in(__DIR__);
 
 return Config::create()
-    ->level(FixerInterface::PSR2_LEVEL)
-    ->level(FixerInterface::SYMFONY_LEVEL)
-    ->fixers($fixers)
-    ->finder($finder)
+    ->setRules($rules)
+    ->setFinder($finder)
     ->setUsingCache(true);
