@@ -216,12 +216,6 @@ $sites = [
         'priority' => '0.8',
     ],
     [
-        'loc' => $siteMap->getUrl('/Tw-Cron/'),
-        'lastmod' => $siteMap->getLastModified('/Tw-Cron/'),
-        'changefreq' => 'yearly',
-        'priority' => '0.5',
-    ],
-    [
         'loc' => $siteMap->getUrl('/TeamGraphicalGraphics/'),
         'lastmod' => $siteMap->getLastModified('/TeamGraphicalGraphics/'),
         'changefreq' => 'yearly',
