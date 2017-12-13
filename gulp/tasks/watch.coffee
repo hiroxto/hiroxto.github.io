@@ -7,7 +7,6 @@ gulp.task "watch", ->
     "babel"
     "coffee"
     "scss"
-    "haml"
   ].forEach((name) ->
     gulp.start("watch:#{name}")
   )
