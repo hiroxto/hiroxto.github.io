@@ -13,8 +13,5 @@ gulp.task "clean:css", ->
 gulp.task "clean:font", ->
   del(["#{config.dist.fonts}/**/*"])
 
-gulp.task "clean:html", ->
-  del(["./**/*.html"])
-
 gulp.task "clean:map", ->
   del(["./assets/**/.map"])
