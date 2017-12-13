@@ -19,6 +19,3 @@ gulp.task "watch:coffee", ->
 
 gulp.task "watch:scss", ->
   $.watch(config.src.scss, -> gulp.start("compile:scss"))
-
-gulp.task "watch:haml", ->
-  $.watch(config.src.haml, -> gulp.start("compile:haml"))
