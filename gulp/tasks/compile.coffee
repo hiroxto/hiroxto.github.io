@@ -27,8 +27,3 @@ gulp.task "compile:scss", ->
   .pipe($.cssmin())
   .pipe($.sourcemaps.write(config.map))
   .pipe(gulp.dest(config.dist.css))
-
-gulp.task "compile:haml", ->
-  gulp.src(config.src.haml)
-  .pipe($.haml())
-  .pipe(gulp.dest(config.dist.html))
