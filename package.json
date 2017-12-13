@@ -30,7 +30,6 @@
     "compile:babel": "gulp compile:babel",
     "compile:coffee": "gulp compile:coffee",
     "compile:scss": "gulp compile:scss",
-    "compile:haml": "gulp compile:haml",
     "copy": "gulp copy",
     "copy:font": "gulp copy:font",
     "lib": "gulp lib",
