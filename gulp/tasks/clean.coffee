@@ -2,7 +2,7 @@ gulp   = require("gulp")
 del    = require("del")
 config = require("../config")
 
-gulp.task("clean", ["clean:js", "clean:css", "clean:font", "clean:html", "clean:map"])
+gulp.task("clean", ["clean:js", "clean:css", "clean:font", "clean:map"])
 
 gulp.task "clean:js", ->
   del(["#{config.dist.js}/**/*.js"])
