@@ -2,7 +2,7 @@ gulp   = require("gulp")
 config = require("../config")
 $      = config.plugins
 
-gulp.task("compile", ["compile:babel", "compile:coffee", "compile:scss", "compile:haml"])
+gulp.task("compile", ["compile:babel", "compile:coffee", "compile:scss"])
 
 gulp.task "compile:babel", ["lint:es"], ->
   gulp.src(config.src.babel)
@@ -27,8 +27,3 @@ gulp.task "compile:scss", ->
   .pipe($.cssmin())
   .pipe($.sourcemaps.write(config.map))
   .pipe(gulp.dest(config.dist.css))
-
-gulp.task "compile:haml", ->
-  gulp.src(config.src.haml)
-  .pipe($.haml())
-  .pipe(gulp.dest(config.dist.html))
