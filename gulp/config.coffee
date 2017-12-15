@@ -3,7 +3,6 @@ config =
     coffee : "./assets-src/coffee/**/*.coffee"
     babel  : "./assets-src/js/**/*.js"
     scss   : "./assets-src/scss/**/*.scss"
-    haml   : "./**/*.haml"
     fonts  : [
       "./node_modules/bootstrap-sass/assets/fonts/bootstrap/**"
       "./node_modules/font-awesome/fonts/**"
@@ -17,7 +16,6 @@ config =
   dist :
     js    : "./assets/js"
     css   : "./assets/css"
-    html  : "./"
     fonts : "./assets/fonts"
 
   map : "./.map"

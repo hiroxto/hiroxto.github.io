@@ -24,13 +24,11 @@
     "clean:js": "gulp clean:js",
     "clean:css": "gulp clean:css",
     "clean:font": "gulp clean:font",
-    "clean:html": "gulp clean:html",
     "clean:map": "gulp clean:map",
     "compile": "gulp compile",
     "compile:babel": "gulp compile:babel",
     "compile:coffee": "gulp compile:coffee",
     "compile:scss": "gulp compile:scss",
-    "compile:haml": "gulp compile:haml",
     "copy": "gulp copy",
     "copy:font": "gulp copy:font",
     "lib": "gulp lib",
@@ -41,8 +39,7 @@
     "watch": "gulp watch",
     "watch:babel": "gulp watch:babel",
     "watch:coffee": "gulp watch:coffee",
-    "watch:scss": "gulp watch:scss",
-    "watch:haml": "gulp watch:haml"
+    "watch:scss": "gulp watch:scss"
   },
   "devDependencies": {
     "babel-core": "^6.21.0",
@@ -62,7 +59,6 @@
     "gulp-flatten": "^0.3.1",
     "gulp-load-plugins": "^1.4.0",
     "gulp-plumber": "^1.1.0",
-    "gulp-ruby-haml": "0.0.9",
     "gulp-ruby-sass": "^2.1.1",
     "gulp-sourcemaps": "^1.9.1",
     "gulp-uglify": "^2.0.0",

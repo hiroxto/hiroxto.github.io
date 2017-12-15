@@ -7,7 +7,6 @@ gulp.task "watch", ->
     "babel"
     "coffee"
     "scss"
-    "haml"
   ].forEach((name) ->
     gulp.start("watch:#{name}")
   )
@@ -20,6 +19,3 @@ gulp.task "watch:coffee", ->
 
 gulp.task "watch:scss", ->
   $.watch(config.src.scss, -> gulp.start("compile:scss"))
-
-gulp.task "watch:haml", ->
-  $.watch(config.src.haml, -> gulp.start("compile:haml"))
