@@ -5,9 +5,9 @@ $(function() {
         if (status === "success") {
             $(".repo-count").html(data.length);
             data.forEach(function(obj) {
-                $(".repo-list").append("<a href=\"" + obj.html_url + "\" class=\"list-group-item\">" + obj.full_name + "</a>");
+                $(".repo-list").append(`<a href="${obj.html_url}" class="list-group-item">${obj.full_name}</a>`);
                 if (obj.has_pages) {
-                    $(".pages-list").append("<a href=\"https://hiroto-k.github.io/" + obj.name + "/\" class=\"list-group-item\">" + obj.full_name + "</a>");
+                    $(".pages-list").append(`<a href="https://hiroto-k.github.io/${obj.name}" class="list-group-item">${obj.full_name}</a>`);
                 }
             });
         } else {
