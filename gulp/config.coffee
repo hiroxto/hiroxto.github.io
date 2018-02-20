@@ -1,6 +1,5 @@
 config =
   src :
-    coffee : "./assets-src/coffee/**/*.coffee"
     babel  : "./assets-src/js/**/*.js"
     scss   : "./assets-src/scss/**/*.scss"
     fonts  : [
