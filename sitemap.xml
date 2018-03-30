@@ -19,8 +19,20 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://hiroto-k.github.io/trysail-blog-notification/</loc>
+    <lastmod>2018-03-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://hiroto-k.github.io/trysail-blog-notification/plugin.html</loc>
+    <lastmod>2018-03-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
     <loc>https://hiroto-k.github.io/HkApps/</loc>
-    <lastmod>2016-10-01</lastmod>
+    <lastmod>2016-09-30</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -35,6 +47,12 @@
     <lastmod>2016-04-29</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://hiroto-k.github.io/Twitter-R4S/</loc>
+    <lastmod>2018-03-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
   </url>
   <url>
     <loc>https://hiroto-k.github.io/EncryptionHelper/</loc>
@@ -62,109 +80,109 @@
   </url>
   <url>
     <loc>https://hiroto-k.github.io/StringBuilder/</loc>
-    <lastmod>2017-04-22</lastmod>
+    <lastmod>2018-03-26</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://hiroto-k.github.io/StringBuilder/namespace-HirotoK.html</loc>
-    <lastmod>2017-04-22</lastmod>
+    <lastmod>2018-03-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://hiroto-k.github.io/StringBuilder/namespace-HirotoK.StringBuilder.html</loc>
-    <lastmod>2017-04-22</lastmod>
+    <lastmod>2018-03-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://hiroto-k.github.io/StringBuilder/class-HirotoK.StringBuilder.StringBuilder.html</loc>
-    <lastmod>2017-04-22</lastmod>
+    <lastmod>2018-03-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://hiroto-k.github.io/StringBuilder/class-HirotoK.StringBuilder.StringBuilderInterface.html</loc>
-    <lastmod>2017-04-22</lastmod>
+    <lastmod>2018-03-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://hiroto-k.github.io/StringBuilder/namespace-HirotoK.html</loc>
-    <lastmod>2017-04-22</lastmod>
+    <lastmod>2018-03-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://hiroto-k.github.io/StringBuilder/namespace-HirotoK.StringBuilder.html</loc>
-    <lastmod>2017-04-22</lastmod>
+    <lastmod>2018-03-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://hiroto-k.github.io/JSON5-php/</loc>
-    <lastmod>2016-09-17</lastmod>
+    <lastmod>2016-09-16</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://hiroto-k.github.io/JSON5-php/namespace-HirotoK.html</loc>
-    <lastmod>2016-09-17</lastmod>
+    <lastmod>2016-09-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://hiroto-k.github.io/JSON5-php/namespace-HirotoK.JSON5.html</loc>
-    <lastmod>2016-09-17</lastmod>
+    <lastmod>2016-09-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://hiroto-k.github.io/JSON5-php/namespace-HirotoK.JSON5.Exception.html</loc>
-    <lastmod>2016-09-17</lastmod>
+    <lastmod>2016-09-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://hiroto-k.github.io/JSON5-php/class-HirotoK.JSON5.JSON5.html</loc>
-    <lastmod>2016-09-17</lastmod>
+    <lastmod>2016-09-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://hiroto-k.github.io/JSON5-php/class-HirotoK.JSON5.Parser.html</loc>
-    <lastmod>2016-09-17</lastmod>
+    <lastmod>2016-09-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://hiroto-k.github.io/JSON5-php/class-HirotoK.JSON5.Exception.FileNotFoundException.html</loc>
-    <lastmod>2016-09-17</lastmod>
+    <lastmod>2016-09-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://hiroto-k.github.io/JSON5-php/class-HirotoK.JSON5.Exception.RuntimeException.html</loc>
-    <lastmod>2016-09-17</lastmod>
+    <lastmod>2016-09-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://hiroto-k.github.io/JSON5-php/namespace-HirotoK.html</loc>
-    <lastmod>2016-09-17</lastmod>
+    <lastmod>2016-09-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://hiroto-k.github.io/JSON5-php/namespace-HirotoK.JSON5.html</loc>
-    <lastmod>2016-09-17</lastmod>
+    <lastmod>2016-09-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://hiroto-k.github.io/JSON5-php/namespace-HirotoK.JSON5.Exception.html</loc>
-    <lastmod>2016-09-17</lastmod>
+    <lastmod>2016-09-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
