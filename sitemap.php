@@ -186,6 +186,18 @@ $sites = [
         'priority' => '0.8',
     ],
     [
+        'loc' => $siteMap->getUrl('/trysail-blog-notification/'),
+        'lastmod' => $siteMap->getLastModified('/trysail-blog-notification/'),
+        'changefreq' => 'yearly',
+        'priority' => '0.4',
+    ],
+    [
+        'loc' => $siteMap->getUrl('/trysail-blog-notification/plugin.html'),
+        'lastmod' => $siteMap->getLastModified('/trysail-blog-notification/plugin.html'),
+        'changefreq' => 'yearly',
+        'priority' => '0.4',
+    ],
+    [
         'loc' => $siteMap->getUrl('/HkApps/'),
         'lastmod' => $siteMap->getLastModified('/HkApps/'),
         'changefreq' => 'yearly',
@@ -202,6 +214,12 @@ $sites = [
         'lastmod' => $siteMap->getLastModified('/ShortURL/'),
         'changefreq' => 'yearly',
         'priority' => '0.5',
+    ],
+    [
+        'loc' => $siteMap->getUrl('/Twitter-R4S/'),
+        'lastmod' => $siteMap->getLastModified('/Twitter-R4S/'),
+        'changefreq' => 'yearly',
+        'priority' => '0.4',
     ],
     [
         'loc' => $siteMap->getUrl('/EncryptionHelper/'),
