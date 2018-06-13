@@ -247,7 +247,7 @@ $sites = [
     ],
 ];
 
-foreach (['StringBuilder', 'JSON5-php'] as $name) {
+foreach (['JSON5-php'] as $name) {
     $sites[] = [
         'loc' => $siteMap->getUrl("/$name/"),
         'lastmod' => $siteMap->getLastModified("/$name/"),
