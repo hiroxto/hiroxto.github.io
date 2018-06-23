@@ -2,6 +2,7 @@
 /.sass-cache/
 /node_modules/
 /vendor/
+package-lock.json
 npm-debug.log
 .DS_Store
 .DS_Store?
