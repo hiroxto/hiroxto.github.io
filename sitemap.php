@@ -198,6 +198,12 @@ $sites = [
         'priority' => '0.4',
     ],
     [
+        'loc' => $siteMap->getUrl('/console-wrapper/'),
+        'lastmod' => $siteMap->getLastModified('/console-wrapper/'),
+        'changefreq' => 'yearly',
+        'priority' => '0.6',
+    ],
+    [
         'loc' => $siteMap->getUrl('/HkApps/'),
         'lastmod' => $siteMap->getLastModified('/HkApps/'),
         'changefreq' => 'yearly',
