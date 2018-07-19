@@ -44,9 +44,9 @@ gulp.task "compile:vue", ->
       console.log(err.stack)
     )
     .pipe($.plumber())
-    .pipe($.sourcemaps.init())
     .pipe(source(config.dist.vue))
     .pipe(buffer())
+    .pipe($.sourcemaps.init())
     .pipe($.uglify())
     .pipe($.sourcemaps.write(config.map))
     .pipe(gulp.dest(config.dist.js));
