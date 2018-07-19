@@ -2,6 +2,12 @@ gulp   = require("gulp")
 config = require("../config")
 $      = config.plugins
 
+browserify = require('browserify')
+vueify = require('vueify')
+babelify = require('babelify')
+source = require('vinyl-source-stream')
+buffer = require('vinyl-buffer')
+
 gulp.task("compile", ["compile:babel", "compile:scss"])
 
 gulp.task "compile:babel", ["lint:es"], ->
@@ -22,3 +28,21 @@ gulp.task "compile:scss", ->
     .pipe($.cssmin())
     .pipe($.sourcemaps.write(config.map))
     .pipe(gulp.dest(config.dist.css))
+
+gulp.task "compile:vue", ->
+  browserify("app.js", {
+    debug: true,
+    extensions: ['.js', '.vue'],
+    transform: [
+      vueify,
+      babelify
+    ]
+  })
+  .bundle()
+  .on("error", (err) ->
+    console.log(err.message)
+    console.log(err.stack)
+  )
+  .pipe(source("app.js"))
+  .pipe(buffer())
+  .pipe(gulp.dest(config.dist.js));
