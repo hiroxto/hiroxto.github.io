@@ -7,6 +7,7 @@ vueify = require('vueify')
 babelify = require('babelify')
 source = require('vinyl-source-stream')
 buffer = require('vinyl-buffer')
+envify = require('envify/custom')
 
 gulp.task("compile", ["compile:babel", "compile:scss"])
 
@@ -38,6 +39,10 @@ gulp.task "compile:vue", ->
       babelify
     ]
   })
+    .transform(
+      { global: true },
+      envify({ NODE_ENV: 'production' })
+    )
     .bundle()
     .on("error", (err) ->
       console.log(err.message)
