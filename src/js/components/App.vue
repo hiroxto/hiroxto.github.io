@@ -6,12 +6,9 @@
 
             <h2>Links</h2>
             <div class='list-group'>
-                <a class='list-group-item' href='https://hiroto-k.net/'>Home Page</a>
-                <a class='list-group-item' href='https://hiroto-k.net/profile'>Profile</a>
-                <a class='list-group-item' href='https://hiroto-k.net/project'>Project</a>
-                <a class='list-group-item' href='http://hiroto-k.hatenablog.com/'>Blog (Programming)</a>
-                <a class='list-group-item' href='https://hiroto-k.github.io/blog/'>Blog (Train)</a>
-                <a class='list-group-item' href='https://hiroto-k.net/contact'>Contact</a>
+                <a v-for="(link, name) in links" class="list-group-item" :href="link">
+                    {{ name }}
+                </a>
             </div>
 
             <div v-if="!has_error">
@@ -45,6 +42,14 @@
         name: "App",
         data () {
             return {
+                links: {
+                    "Home Page": "https://hiroto-k.net/",
+                    "Profile": "https://hiroto-k.net/profile",
+                    "Project": "https://hiroto-k.net/project",
+                    "Blog (Programming)": "https://hiroto-k.hatenablog.com/",
+                    "Blog (Train)": "https://hiroto-k.github.io/blog/",
+                    "Contact": "https://hiroto-k.net/contact"
+                },
                 repos: [],
                 gh_pages: [],
                 has_error: false,
