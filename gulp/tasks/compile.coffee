@@ -30,7 +30,7 @@ gulp.task "compile:scss", ->
     .pipe(gulp.dest(config.dist.css))
 
 gulp.task "compile:vue", ->
-  browserify("app.js", {
+  browserify(config.src.vue, {
     debug: true,
     extensions: ['.js', '.vue'],
     transform: [
@@ -43,6 +43,6 @@ gulp.task "compile:vue", ->
     console.log(err.message)
     console.log(err.stack)
   )
-  .pipe(source("app.js"))
+  .pipe(source(config.dist.vue))
   .pipe(buffer())
   .pipe(gulp.dest(config.dist.js));
