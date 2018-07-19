@@ -14,8 +14,11 @@ gulp.task "compile:babel", ["lint:es"], ->
     .pipe(gulp.dest(config.dist.js))
 
 gulp.task "compile:scss", ->
-  $.sass(config.src.scss)
-  .pipe($.sourcemaps.init())
-  .pipe($.cssmin())
-  .pipe($.sourcemaps.write(config.map))
-  .pipe(gulp.dest(config.dist.css))
+  gulp
+    .src(config.src.scss)
+    .pipe($.plumber())
+    .pipe($.sourcemaps.init())
+    .pipe($.sass({outputStyle: 'expanded'}).on('error', $.sass.logError))
+    .pipe($.cssmin())
+    .pipe($.sourcemaps.write(config.map))
+    .pipe(gulp.dest(config.dist.css))
