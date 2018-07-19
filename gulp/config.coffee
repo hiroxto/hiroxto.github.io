@@ -26,10 +26,6 @@ config =
     eslint :
       configFile : ".eslintrc.yml"
 
-  plugins : require("gulp-load-plugins")({
-    rename :
-      "gulp-ruby-sass" : "sass"
-      "gulp-ruby-haml" : "haml"
-  })
+  plugins : require("gulp-load-plugins")()
 
 module.exports = config
