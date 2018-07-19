@@ -1,7 +1,7 @@
 config =
   src :
-    babel  : "./assets-src/js/**/*.js"
-    scss   : "./assets-src/scss/**/*.scss"
+    babel  : "./src/js/**/*.js"
+    scss   : "./src/scss/**/*.scss"
     fonts  : [
       "./node_modules/bootstrap-sass/assets/fonts/bootstrap/**"
       "./node_modules/font-awesome/fonts/**"
