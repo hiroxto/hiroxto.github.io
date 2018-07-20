@@ -47,6 +47,6 @@ gulp.task "compile:vue", ->
     .pipe(source(config.dist.vue))
     .pipe(buffer())
     .pipe($.if(!isProduction, $.sourcemaps.init()))
-    .pipe($.uglify())
+    .pipe($.if(isProduction, $.uglify()))
     .pipe($.if(!isProduction, $.sourcemaps.write(config.map)))
     .pipe(gulp.dest(config.dist.js));
