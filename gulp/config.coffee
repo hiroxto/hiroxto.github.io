@@ -1,4 +1,11 @@
+minimist = require("minimist")
+options = minimist(process.argv.slice(2))
+isProduction = options.env == 'production'
+
 config =
+  console_options: options
+  isProduction: isProduction
+
   src :
     scss   : "./src/scss/**/*.scss"
     fonts  : [
