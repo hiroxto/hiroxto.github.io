@@ -1,6 +1,7 @@
 gulp   = require("gulp")
 config = require("../config")
 $      = config.plugins
+isProduction = config.isProduction
 
 browserify = require('browserify')
 vueify = require('vueify')
@@ -22,7 +23,7 @@ gulp.task "compile:scss", ->
     .pipe(gulp.dest(config.dist.css))
 
 gulp.task "compile:vue", ->
-  browserify(config.src.vue, {
+  b = browserify(config.src.vue, {
     debug: true,
     extensions: ['.js', '.vue'],
     transform: [
@@ -30,11 +31,14 @@ gulp.task "compile:vue", ->
       babelify
     ]
   })
-    .transform(
+
+  if isProduction
+    b = b.transform(
       { global: true },
       envify({ NODE_ENV: 'production' })
     )
-    .bundle()
+
+  b.bundle()
     .on("error", (err) ->
       console.log(err.message)
       console.log(err.stack)
@@ -42,7 +46,7 @@ gulp.task "compile:vue", ->
     .pipe($.plumber())
     .pipe(source(config.dist.vue))
     .pipe(buffer())
-    .pipe($.sourcemaps.init())
+    .pipe($.if(!isProduction, $.sourcemaps.init()))
     .pipe($.uglify())
-    .pipe($.sourcemaps.write(config.map))
+    .pipe($.if(!isProduction, $.sourcemaps.write(config.map)))
     .pipe(gulp.dest(config.dist.js));
