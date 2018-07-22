@@ -1,27 +1,27 @@
 <template>
-    <div class='jumbotron'>
-        <div class='container'>
+    <div class="jumbotron">
+        <div class="container">
             <h1>Hiroto-K.github.io</h1>
-            <p>This is a web pages of <a href='https://github.com/Hiroto-K'>Hiroto-K</a>.</p>
+            <p>This is a web pages of <a href="https://github.com/Hiroto-K">Hiroto-K</a>.</p>
 
             <h2>Links</h2>
-            <div class='list-group'>
+            <div class="list-group">
                 <a v-for="(link, name) in links" class="list-group-item" :href="link">
                     {{ name }}
                 </a>
             </div>
 
             <div v-if="!has_error">
-                <h2>Public Repositories <span class='label label-primary'>{{ repos_length }}</span></h2>
+                <h2>Public Repositories <span class="label label-primary">{{ repos_length }}</span></h2>
 
-                <div class='list-group'>
+                <div class="list-group">
                     <a v-for="repo in repos" :key="repos.id" :href="repo.html_url" class="list-group-item">
                         {{ repo.full_name }}
                     </a>
                 </div>
 
-                <h2>GitHub Pages <span class='label label-primary'>{{ gh_pages_length }}</span></h2>
-                <div class='list-group'>
+                <h2>GitHub Pages <span class="label label-primary">{{ gh_pages_length }}</span></h2>
+                <div class="list-group">
                     <a v-for="gh_page in gh_pages" :key="gh_pages.id" :href="['https://hiroto-k.github.io/' + gh_page.name]" class="list-group-item">
                         {{ gh_page.full_name }}
                     </a>
@@ -30,7 +30,7 @@
             <div v-else>
                 <h2>Public Repositories</h2>
                 <h3>Error</h3>
-                <p class='text-warning'>Sorry, An error has occurred.</p>
+                <p class="text-warning">Sorry, An error has occurred.</p>
             </div>
 
         </div>
