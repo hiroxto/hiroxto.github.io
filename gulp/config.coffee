@@ -1,6 +1,12 @@
+minimist = require("minimist")
+options = minimist(process.argv.slice(2))
+isProduction = options.env == 'production'
+
 config =
+  console_options: options
+  isProduction: isProduction
+
   src :
-    babel  : "./src/js/**/*.js"
     scss   : "./src/scss/**/*.scss"
     fonts  : [
       "./node_modules/bootstrap-sass/assets/fonts/bootstrap/**"
@@ -11,11 +17,13 @@ config =
         "./node_modules/jquery/dist/jquery.min.js"
         "./node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js"
       ]
+    vue : "./src/js/app.js"
 
   dist :
     js    : "./assets/js"
     css   : "./assets/css"
     fonts : "./assets/fonts"
+    vue : "app.js"
 
   map : "./.map"
 
