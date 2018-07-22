@@ -45,8 +45,9 @@ gulp.task "compile:scss", ->
   gulp
     .src(config.src.scss)
     .pipe($.plumber())
-    .pipe($.sourcemaps.init())
-    .pipe($.sass({outputStyle: 'expanded'}).on('error', $.sass.logError))
-    .pipe($.cssmin())
-    .pipe($.sourcemaps.write(config.map))
+    .pipe($.if(!isProduction, $.sourcemaps.init()))
+    .pipe($.sass({outputStyle: 'expanded'})
+    .on('error', $.sass.logError))
+    .pipe($.if(isProduction, $.cssmin()))
+    .pipe($.if(!isProduction, $.sourcemaps.write(config.map)))
     .pipe(gulp.dest(config.dist.css))
