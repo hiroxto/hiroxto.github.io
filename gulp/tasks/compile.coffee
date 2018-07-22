@@ -12,16 +12,6 @@ envify = require('envify/custom')
 
 gulp.task("compile", ["compile:vue", "compile:scss"])
 
-gulp.task "compile:scss", ->
-  gulp
-    .src(config.src.scss)
-    .pipe($.plumber())
-    .pipe($.sourcemaps.init())
-    .pipe($.sass({outputStyle: 'expanded'}).on('error', $.sass.logError))
-    .pipe($.cssmin())
-    .pipe($.sourcemaps.write(config.map))
-    .pipe(gulp.dest(config.dist.css))
-
 gulp.task "compile:vue", ->
   b = browserify(config.src.vue, {
     debug: true,
@@ -50,3 +40,13 @@ gulp.task "compile:vue", ->
     .pipe($.if(isProduction, $.uglify()))
     .pipe($.if(!isProduction, $.sourcemaps.write(config.map)))
     .pipe(gulp.dest(config.dist.js));
+
+gulp.task "compile:scss", ->
+  gulp
+    .src(config.src.scss)
+    .pipe($.plumber())
+    .pipe($.sourcemaps.init())
+    .pipe($.sass({outputStyle: 'expanded'}).on('error', $.sass.logError))
+    .pipe($.cssmin())
+    .pipe($.sourcemaps.write(config.map))
+    .pipe(gulp.dest(config.dist.css))
