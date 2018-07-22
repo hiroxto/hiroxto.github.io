@@ -11,7 +11,7 @@ gulp.task "watch", ->
   )
 
 gulp.task "watch:vue", ->
-  $.watch(config.src.babel, -> gulp.start("compile:vue"))
+  $.watch(config.src.vue, -> gulp.start("compile:vue"))
 
 gulp.task "watch:scss", ->
   $.watch(config.src.scss, -> gulp.start("compile:scss"))
