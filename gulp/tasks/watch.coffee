@@ -4,14 +4,14 @@ $      = config.plugins
 
 gulp.task "watch", ->
   [
-    "babel"
+    "vue"
     "scss"
   ].forEach((name) ->
     gulp.start("watch:#{name}")
   )
 
-gulp.task "watch:babel", ->
-  $.watch(config.src.babel, -> gulp.start("compile:babel"))
+gulp.task "watch:vue", ->
+  $.watch(config.src.babel, -> gulp.start("compile:vue"))
 
 gulp.task "watch:scss", ->
   $.watch(config.src.scss, -> gulp.start("compile:scss"))
