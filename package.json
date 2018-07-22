@@ -35,7 +35,7 @@
     "lint": "gulp lint",
     "lint:es": "gulp lint:es",
     "watch": "gulp watch",
-    "watch:babel": "gulp watch:babel",
+    "watch:vue": "gulp watch:vue",
     "watch:scss": "gulp watch:scss"
   },
   "devDependencies": {
