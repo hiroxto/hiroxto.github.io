@@ -255,8 +255,8 @@ $sites = [
 
 foreach (['JSON5-php'] as $name) {
     $sites[] = [
-        'loc' => $siteMap->getUrl("/$name/"),
-        'lastmod' => $siteMap->getLastModified("/$name/"),
+        'loc' => $siteMap->getUrl("/${name}/"),
+        'lastmod' => $siteMap->getLastModified("/${name}/"),
         'changefreq' => 'yearly',
         'priority' => '0.6',
     ];
