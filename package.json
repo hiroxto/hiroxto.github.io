@@ -18,6 +18,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
+    "deploy": "gulp clean && gulp copy && gulp compile --env production && gulp lib --env production",
     "gulp": "gulp",
     "all": "gulp all",
     "clean": "gulp clean",
