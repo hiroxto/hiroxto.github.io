@@ -26,7 +26,7 @@ gulp.task("compile:vue", () => {
     });
 
     if (isProduction) {
-        browser = b.transform(
+        browser = browser.transform(
             {global: true},
             envify({NODE_ENV: 'production'})
         );
