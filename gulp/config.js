@@ -7,6 +7,7 @@ config = {
     isProduction: isProduction,
 
     src: {
+        js: "./sec/js/**/*.js",
         vue: "./src/js/app.js",
         scss: "./src/scss/**/*.scss",
         fonts: [
