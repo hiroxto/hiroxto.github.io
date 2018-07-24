@@ -9,6 +9,7 @@ config = {
     src: {
         js: "./sec/js/**/*.js",
         vue: "./src/js/app.js",
+        vue_watch: "./src/js/**/*.{js,vue}",
         scss: "./src/scss/**/*.scss",
         fonts: [
             "./node_modules/bootstrap-sass/assets/fonts/bootstrap/**",

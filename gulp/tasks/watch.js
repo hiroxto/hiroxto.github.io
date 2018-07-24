@@ -12,7 +12,7 @@ gulp.task("watch", () => {
 });
 
 gulp.task("watch:vue", () => {
-    $.watch(config.src.vue, () => {
+    $.watch(config.src.vue_watch, () => {
         gulp.start("compile:vue")
     });
 });
