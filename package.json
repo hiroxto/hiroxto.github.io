@@ -49,7 +49,7 @@
     "browserify": "^16.2.2",
     "del": "^3.0.0",
     "envify": "^4.1.0",
-    "eslint": "^5.1.0",
+    "eslint": "^5.2.0",
     "font-awesome": "^4.7.0",
     "gulp": "^3.9.1",
     "gulp-babel": "^7.0.1",
