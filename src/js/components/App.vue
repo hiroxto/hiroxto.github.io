@@ -22,7 +22,8 @@
 
                 <h2>GitHub Pages <span class="label label-primary">{{ gh_pages_length }}</span></h2>
                 <div class="list-group">
-                    <a v-for="gh_page in gh_pages" :key="gh_pages.id" :href="['https://hiroto-k.github.io/' + gh_page.name]" class="list-group-item">
+                    <a v-for="gh_page in gh_pages" :key="gh_pages.id"
+                       :href="['https://hiroto-k.github.io/' + gh_page.name]" class="list-group-item">
                         {{ gh_page.full_name }}
                     </a>
                 </div>
@@ -40,7 +41,7 @@
 <script>
     export default {
         name: "App",
-        data () {
+        data() {
             return {
                 links: {
                     "Home Page": "https://hiroto-k.net/",
@@ -64,35 +65,29 @@
             }
         },
         mounted: function () {
-            let repos = [], gh_pages = [], has_error = false;
-
-            let fetchPromise = fetch("https://api.github.com/users/Hiroto-K/repos?per_page=100").then(function (response) {
+            fetch("https://api.github.com/users/Hiroto-K/repos?per_page=100").then((response) => {
                 if (!response.ok) {
                     throw Error(response.statusText);
                 }
 
                 return response.json();
-            }).then(function (json) {
-                json.forEach(function (repo) {
-                    repos.push(repo);
+            }).then((json) => {
+                json.forEach((repo) => {
+                    this.repos.push(repo);
 
                     if (repo.has_pages) {
-                        gh_pages.push(repo);
+                        this.gh_pages.push(repo);
                     }
                 });
 
-                has_error = false;
-            }).catch(function (e) {
+                this.has_error = false;
+
+                return json;
+            }).catch((e) => {
                 console.log(e);
-                has_error = true;
+
+                this.has_error = true;
             });
-
-            Promise.all([fetchPromise]).then(() => {});
-
-            console.log(repos, gh_pages, has_error);
-            this.repos = repos;
-            this.gh_pages = gh_pages;
-            this.has_error = has_error;
         }
     }
 </script>
