@@ -52,6 +52,7 @@
     "eslint-config-standard": "^11.0.0",
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^3.8.0",
     "font-awesome": "^4.7.0",
     "gulp": "^3.9.1",
     "gulp-babel": "^7.0.1",
