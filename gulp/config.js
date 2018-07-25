@@ -12,13 +12,12 @@ config = {
         vue_watch: "./src/js/**/*.{js,vue}",
         scss: "./src/scss/**/*.scss",
         fonts: [
-            "./node_modules/bootstrap-sass/assets/fonts/bootstrap/**",
             "./node_modules/font-awesome/fonts/**",
         ],
         lib: {
             js: [
                 "./node_modules/jquery/dist/jquery.min.js",
-                "./node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js",
+                "./node_modules/bootstrap/dist/js/bootstrap.min.js",
             ]
         },
     },
