@@ -2,7 +2,7 @@
     <div class="jumbotron">
         <div class="container">
 
-            <h1 class="display-3">Hiroto-K.github.io</h1>
+            <h1>Hiroto-K.github.io</h1>
             <p class="lead">This is a web pages of <a href="https://github.com/Hiroto-K">Hiroto-K</a>.</p>
 
             <h2>Links</h2>
