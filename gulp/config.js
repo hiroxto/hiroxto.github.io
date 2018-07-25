@@ -38,7 +38,7 @@ config = {
 
     options: {
         eslint: {
-            configFile: ".eslintrc.yml",
+            configFile: ".eslintrc.js",
         },
     },
 
