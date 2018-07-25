@@ -15,22 +15,26 @@
             <hr>
 
             <div v-if="!has_error">
-                <h2>Public Repositories <span class="badge badge-primary">{{ repos_length }}</span></h2>
+                <div class="repos-list">
+                    <h2>Public Repositories <span class="badge badge-primary">{{ repos_length }}</span></h2>
 
-                <div class="list-group">
-                    <a v-for="repo in repos" :key="repos.id" :href="repo.html_url"
-                       class="list-group-item list-group-item-action">
-                        {{ repo.full_name }}
-                    </a>
+                    <div class="list-group">
+                        <a v-for="repo in repos" :key="repos.id" :href="repo.html_url"
+                           class="list-group-item list-group-item-action">
+                            {{ repo.full_name }}
+                        </a>
+                    </div>
                 </div>
 
-                <h2>GitHub Pages <span class="badge badge-primary">{{ gh_pages_length }}</span></h2>
-                <div class="list-group">
-                    <a v-for="gh_page in gh_pages" :key="gh_pages.id"
-                       :href="['https://hiroto-k.github.io/' + gh_page.name]"
-                       class="list-group-item list-group-item-action">
-                        {{ gh_page.full_name }}
-                    </a>
+                <div class="repos-list">
+                    <h2>GitHub Pages <span class="badge badge-primary">{{ gh_pages_length }}</span></h2>
+                    <div class="list-group">
+                        <a v-for="gh_page in gh_pages" :key="gh_pages.id"
+                           :href="['https://hiroto-k.github.io/' + gh_page.name]"
+                           class="list-group-item list-group-item-action">
+                            {{ gh_page.full_name }}
+                        </a>
+                    </div>
                 </div>
             </div>
             <div v-else>
@@ -98,4 +102,7 @@
 </script>
 
 <style scoped>
+    .repos-list {
+        margin-top: 1em;
+    }
 </style>
