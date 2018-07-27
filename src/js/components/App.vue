@@ -58,7 +58,6 @@
                     "Project": "https://hiroto-k.net/project",
                     "Blog (Programming)": "https://hiroto-k.hatenablog.com/",
                     "Blog (Train)": "https://hiroto-k.github.io/blog/",
-                    "Contact": "https://hiroto-k.net/contact"
                 },
                 repos: [],
                 gh_pages: [],
