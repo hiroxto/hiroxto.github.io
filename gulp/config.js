@@ -12,7 +12,7 @@ config = {
         vue_watch: "./src/js/**/*.{js,vue}",
         scss: "./src/scss/**/*.scss",
         fonts: [
-            "./node_modules/font-awesome/fonts/**",
+            // "./node_modules/font-awesome/fonts/**",
         ],
         lib: {
             js: [
