@@ -29,8 +29,6 @@
     "compile": "gulp compile",
     "compile:vue": "gulp compile:vue",
     "compile:scss": "gulp compile:scss",
-    "copy": "gulp copy",
-    "copy:font": "gulp copy:font",
     "lib": "gulp lib",
     "lib:js": "gulp lib:js",
     "lint": "gulp lint",
