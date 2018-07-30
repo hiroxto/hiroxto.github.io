@@ -7,7 +7,7 @@ config = {
     isProduction: isProduction,
 
     src: {
-        js: "./sec/js/**/*.js",
+        js: "./src/js/**/*.js",
         vue: "./src/js/app.js",
         vue_watch: "./src/js/**/*.{js,vue}",
         scss: "./src/scss/**/*.scss",
