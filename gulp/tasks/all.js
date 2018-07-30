@@ -1,3 +1,3 @@
 const gulp = require("gulp");
 
-gulp.task("all", ["clean", "compile", "lib", "copy"]);
+gulp.task("all", ["clean", "compile", "lib"]);
