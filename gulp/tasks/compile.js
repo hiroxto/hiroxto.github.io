@@ -3,12 +3,12 @@ const config = require("../config");
 const $ = config.plugins;
 const isProduction = config.isProduction;
 
-const browserify = require('browserify');
-const vueify = require('vueify');
-const babelify = require('babelify');
-const source = require('vinyl-source-stream');
-const buffer = require('vinyl-buffer');
-const envify = require('envify/custom');
+const browserify = require("browserify");
+const vueify = require("vueify");
+const babelify = require("babelify");
+const source = require("vinyl-source-stream");
+const buffer = require("vinyl-buffer");
+const envify = require("envify/custom");
 
 gulp.task("compile", [
     "compile:vue",
@@ -18,7 +18,7 @@ gulp.task("compile", [
 gulp.task("compile:vue", () => {
     let browser = browserify(config.src.vue, {
         debug: true,
-        extensions: ['.js', '.vue'],
+        extensions: [".js", ".vue"],
         transform: [
             vueify,
             babelify
@@ -28,7 +28,7 @@ gulp.task("compile:vue", () => {
     if (isProduction) {
         browser = browser.transform(
             {global: true},
-            envify({NODE_ENV: 'production'})
+            envify({NODE_ENV: "production"})
         );
     }
 
@@ -52,8 +52,8 @@ gulp.task("compile:scss", () => {
         .src(config.src.scss)
         .pipe($.plumber())
         .pipe($.if(!isProduction, $.sourcemaps.init()))
-        .pipe($.sass({outputStyle: 'expanded'})
-            .on('error', $.sass.logError))
+        .pipe($.sass({outputStyle: "expanded"})
+            .on("error", $.sass.logError))
         .pipe($.if(isProduction, $.cssmin()))
         .pipe($.if(!isProduction, $.sourcemaps.write(config.map)))
         .pipe(gulp.dest(config.dist.css));
