@@ -11,9 +11,6 @@ config = {
         vue: "./src/js/app.js",
         vue_watch: "./src/js/**/*.{js,vue}",
         scss: "./src/scss/**/*.scss",
-        fonts: [
-            // "./node_modules/font-awesome/fonts/**",
-        ],
         lib: {
             js: [
                 "./node_modules/jquery/dist/jquery.min.js",
@@ -25,7 +22,6 @@ config = {
     dist: {
         js: "./assets/js",
         css: "./assets/css",
-        fonts: "./assets/fonts",
         vue: "app.js",
     },
 
