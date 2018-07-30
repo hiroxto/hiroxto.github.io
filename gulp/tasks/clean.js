@@ -9,13 +9,13 @@ gulp.task("clean", [
 ]);
 
 gulp.task("clean:js", () => {
-    del([`${config.dist.js}/**/*.js`]);
+    del(`${config.dist.js}/**/*.js`);
 });
 
 gulp.task("clean:css", () => {
-    del([`${config.dist.css}/**/*.css`]);
+    del(`${config.dist.css}/**/*.css`);
 });
 
 gulp.task("clean:map", () => {
-    del(["./assets/**/.map"]);
+    del("./assets/**/.map");
 });
