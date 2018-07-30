@@ -23,7 +23,6 @@
     "clean": "gulp clean",
     "clean:js": "gulp clean:js",
     "clean:css": "gulp clean:css",
-    "clean:font": "gulp clean:font",
     "clean:map": "gulp clean:map",
     "compile": "gulp compile",
     "compile:vue": "gulp compile:vue",
