@@ -18,5 +18,6 @@ module.exports = {
         'semi': ['error', 'always'],
         'no-console': 'off',
         'no-new': 'off',
+        "vue/valid-v-for": "off",
     }
 };
