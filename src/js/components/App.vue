@@ -27,7 +27,7 @@
                 </div>
 
                 <div class="repos-list">
-                    <h2>GitHub Pages <span class="badge badge-primary">{{ gh_pages_length }}</span></h2>
+                    <h2>GitHub Pages <span class="badge badge-primary">{{ gitHubPagesLength }}</span></h2>
                     <div class="list-group">
                         <a v-for="gh_page in gitHubPages" :key="gitHubPages.id"
                            :href="['https://hiroto-k.github.io/' + gh_page.name]"
@@ -68,7 +68,7 @@
             repos_length: function () {
                 return this.repos.length
             },
-            gh_pages_length: function () {
+            gitHubPagesLength: function () {
                 return this.gitHubPages.length;
             }
         },
