@@ -29,7 +29,7 @@
                 <div class="repos-list">
                     <h2>GitHub Pages <span class="badge badge-primary">{{ gh_pages_length }}</span></h2>
                     <div class="list-group">
-                        <a v-for="gh_page in gh_pages" :key="gh_pages.id"
+                        <a v-for="gh_page in gitHubPages" :key="gitHubPages.id"
                            :href="['https://hiroto-k.github.io/' + gh_page.name]"
                            class="list-group-item list-group-item-action">
                             {{ gh_page.full_name }}
@@ -60,7 +60,7 @@
                     "Blog (Train)": "https://hiroto-k.github.io/blog/",
                 },
                 repos: [],
-                gh_pages: [],
+                gitHubPages: [],
                 has_error: false,
             };
         },
@@ -69,7 +69,7 @@
                 return this.repos.length
             },
             gh_pages_length: function () {
-                return this.gh_pages.length;
+                return this.gitHubPages.length;
             }
         },
         mounted: function () {
@@ -84,7 +84,7 @@
                     this.repos.push(repo);
 
                     if (repo.has_pages) {
-                        this.gh_pages.push(repo);
+                        this.gitHubPages.push(repo);
                     }
                 });
 
