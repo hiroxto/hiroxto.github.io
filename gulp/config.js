@@ -8,6 +8,10 @@ config = {
 
     src: {
         js: "./src/js/**/*.js",
+        vue: {
+            // src : dist
+            "./src/js/app.js": "app.js"
+        },
         old_vue: "./src/js/app.js",
         vue_watch: "./src/js/**/*.{js,vue}",
         scss: "./src/scss/**/*.scss",
