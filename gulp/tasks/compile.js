@@ -16,7 +16,7 @@ gulp.task("compile", [
 ]);
 
 gulp.task("compile:vue", () => {
-    let browser = browserify(config.src.vue, {
+    let browser = browserify(config.src.old_vue, {
         debug: true,
         extensions: [".js", ".vue"],
         transform: [
@@ -39,7 +39,7 @@ gulp.task("compile:vue", () => {
             console.log(err.stack);
         })
         .pipe($.plumber())
-        .pipe(source(config.dist.vue))
+        .pipe(source(config.dist.old_vue))
         .pipe(buffer())
         .pipe($.if(!isProduction, $.sourcemaps.init()))
         .pipe($.if(isProduction, $.uglify()))
