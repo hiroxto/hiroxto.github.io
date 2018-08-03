@@ -2,13 +2,13 @@ const gulp = require('gulp');
 const config = require('../config');
 const $ = config.plugins;
 
-gulp.task("watch", () => {
+gulp.task('watch', () => {
   [
-    "watch:vue",
-    "watch:scss",
-    "server",
+    'watch:vue',
+    'watch:scss',
+    'server'
   ].forEach((name) => {
-    gulp.start(name)
+    gulp.start(name);
   });
 });
 

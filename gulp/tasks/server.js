@@ -1,11 +1,11 @@
-const gulp = require("gulp");
-const config = require("../config");
+const gulp = require('gulp');
+const config = require('../config');
 const $ = config.plugins;
 
-gulp.task("server", () => {
+gulp.task('server', () => {
   $.connect.server({
     root: './',
     livereload: true,
-    port: 8888,
+    port: 8888
   });
 });
