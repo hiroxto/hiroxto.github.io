@@ -7,7 +7,7 @@
 
       <h2>Links</h2>
       <div class="list-group">
-        <a v-for="(link, name) in links" class="list-group-item list-group-item-action" :href="link">
+        <a v-for="(link, name, index) in links" :key="index" class="list-group-item list-group-item-action" :href="link">
           {{ name }}
         </a>
       </div>
