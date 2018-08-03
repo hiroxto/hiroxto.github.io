@@ -6,6 +6,6 @@ gulp.task("server", () => {
   $.connect.server({
     root: './',
     livereload: true,
-    port: 8888
+    port: 8888,
   });
 });
