@@ -8,7 +8,10 @@ config = {
 
     src: {
         js: "./src/js/**/*.js",
-        vue: "./src/js/app.js",
+        vue: {
+            // src : dist
+            "./src/js/app.js": "app.js"
+        },
         vue_watch: "./src/js/**/*.{js,vue}",
         scss: "./src/scss/**/*.scss",
         lib: {
@@ -22,7 +25,6 @@ config = {
     dist: {
         js: "./assets/js",
         css: "./assets/css",
-        vue: "app.js",
     },
 
     map: "./.map",

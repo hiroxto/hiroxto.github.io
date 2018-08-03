@@ -16,35 +16,41 @@ gulp.task("compile", [
 ]);
 
 gulp.task("compile:vue", () => {
-    let browser = browserify(config.src.vue, {
-        debug: true,
-        extensions: [".js", ".vue"],
-        transform: [
-            vueify,
-            babelify
-        ]
+    const vues = config.src.vue;
+
+    Object.keys(vues).forEach((src) => {
+        const dist = vues[src];
+
+        let browser = browserify(src, {
+            debug: true,
+            extensions: [".js", ".vue"],
+            transform: [
+                vueify,
+                babelify
+            ]
+        });
+
+        if (isProduction) {
+            browser = browser.transform(
+                {global: true},
+                envify({NODE_ENV: "production"})
+            );
+        }
+
+        browser
+            .bundle()
+            .on("error", (err) => {
+                console.log(err.message);
+                console.log(err.stack);
+            })
+            .pipe($.plumber())
+            .pipe(source(dist))
+            .pipe(buffer())
+            .pipe($.if(!isProduction, $.sourcemaps.init()))
+            .pipe($.if(isProduction, $.uglify()))
+            .pipe($.if(!isProduction, $.sourcemaps.write(config.map)))
+            .pipe(gulp.dest(config.dist.js));
     });
-
-    if (isProduction) {
-        browser = browser.transform(
-            {global: true},
-            envify({NODE_ENV: "production"})
-        );
-    }
-
-    browser
-        .bundle()
-        .on("error", (err) => {
-            console.log(err.message);
-            console.log(err.stack);
-        })
-        .pipe($.plumber())
-        .pipe(source(config.dist.vue))
-        .pipe(buffer())
-        .pipe($.if(!isProduction, $.sourcemaps.init()))
-        .pipe($.if(isProduction, $.uglify()))
-        .pipe($.if(!isProduction, $.sourcemaps.write(config.map)))
-        .pipe(gulp.dest(config.dist.js));
 });
 
 gulp.task("compile:scss", () => {
