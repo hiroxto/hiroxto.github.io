@@ -11,7 +11,6 @@
   m.parentNode.insertBefore(a, m);
 })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-/* eslint-disable */
-ga("create", "UA-73752623-2", "auto");
-ga("send", "pageview");
-/* eslint-enable */
+/* eslint-disable no-undef */
+ga('create', 'UA-73752623-2', 'auto');
+ga('send', 'pageview');
