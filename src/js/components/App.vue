@@ -49,31 +49,31 @@
 
 <script>
   export default {
-    name: "App",
+    name: 'App',
     data() {
       return {
         links: {
-          "Home Page": "https://hiroto-k.net/",
-          "Profile": "https://hiroto-k.net/profile",
-          "Project": "https://hiroto-k.net/project",
-          "Blog (Programming)": "https://hiroto-k.hatenablog.com/",
-          "Blog (Train)": "https://hiroto-k.github.io/blog/",
+          'Home Page': 'https://hiroto-k.net/',
+          'Profile': 'https://hiroto-k.net/profile',
+          'Project': 'https://hiroto-k.net/project',
+          'Blog (Programming)': 'https://hiroto-k.hatenablog.com/',
+          'Blog (Train)': 'https://hiroto-k.github.io/blog/'
         },
         repos: [],
         gitHubPages: [],
-        hasError: false,
+        hasError: false
       };
     },
     computed: {
       reposLength: function () {
-        return this.repos.length
+        return this.repos.length;
       },
       gitHubPagesLength: function () {
         return this.gitHubPages.length;
       }
     },
     mounted: function () {
-      fetch("https://api.github.com/users/Hiroto-K/repos?per_page=100").then((response) => {
+      fetch('https://api.github.com/users/Hiroto-K/repos?per_page=100').then((response) => {
         if (!response.ok) {
           throw Error(response.statusText);
         }
@@ -97,7 +97,7 @@
         this.hasError = true;
       });
     }
-  }
+  };
 </script>
 
 <style scoped>
