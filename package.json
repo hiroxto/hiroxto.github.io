@@ -68,7 +68,7 @@
     "require-dir": "^1.0.0",
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0",
-    "vue": "^2.5.16",
+    "vue": "^2.5.17",
     "vueify": "^9.4.1"
   }
 }
