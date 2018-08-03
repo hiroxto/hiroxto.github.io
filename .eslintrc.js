@@ -19,5 +19,6 @@ module.exports = {
         'no-console': 'off',
         'no-new': 'off',
         "vue/valid-v-for": "off",
+        "vue/script-indent": ["error", 2, {"baseIndent": 1}]
     }
 };
