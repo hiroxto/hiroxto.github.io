@@ -4,10 +4,11 @@ const $ = config.plugins;
 
 gulp.task("watch", () => {
     [
-        "vue",
-        "scss",
+        "watch:vue",
+        "watch:scss",
+        "server",
     ].forEach((name) => {
-        gulp.start(`watch:${name}`)
+        gulp.start(name)
     });
 });
 
