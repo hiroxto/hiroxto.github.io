@@ -16,7 +16,7 @@
 
             <div v-if="!has_error">
                 <div class="repos-list">
-                    <h2>Public Repositories <span class="badge badge-primary">{{ repos_length }}</span></h2>
+                    <h2>Public Repositories <span class="badge badge-primary">{{ reposLength }}</span></h2>
 
                     <div class="list-group">
                         <a v-for="repo in repos" :key="repos.id" :href="repo.html_url"
@@ -65,7 +65,7 @@
             };
         },
         computed: {
-            repos_length: function () {
+            reposLength: function () {
                 return this.repos.length
             },
             gitHubPagesLength: function () {
