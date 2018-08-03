@@ -12,7 +12,6 @@ module.exports = {
     ],
     rules: {
         'semi': ['error', 'always'],
-        'generator-star-spacing': 'off',
         'no-console': 'off',
         'no-new': 'off',
     }
