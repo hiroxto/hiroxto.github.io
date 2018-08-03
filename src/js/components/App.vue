@@ -14,7 +14,7 @@
 
             <hr>
 
-            <div v-if="!has_error">
+            <div v-if="!hasError">
                 <div class="repos-list">
                     <h2>Public Repositories <span class="badge badge-primary">{{ reposLength }}</span></h2>
 
@@ -61,7 +61,7 @@
                 },
                 repos: [],
                 gitHubPages: [],
-                has_error: false,
+                hasError: false,
             };
         },
         computed: {
@@ -88,13 +88,13 @@
                     }
                 });
 
-                this.has_error = false;
+                this.hasError = false;
 
                 return json;
             }).catch((e) => {
                 console.log(e);
 
-                this.has_error = true;
+                this.hasError = true;
             });
         }
     }
