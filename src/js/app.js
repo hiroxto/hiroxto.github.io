@@ -4,6 +4,6 @@ import App from './components/App';
 require("./google-analytics");
 
 new Vue({
-    el: '#app',
-    render: h => h(App)
+  el: '#app',
+  render: h => h(App)
 });
