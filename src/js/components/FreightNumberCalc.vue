@@ -50,8 +50,8 @@
       };
     },
     methods: {
-      changeInput: function (){
-        this.updateType(this.freightNumber)
+      changeInput: function () {
+        this.updateType(this.freightNumber);
       },
       updateType: function (number) {
         if (number === null || number === '') {
@@ -115,7 +115,7 @@
       },
       splitNumber: function (number) {
         return number.toString().padStart(4, '0').split('').map((s) => parseInt(s));
-      }
+      },
     },
   };
 </script>
