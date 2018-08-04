@@ -83,23 +83,25 @@
           isSpecial = true;
         }
 
-        // Checks 高速貨A,B
         if (splitNumber[1] === 0) {
+          // Checks 高速貨A,B
+
           let ab = (splitNumber[2] <= 6) ? 'A' : 'B';
           type = isSpecial ? `臨高速貨${ab}` : `高速貨${ab}`;
-        }
-        // Checks 高速貨C
-        else if (splitNumber[1] === 1 && splitNumber[2] === 5) {
+        } else if (splitNumber[1] === 1 && splitNumber[2] === 5) {
+          // Checks 高速貨C
+
           type = isSpecial ? '臨高速貨C' : '高速貨C';
-        }
-        // Checks 専貨A
-        else if (splitNumber[2] >= 6 && splitNumber[2] <= 8) {
+        } else if (splitNumber[2] >= 6 && splitNumber[2] <= 8) {
+          // Checks 専貨A
+
           type = isSpecial ? '臨専貨A' : '専貨A';
-        }
-        // Checks 専貨B
-        else if (splitNumber[2] === 9) {
+        } else if (splitNumber[2] === 9) {
+          // Checks 専貨B
+
           type = isSpecial ? '臨専貨B' : '専貨B';
         } else {
+          // Undefined
           type = '不明';
         }
 
