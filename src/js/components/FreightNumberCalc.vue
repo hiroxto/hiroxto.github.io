@@ -8,7 +8,7 @@
       <div v-if="errors.length">
         <div class="alert alert-warning" role="alert">
           <ul>
-            <li v-for="error in errors">
+            <li v-for="(error, index) in errors" :key="index">
               {{ error }}
             </li>
           </ul>
