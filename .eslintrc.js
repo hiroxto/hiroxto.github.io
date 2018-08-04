@@ -5,7 +5,7 @@ module.exports = {
   },
   env: {
     browser: true,
-    node: true,
+    node: true
   },
   extends: [
     'plugin:vue/essential',
@@ -19,8 +19,8 @@ module.exports = {
     'no-console': 'off',
     'no-new': 'off',
     'indent': ['error', 2],
-    "vue/valid-v-for": "off",
-    "vue/script-indent": ["error", 2, {baseIndent: 1, switchCase: 1}]
+    'vue/valid-v-for': 'off',
+    'vue/script-indent': ['error', 2, {baseIndent: 1, switchCase: 1}]
   },
   'overrides': [
     {
@@ -29,5 +29,5 @@ module.exports = {
         'indent': 'off'
       }
     }
-  ],
+  ]
 };
