@@ -76,8 +76,35 @@
       },
       getType: function (number) {
         const splitNumber = number.toString().padStart(4, "0").split('').map((s) => parseInt(s));
+        let type = "", isSpecial = false;
 
-        return '種別';
+        // 臨時列車 (6000 以上)
+        if (splitNumber[0] >= 6) {
+          isSpecial = true;
+        }
+
+        // Checks 高速貨A,B
+        if (splitNumber[1] === 0){
+          let ab = (splitNumber[2] <= 6) ? "A" : "B";
+          type = isSpecial ? `臨高速貨${ab}` : `高速貨${ab}`;
+        }
+        // Checks 高速貨C
+        else if (splitNumber[1] === 1 && splitNumber[2] === 5){
+          type = isSpecial ? "臨高速貨C" : "高速貨C";
+        }
+        // Checks 専貨A
+        else if (splitNumber[2] >= 6 && splitNumber[2] <= 8){
+          type = isSpecial ? "臨専貨A" : "専貨A";
+        }
+        // Checks 専貨B
+        else if (splitNumber[2] === 9){
+          type = isSpecial ? "臨専貨B" : "専貨B";
+        }
+        else {
+          type = "不明";
+        }
+
+        return type;
       },
     },
   };
