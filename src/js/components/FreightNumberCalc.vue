@@ -95,7 +95,7 @@
 
           let ab = (splitNumber[2] <= 6) ? 'A' : 'B';
           type = isSpecial ? `臨高速貨${ab}` : `高速貨${ab}`;
-        } else if (splitNumber[1] === 1 && splitNumber[2] === 5) {
+        } else if (splitNumber[0] === 1 && splitNumber[2] === 5) {
           // Checks 高速貨C
 
           type = isSpecial ? '臨高速貨C' : '高速貨C';
