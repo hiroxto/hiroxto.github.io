@@ -5,16 +5,7 @@
       <h1>貨物列車 種別計算</h1>
       <p class="lead">2〜4ケタの列番から列車種別を計算。現在は貨物列車の列番のみの対応です。旅客列車の種別計算は少々お待ち下さい。</p>
 
-      <div v-if="errors.length">
-        <div class="alert alert-warning" role="alert">
-          <ul>
-            <li v-for="(error, index) in errors" :key="index">
-              {{ error }}
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div v-else-if="freightType !== null">
+      <div v-if="freightType !== null">
         <div class="alert alert-info" role="alert">
           {{ freightType }}
         </div>
@@ -27,11 +18,20 @@
             v-model.number="freightNumber"
             v-on:keyup="changeInput"
             v-on:keydown="changeInput"
+            :class="{'is-invalid': errors.length !== 0, 'is-valid': errors.length === 0}"
             type="number"
             class="form-control"
             id="freightNumber"
             placeholder="列車番号"
           >
+          <div
+            v-if="errors.length !== 0"
+            v-for="(error, index) in errors"
+            :key="index"
+            class="invalid-feedback"
+          >
+            {{ error }}
+          </div>
         </div>
       </form>
 
@@ -61,6 +61,7 @@
         const valid = this.validateNumber(number);
 
         if (valid === false) {
+          this.freightType = null;
           return;
         }
 
