@@ -13,7 +13,7 @@ let config = {
       './src/js/app.js': 'app.js'
     },
     vue_watch: './src/js/**/*.{js,vue}',
-    es_lint: './src/js/**/*.{js,vue}',
+    eslint: './src/js/**/*.{js,vue}',
     scss: './src/scss/**/*.scss',
     lib: {
       js: [
