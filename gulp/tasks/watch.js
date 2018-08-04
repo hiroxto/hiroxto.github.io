@@ -6,7 +6,7 @@ gulp.task('watch', () => {
   [
     'watch:vue',
     'watch:scss',
-    'server'
+    'server',
   ].forEach((name) => {
     gulp.start(name);
   });

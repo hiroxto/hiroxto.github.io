@@ -10,7 +10,7 @@ let config = {
     js: './src/js/**/*.js',
     vue: {
       // src : dist
-      './src/js/app.js': 'app.js'
+      './src/js/app.js': 'app.js',
     },
     vue_watch: './src/js/**/*.{js,vue}',
     eslint: './src/js/**/*.{js,vue}',
@@ -18,29 +18,29 @@ let config = {
     lib: {
       js: [
         './node_modules/jquery/dist/jquery.min.js',
-        './node_modules/bootstrap/dist/js/bootstrap.min.js'
-      ]
-    }
+        './node_modules/bootstrap/dist/js/bootstrap.min.js',
+      ],
+    },
   },
 
   dist: {
     js: './assets/js',
-    css: './assets/css'
+    css: './assets/css',
   },
 
   map: './.map',
 
   lib: {
-    js: 'lib.js'
+    js: 'lib.js',
   },
 
   options: {
     eslint: {
-      configFile: '.eslintrc.js'
-    }
+      configFile: '.eslintrc.js',
+    },
   },
 
-  plugins: require('gulp-load-plugins')()
+  plugins: require('gulp-load-plugins')(),
 };
 
 module.exports = config;

@@ -5,7 +5,7 @@ const config = require('../config');
 gulp.task('clean', [
   'clean:js',
   'clean:css',
-  'clean:map'
+  'clean:map',
 ]);
 
 gulp.task('clean:js', () => {

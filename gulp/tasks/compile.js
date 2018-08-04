@@ -12,7 +12,7 @@ const envify = require('envify/custom');
 
 gulp.task('compile', [
   'compile:vue',
-  'compile:scss'
+  'compile:scss',
 ]);
 
 gulp.task('compile:vue', () => {
@@ -26,8 +26,8 @@ gulp.task('compile:vue', () => {
       extensions: ['.js', '.vue'],
       transform: [
         vueify,
-        babelify
-      ]
+        babelify,
+      ],
     });
 
     if (isProduction) {
