@@ -55,6 +55,7 @@
       },
       updateType: function (number) {
         if (number === null || number === '') {
+          this.freightType = null;
           return null;
         }
 
