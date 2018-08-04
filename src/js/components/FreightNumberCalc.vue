@@ -25,6 +25,8 @@
           <label for="freightNumber">列車番号 (2〜4ケタの数字)</label>
           <input
             v-model.number="freightNumber"
+            v-on:keyup="calcNumber(freightNumber)"
+            v-on:keydown="calcNumber(freightNumber)"
             type="number"
             class="form-control"
             id="freightNumber"
@@ -44,12 +46,8 @@
       return {
         errors: [],
         freightNumber: null,
+        freightType: null,
       }
-    },
-    computed: {
-      freightType: function () {
-        return this.calcNumber(this.freightNumber);
-      },
     },
     methods: {
       calcNumber: function (number) {
@@ -59,11 +57,11 @@
 
         const valid = this.validateNumber(number);
 
-        if (valid === false){
+        if (valid === false) {
           return;
         }
 
-        return this.getType(number);
+        this.freightType = this.getType(number);
       },
       validateNumber: function (number) {
         this.errors = [];
