@@ -75,7 +75,7 @@
         return this.errors.length === 0;
       },
       getType: function (number) {
-        const splitNumber = number.toString().padStart(4, '0').split('').map((s) => parseInt(s));
+        const splitNumber = this.splitNumber(number);
         let type = ''; let isSpecial = false;
 
         // 臨時列車 (6000 以上)
