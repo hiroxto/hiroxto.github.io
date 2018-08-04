@@ -51,9 +51,9 @@
     },
     methods: {
       changeInput: function (){
-        this.calcNumber(this.freightNumber)
+        this.updateType(this.freightNumber)
       },
-      calcNumber: function (number) {
+      updateType: function (number) {
         if (number === null || number === '') {
           return null;
         }
