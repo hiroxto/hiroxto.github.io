@@ -107,6 +107,9 @@
 
         return type;
       },
+      splitNumber: function (number) {
+        return number.toString().padStart(4, '0').split('').map((s) => parseInt(s));
+      }
     },
   };
 </script>
