@@ -71,7 +71,7 @@
           this.errors.push('入力された数が整数ではありません。');
         } else if (number < 50 || number > 9999) {
           this.errors.push('入力された数の範囲が貨物列車の列車番号ではありません。');
-        } else if (splitNumber[2] <= 5) {
+        } else if (splitNumber[2] < 5) {
           this.errors.push('入力された数の範囲が貨物列車の列車番号ではありません。');
         }
 
