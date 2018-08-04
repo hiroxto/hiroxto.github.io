@@ -1,18 +1,18 @@
 module.exports = {
   root: true,
   parserOptions: {
-    parser: 'babel-eslint'
+    parser: 'babel-eslint',
   },
   env: {
     browser: true,
-    node: true
+    node: true,
   },
   extends: [
     'plugin:vue/essential',
-    'standard'
+    'standard',
   ],
   plugins: [
-    'vue'
+    'vue',
   ],
   rules: {
     'comma-dangle': ['error', 'always-multiline'],
@@ -21,14 +21,14 @@ module.exports = {
     'no-new': 'off',
     'indent': ['error', 2],
     'vue/valid-v-for': 'off',
-    'vue/script-indent': ['error', 2, {baseIndent: 1, switchCase: 1}]
+    'vue/script-indent': ['error', 2, {baseIndent: 1, switchCase: 1}],
   },
   'overrides': [
     {
       'files': ['*.vue'],
       'rules': {
-        'indent': 'off'
-      }
-    }
-  ]
+        'indent': 'off',
+      },
+    },
+  ],
 };
