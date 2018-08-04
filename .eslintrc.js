@@ -15,6 +15,7 @@ module.exports = {
     'vue'
   ],
   rules: {
+    'comma-dangle': ['error', 'always-multiline'],
     'semi': ['error', 'always'],
     'no-console': 'off',
     'no-new': 'off',
