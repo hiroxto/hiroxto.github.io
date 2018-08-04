@@ -63,7 +63,7 @@
           return;
         }
 
-        return '種別';
+        return this.getType(number);
       },
       validateNumber: function (number) {
         this.errors = [];
@@ -77,6 +77,11 @@
 
         return this.errors.length === 0;
       },
+      getType: function (number) {
+        const splitNumber = number.toString().split('').map((s) => parseInt(s));
+
+        return '種別';
+      }
     }
   };
 </script>
