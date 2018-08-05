@@ -18,7 +18,7 @@
             v-model.number="freightNumber"
             v-on:keyup="changeInput"
             v-on:keydown="changeInput"
-            :class="{'is-invalid': errors.length !== 0, 'is-valid': errors.length === 0}"
+            :class="[errors.length === 0 ? 'is-valid' : 'is-invalid']"
             type="number"
             class="form-control"
             id="freightNumber"
