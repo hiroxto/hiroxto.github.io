@@ -16,8 +16,8 @@
           <label for="freightNumber">列車番号 (2〜4ケタの数字)</label>
           <input
             v-model.number="freightNumber"
-            v-on:keyup="changeInput"
-            v-on:keydown="changeInput"
+            @keyup="changeInput"
+            @keydown="changeInput"
             :class="[errors.length === 0 ? 'is-valid' : 'is-invalid']"
             type="number"
             class="form-control"
