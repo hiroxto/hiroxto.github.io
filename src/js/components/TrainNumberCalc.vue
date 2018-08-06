@@ -133,19 +133,19 @@
           // Checks 高速貨A,B
 
           let ab = (splitNumber[2] <= 6) ? 'A' : 'B';
-          type = this.isSpecial ? `臨高速貨${ab}` : `高速貨${ab}`;
-        } else if ((splitNumber[0] <= 1 || this.isSpecial) && splitNumber[2] === 5) {
+          type = this.isFreightSpecial ? `臨高速貨${ab}` : `高速貨${ab}`;
+        } else if ((splitNumber[0] <= 1 || this.isFreightSpecial) && splitNumber[2] === 5) {
           // Checks 高速貨C
 
-          type = this.isSpecial ? '臨高速貨C' : '高速貨C';
+          type = this.isFreightSpecial ? '臨高速貨C' : '高速貨C';
         } else if (splitNumber[2] >= 6 && splitNumber[2] <= 8) {
           // Checks 専貨A
 
-          type = this.isSpecial ? '臨専貨A' : '専貨A';
+          type = this.isFreightSpecial ? '臨専貨A' : '専貨A';
         } else if (splitNumber[2] === 9) {
           // Checks 専貨B
 
-          type = this.isSpecial ? '臨専貨B' : '専貨B';
+          type = this.isFreightSpecial ? '臨専貨B' : '専貨B';
         } else {
           // Undefined
           type = '不明';
