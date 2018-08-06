@@ -15,7 +15,7 @@
         <div class="form-group">
           <label for="freightNumber">列車番号 (2〜4ケタの数字)</label>
           <input
-            v-model.number="freightNumber"
+            v-model.number="trainNumber"
             @keyup="changeInput"
             @keydown="changeInput"
             :class="[errors.length === 0 ? 'is-valid' : 'is-invalid']"
@@ -45,13 +45,13 @@
     data () {
       return {
         errors: [],
-        freightNumber: null,
+        trainNumber: null,
         freightType: null,
       };
     },
     methods: {
       changeInput: function () {
-        this.updateType(this.freightNumber);
+        this.updateType(this.trainNumber);
       },
       updateType: function (number) {
         if (number === null || number === '') {
