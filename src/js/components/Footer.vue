@@ -12,9 +12,13 @@
     data () {
       return {
         sinceYear: '2015',
-        currentYear: '2018',
       };
     },
+    computed: {
+      currentYear: function () {
+        return (new Date()).getFullYear().toString();
+      },
+    }
   };
 </script>
 
