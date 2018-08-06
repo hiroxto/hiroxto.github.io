@@ -84,8 +84,12 @@
         return this.errors.length === 0;
       },
       getType: function (number) {
+        return this.getFreightType(number);
+      },
+      getFreightType: function (number) {
         const splitNumber = this.splitNumber(number);
-        let type = ''; let isSpecial = false;
+        let type = '';
+        let isSpecial = false;
 
         // 臨時列車 (6000 以上)
         if (splitNumber[0] >= 6) {
