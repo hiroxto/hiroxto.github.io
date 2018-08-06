@@ -2,8 +2,8 @@
   <div class="jumbotron">
     <div class="container">
 
-      <h1>貨物列車 種別計算</h1>
-      <p class="lead">2〜4ケタの列番から列車種別を計算。現在は貨物列車の列番のみの対応です。旅客列車の種別計算は少々お待ち下さい。</p>
+      <h1>列車番号から種別計算</h1>
+      <p class="lead">1〜4ケタの列番から列車種別を計算。</p>
 
       <div v-if="trainType !== null">
         <div class="alert alert-info" role="alert">
@@ -13,7 +13,7 @@
 
       <form>
         <div class="form-group">
-          <label for="freightNumber">列車番号 (2〜4ケタの数字)</label>
+          <label for="freightNumber">列車番号 (1〜4ケタの数字)</label>
           <input
             v-model.number="trainNumber"
             @keyup="changeInput"
