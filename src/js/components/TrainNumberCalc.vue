@@ -62,16 +62,18 @@
           return null;
         }
 
-        const valid = this.validateNumber(number);
+        const valid = this.validateNumber();
 
         if (valid === false) {
           this.trainType = null;
           return;
         }
 
-        this.trainType = this.getType(number);
+        this.trainType = this.getType();
       },
-      validateNumber: function (number) {
+      validateNumber: function () {
+        const number = this.trainNumber;
+
         this.errors = [];
 
         if (!Number.isInteger(number)) {
@@ -82,7 +84,8 @@
 
         return this.errors.length === 0;
       },
-      getType: function (number) {
+      getType: function () {
+        const number = this.trainNumber;
         const splitNumber = this.splitNumber(number);
         const isPassengerNumber = splitNumber[2] < 5;
 
