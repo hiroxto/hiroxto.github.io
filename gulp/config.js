@@ -11,7 +11,7 @@ let config = {
     vue: {
       // src : dist
       './src/js/app.js': 'app.js',
-      './src/js/freight-number-calc.js': 'freight-number-calc.js',
+      './src/js/train-number-calc.js': 'train-number-calc.js',
     },
     vue_watch: './src/js/**/*.{js,vue}',
     eslint: './src/js/**/*.{js,vue}',
