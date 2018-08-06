@@ -99,20 +99,17 @@
         if (splitNumber[1] === 0) {
           // Check 特急客
 
-          type = isSpecial ? "臨特急客" : "特急客";
-        }
-        else if ((splitNumber[0] !== 0 || splitNumber[1] !== 0) && splitNumber[2] <= 1) {
+          type = isSpecial ? '臨特急客' : '特急客';
+        } else if ((splitNumber[0] !== 0 || splitNumber[1] !== 0) && splitNumber[2] <= 1) {
           // Checks 急客
 
-          type = isSpecial ? "臨急客" : "急客";
-        }
-        else if (splitNumber[1] !== 0 && splitNumber[2] >= 2) {
+          type = isSpecial ? '臨急客' : '急客';
+        } else if (splitNumber[1] !== 0 && splitNumber[2] >= 2) {
           // Checks 客
 
-          type = isSpecial ? "臨客" : "客";
-        }
-        else {
-          type = "不明";
+          type = isSpecial ? '臨客' : '客';
+        } else {
+          type = '不明';
         }
 
         return type;
