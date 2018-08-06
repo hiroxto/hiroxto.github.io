@@ -8,7 +8,12 @@
 
         <h2>Links</h2>
         <div class="list-group">
-          <a v-for="(link, name, index) in links" :key="index" class="list-group-item list-group-item-action" :href="link">
+          <a
+            v-for="(link, name, index) in links"
+            :key="index"
+            :href="link"
+            class="list-group-item list-group-item-action"
+          >
             {{ name }}
           </a>
         </div>
@@ -20,8 +25,12 @@
             <h2>Public Repositories <span class="badge badge-primary">{{ reposLength }}</span></h2>
 
             <div class="list-group">
-              <a v-for="repo in repos" :key="repos.id" :href="repo.html_url"
-                 class="list-group-item list-group-item-action">
+              <a
+                v-for="repo in repos"
+                :key="repos.id"
+                :href="repo.html_url"
+                class="list-group-item list-group-item-action"
+              >
                 {{ repo.full_name }}
               </a>
             </div>
@@ -30,9 +39,11 @@
           <div class="repos-list">
             <h2>GitHub Pages <span class="badge badge-primary">{{ gitHubPagesLength }}</span></h2>
             <div class="list-group">
-              <a v-for="gh_page in gitHubPages" :key="gitHubPages.id"
-                 :href="['https://hiroto-k.github.io/' + gh_page.name]"
-                 class="list-group-item list-group-item-action">
+              <a
+                v-for="gh_page in gitHubPages"
+                :key="gitHubPages.id"
+                :href="['https://hiroto-k.github.io/' + gh_page.name]"
+                class="list-group-item list-group-item-action">
                 {{ gh_page.full_name }}
               </a>
             </div>
