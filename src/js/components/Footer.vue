@@ -18,7 +18,7 @@
       currentYear: function () {
         return (new Date()).getFullYear().toString();
       },
-    }
+    },
   };
 </script>
 
