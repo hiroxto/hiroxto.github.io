@@ -71,14 +71,11 @@
       },
       validateNumber: function (number) {
         this.errors = [];
-        const splitNumber = this.splitNumber(number);
 
         if (!Number.isInteger(number)) {
           this.errors.push('入力された数が整数ではありません。');
-        } else if (number < 50 || number > 9999) {
-          this.errors.push('入力された数の範囲が貨物列車の列車番号ではありません。');
-        } else if (splitNumber[2] < 5) {
-          this.errors.push('入力された数の範囲が貨物列車の列車番号ではありません。');
+        } else if (number < 1 || number > 9999) {
+          this.errors.push('入力された数が列車番号の範囲ではありません。');
         }
 
         return this.errors.length === 0;
