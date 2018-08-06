@@ -59,6 +59,7 @@
         if (number === null || number === '') {
           this.trainType = null;
           this.errors = [];
+
           return null;
         }
 
@@ -66,6 +67,7 @@
 
         if (valid === false) {
           this.trainType = null;
+
           return;
         }
 
