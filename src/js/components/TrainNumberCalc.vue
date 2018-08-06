@@ -1,41 +1,45 @@
 <template>
-  <div class="jumbotron">
-    <div class="container">
+  <div>
+    <div class="jumbotron">
+      <div class="container">
 
-      <h1>列車番号から種別計算</h1>
-      <p class="lead">1〜4ケタの列番から列車種別を計算。</p>
+        <h1>列車番号から種別計算</h1>
+        <p class="lead">1〜4ケタの列番から列車種別を計算。</p>
 
-      <div v-if="trainType !== null">
-        <div class="alert alert-info" role="alert">
-          {{ trainType }}
-        </div>
-      </div>
-
-      <form>
-        <div class="form-group">
-          <label for="freightNumber">列車番号 (1〜4ケタの数字)</label>
-          <input
-            v-model.number="trainNumber"
-            @keyup="changeInput"
-            @keydown="changeInput"
-            :class="[errors.length === 0 ? 'is-valid' : 'is-invalid']"
-            type="number"
-            class="form-control"
-            id="freightNumber"
-            placeholder="列車番号"
-          >
-          <div
-            v-if="errors.length !== 0"
-            v-for="(error, index) in errors"
-            :key="index"
-            class="invalid-feedback"
-          >
-            {{ error }}
+        <div v-if="trainType !== null">
+          <div class="alert alert-info" role="alert">
+            {{ trainType }}
           </div>
         </div>
-      </form>
 
+        <form>
+          <div class="form-group">
+            <label for="freightNumber">列車番号 (1〜4ケタの数字)</label>
+            <input
+              v-model.number="trainNumber"
+              @keyup="changeInput"
+              @keydown="changeInput"
+              :class="[errors.length === 0 ? 'is-valid' : 'is-invalid']"
+              type="number"
+              class="form-control"
+              id="freightNumber"
+              placeholder="列車番号"
+            >
+            <div
+              v-if="errors.length !== 0"
+              v-for="(error, index) in errors"
+              :key="index"
+              class="invalid-feedback"
+            >
+              {{ error }}
+            </div>
+          </div>
+        </form>
+
+      </div>
     </div>
+
+    <page-footer></page-footer>
   </div>
 </template>
 

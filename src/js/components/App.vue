@@ -1,49 +1,53 @@
 <template>
-  <div class="jumbotron">
-    <div class="container">
+  <div>
+    <div class="jumbotron">
+      <div class="container">
 
-      <h1>Hiroto-K.github.io</h1>
-      <p class="lead">This is a web pages of <a href="https://github.com/Hiroto-K">Hiroto-K</a>.</p>
+        <h1>Hiroto-K.github.io</h1>
+        <p class="lead">This is a web pages of <a href="https://github.com/Hiroto-K">Hiroto-K</a>.</p>
 
-      <h2>Links</h2>
-      <div class="list-group">
-        <a v-for="(link, name, index) in links" :key="index" class="list-group-item list-group-item-action" :href="link">
-          {{ name }}
-        </a>
-      </div>
-
-      <hr>
-
-      <div v-if="!hasError">
-        <div class="repos-list">
-          <h2>Public Repositories <span class="badge badge-primary">{{ reposLength }}</span></h2>
-
-          <div class="list-group">
-            <a v-for="repo in repos" :key="repos.id" :href="repo.html_url"
-               class="list-group-item list-group-item-action">
-              {{ repo.full_name }}
-            </a>
-          </div>
+        <h2>Links</h2>
+        <div class="list-group">
+          <a v-for="(link, name, index) in links" :key="index" class="list-group-item list-group-item-action" :href="link">
+            {{ name }}
+          </a>
         </div>
 
-        <div class="repos-list">
-          <h2>GitHub Pages <span class="badge badge-primary">{{ gitHubPagesLength }}</span></h2>
-          <div class="list-group">
-            <a v-for="gh_page in gitHubPages" :key="gitHubPages.id"
-               :href="['https://hiroto-k.github.io/' + gh_page.name]"
-               class="list-group-item list-group-item-action">
-              {{ gh_page.full_name }}
-            </a>
+        <hr>
+
+        <div v-if="!hasError">
+          <div class="repos-list">
+            <h2>Public Repositories <span class="badge badge-primary">{{ reposLength }}</span></h2>
+
+            <div class="list-group">
+              <a v-for="repo in repos" :key="repos.id" :href="repo.html_url"
+                 class="list-group-item list-group-item-action">
+                {{ repo.full_name }}
+              </a>
+            </div>
+          </div>
+
+          <div class="repos-list">
+            <h2>GitHub Pages <span class="badge badge-primary">{{ gitHubPagesLength }}</span></h2>
+            <div class="list-group">
+              <a v-for="gh_page in gitHubPages" :key="gitHubPages.id"
+                 :href="['https://hiroto-k.github.io/' + gh_page.name]"
+                 class="list-group-item list-group-item-action">
+                {{ gh_page.full_name }}
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-      <div v-else>
-        <h2>Public Repositories</h2>
-        <h3>Error</h3>
-        <p class="text-danger">Sorry, An error has occurred.</p>
-      </div>
+        <div v-else>
+          <h2>Public Repositories</h2>
+          <h3>Error</h3>
+          <p class="text-danger">Sorry, An error has occurred.</p>
+        </div>
 
+      </div>
     </div>
+
+    <page-footer></page-footer>
   </div>
 </template>
 
