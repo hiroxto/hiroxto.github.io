@@ -84,7 +84,7 @@
         const splitNumber = this.splitNumber(number);
         const isPassengerNumber = splitNumber[2] < 5;
 
-        return this.getFreightType(number);
+        return isPassengerNumber ? this.getPassengerType(number) : this.getFreightType(number);
       },
       getPassengerType: function (number) {
       },
