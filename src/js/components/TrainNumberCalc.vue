@@ -103,25 +103,19 @@
       getPassengerType: function () {
         const splitNumber = this.splitNumber;
         let type = '';
-        let isSpecial = false;
-
-        // 臨時列車 (6000 以上)
-        if (splitNumber[0] >= 6) {
-          isSpecial = true;
-        }
 
         if (splitNumber[1] === 0) {
           // Check 特急客
 
-          type = isSpecial ? '臨特急客' : '特急客';
+          type = this.isSpecial ? '臨特急客' : '特急客';
         } else if ((splitNumber[0] !== 0 || splitNumber[1] !== 0) && splitNumber[2] <= 1) {
           // Checks 急客
 
-          type = isSpecial ? '臨急客' : '急客';
+          type = this.isSpecial ? '臨急客' : '急客';
         } else if (splitNumber[1] !== 0 && splitNumber[2] >= 2) {
           // Checks 客
 
-          type = isSpecial ? '臨客' : '客';
+          type = this.isSpecial ? '臨客' : '客';
         } else {
           type = '不明';
         }
@@ -131,30 +125,24 @@
       getFreightType: function () {
         const splitNumber = this.splitNumber;
         let type = '';
-        let isSpecial = false;
-
-        // 臨時列車 (6000 以上)
-        if (splitNumber[0] >= 6) {
-          isSpecial = true;
-        }
 
         if (splitNumber[1] === 0) {
           // Checks 高速貨A,B
 
           let ab = (splitNumber[2] <= 6) ? 'A' : 'B';
-          type = isSpecial ? `臨高速貨${ab}` : `高速貨${ab}`;
-        } else if ((splitNumber[0] <= 1 || isSpecial) && splitNumber[2] === 5) {
+          type = this.isSpecial ? `臨高速貨${ab}` : `高速貨${ab}`;
+        } else if ((splitNumber[0] <= 1 || this.isSpecial) && splitNumber[2] === 5) {
           // Checks 高速貨C
 
-          type = isSpecial ? '臨高速貨C' : '高速貨C';
+          type = this.isSpecial ? '臨高速貨C' : '高速貨C';
         } else if (splitNumber[2] >= 6 && splitNumber[2] <= 8) {
           // Checks 専貨A
 
-          type = isSpecial ? '臨専貨A' : '専貨A';
+          type = this.isSpecial ? '臨専貨A' : '専貨A';
         } else if (splitNumber[2] === 9) {
           // Checks 専貨B
 
-          type = isSpecial ? '臨専貨B' : '専貨B';
+          type = this.isSpecial ? '臨専貨B' : '専貨B';
         } else {
           // Undefined
           type = '不明';
