@@ -51,9 +51,11 @@
     },
     methods: {
       changeInput: function () {
-        this.updateType(this.trainNumber);
+        this.updateType();
       },
-      updateType: function (number) {
+      updateType: function () {
+        const number = this.trainNumber;
+
         if (number === null || number === '') {
           this.trainType = null;
           this.errors = [];
