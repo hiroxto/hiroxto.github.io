@@ -1,9 +1,9 @@
 import Vue from 'vue';
-import FreightNumberCalc from './components/FreightNumberCalc';
+import TrainNumberCalc from './components/TrainNumberCalc';
 
 require('./google-analytics');
 
 new Vue({
   el: '#app',
-  render: h => h(FreightNumberCalc),
+  render: h => h(TrainNumberCalc),
 });
