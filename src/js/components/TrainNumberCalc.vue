@@ -51,7 +51,7 @@
     },
     computed: {
       splitNumber: function () {
-        return this.number.toString().padStart(4, '0').split('').map((s) => parseInt(s));
+        return this.trainNumber.toString().padStart(4, '0').split('').map((s) => parseInt(s));
       }
     },
     methods: {
