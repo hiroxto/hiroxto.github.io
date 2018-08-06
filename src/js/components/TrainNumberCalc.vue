@@ -86,6 +86,8 @@
 
         return this.getFreightType(number);
       },
+      getPassengerType: function (number) {
+      },
       getFreightType: function (number) {
         const splitNumber = this.splitNumber(number);
         let type = '';
