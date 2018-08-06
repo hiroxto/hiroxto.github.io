@@ -5,9 +5,9 @@
       <h1>貨物列車 種別計算</h1>
       <p class="lead">2〜4ケタの列番から列車種別を計算。現在は貨物列車の列番のみの対応です。旅客列車の種別計算は少々お待ち下さい。</p>
 
-      <div v-if="freightType !== null">
+      <div v-if="trainType !== null">
         <div class="alert alert-info" role="alert">
-          {{ freightType }}
+          {{ trainType }}
         </div>
       </div>
 
@@ -46,7 +46,7 @@
       return {
         errors: [],
         trainNumber: null,
-        freightType: null,
+        trainType: null,
       };
     },
     methods: {
@@ -55,7 +55,7 @@
       },
       updateType: function (number) {
         if (number === null || number === '') {
-          this.freightType = null;
+          this.trainType = null;
           this.errors = [];
           return null;
         }
@@ -63,11 +63,11 @@
         const valid = this.validateNumber(number);
 
         if (valid === false) {
-          this.freightType = null;
+          this.trainType = null;
           return;
         }
 
-        this.freightType = this.getType(number);
+        this.trainType = this.getType(number);
       },
       validateNumber: function (number) {
         this.errors = [];
