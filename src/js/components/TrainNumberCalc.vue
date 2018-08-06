@@ -56,6 +56,9 @@
       isSpecial: function () {
         return this.splitNumber[0] >= 6;
       },
+      isFreightSpecial: function () {
+        return this.splitNumber[0] >= 8;
+      },
     },
     methods: {
       changeInput: function () {
