@@ -93,13 +93,13 @@
       },
       getType: function () {
         const number = this.trainNumber;
-        const splitNumber = this.splitNumber(number);
+        const splitNumber = this.splitNumber;
         const isPassengerNumber = splitNumber[2] < 5;
 
         return isPassengerNumber ? this.getPassengerType(number) : this.getFreightType(number);
       },
       getPassengerType: function (number) {
-        const splitNumber = this.splitNumber(number);
+        const splitNumber = this.splitNumber;
         let type = '';
         let isSpecial = false;
 
@@ -127,7 +127,7 @@
         return type;
       },
       getFreightType: function (number) {
-        const splitNumber = this.splitNumber(number);
+        const splitNumber = this.splitNumber;
         let type = '';
         let isSpecial = false;
 
@@ -159,9 +159,6 @@
         }
 
         return type;
-      },
-      splitNumber: function (number) {
-        return number.toString().padStart(4, '0').split('').map((s) => parseInt(s));
       },
     },
   };
