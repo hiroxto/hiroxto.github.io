@@ -23,7 +23,7 @@ module.exports = {
     'vue/valid-v-for': 'off',
     'vue/script-indent': ['error', 2, {baseIndent: 1, switchCase: 1}],
   },
-  'overrides': [
+  overrides: [
     {
       'files': ['*.vue'],
       'rules': {
