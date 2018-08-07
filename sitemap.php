@@ -174,6 +174,12 @@ $sites = [
         'priority' => '1.0',
     ],
     [
+        'loc' => $siteMap->getUrl('/train-number-calc.html'),
+        'lastmod' => $siteMap->getLastModified('/train-number-calc.html'),
+        'changefreq' => 'monthly',
+        'priority' => '0.8',
+    ],
+    [
         'loc' => $siteMap->getUrl('/Anime-push/'),
         'lastmod' => $siteMap->getLastModified('/Anime-push/'),
         'changefreq' => 'yearly',
