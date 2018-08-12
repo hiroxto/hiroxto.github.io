@@ -1,7 +1,7 @@
 <template>
   <div id="footer">
     <div class="container">
-      <p class="footer-text">&#169; {{ sinceYear }}-{{ currentYear }} Hiroto-K</p>
+      <p class="footer-text">© {{ sinceYear }}-{{ currentYear }} Hiroto-K</p>
     </div>
   </div>
 </template>
