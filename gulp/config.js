@@ -18,7 +18,7 @@ let config = {
     scss: './src/scss/**/*.scss',
     lib: {
       js: [
-        './node_modules/jquery/dist/jquery.min.js',
+        './node_modules/jquery/dist/jquery.slim.min.js',
         './node_modules/bootstrap/dist/js/bootstrap.min.js',
       ],
     },
