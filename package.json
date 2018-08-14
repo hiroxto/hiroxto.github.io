@@ -1,5 +1,5 @@
 {
-  "name": "Hiroto-K.github.io",
+  "name": "hiroto-k.github.io",
   "version": "0.0.1",
   "description": "GitHub pages.",
   "homepage": "https://hiroto-k.github.io/",
@@ -10,10 +10,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/Hiroto-K/Hiroto-K.github.io.git"
+    "url": "git://github.com/hiroto-k/hiroto-k.github.io.git"
   },
   "bugs": {
-    "url": "https://github.com/Hiroto-K/Hiroto-K.github.io/issues"
+    "url": "https://github.com/hiroto-k/hiroto-k.github.io/issues"
   },
   "license": "MIT",
   "private": true,
