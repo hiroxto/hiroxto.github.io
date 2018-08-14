@@ -13,7 +13,7 @@ use PhpCsFixer\Config;
 use PhpCsFixer\Finder;
 
 $header = <<<'EOS'
-This file is part of "Hiroto-K.github.io".
+This file is part of "hiroto-k.github.io".
 
 (c) Hiroto Kitazawa <hiro.yo.yo1610@gmail.com>
 
