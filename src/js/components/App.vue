@@ -88,7 +88,7 @@
       },
     },
     mounted: function () {
-      fetch('https://api.github.com/users/Hiroto-K/repos?per_page=100').then((response) => {
+      fetch('https://api.github.com/users/hiroto-k/repos?per_page=100').then((response) => {
         if (!response.ok) {
           throw Error(response.statusText);
         }
