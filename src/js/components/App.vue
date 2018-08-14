@@ -4,7 +4,7 @@
       <div class="container">
 
         <h1>Hiroto-K.github.io</h1>
-        <p class="lead">This is a web pages of <a href="https://github.com/Hiroto-K">Hiroto-K</a>.</p>
+        <p class="lead">This is a web pages of <a href="https://github.com/hiroto-k">hiroto-k</a>.</p>
 
         <h2>Links</h2>
         <div class="list-group">
