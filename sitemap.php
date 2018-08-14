@@ -228,8 +228,8 @@ $sites = [
         'priority' => '0.5',
     ],
     [
-        'loc' => $siteMap->getUrl('/Twitter-R4S/'),
-        'lastmod' => $siteMap->getLastModified('/Twitter-R4S/'),
+        'loc' => $siteMap->getUrl('/twitter-r4s/'),
+        'lastmod' => $siteMap->getLastModified('/twitter-r4s/'),
         'changefreq' => 'yearly',
         'priority' => '0.4',
     ],
