@@ -234,18 +234,6 @@ $sites = [
         'priority' => '0.4',
     ],
     [
-        'loc' => $siteMap->getUrl('/EncryptionHelper/'),
-        'lastmod' => $siteMap->getLastModified('/EncryptionHelper/'),
-        'changefreq' => 'yearly',
-        'priority' => '0.4',
-    ],
-    [
-        'loc' => $siteMap->getUrl('/MP3-Downloader/'),
-        'lastmod' => $siteMap->getLastModified('/MP3-Downloader/'),
-        'changefreq' => 'yearly',
-        'priority' => '0.8',
-    ],
-    [
         'loc' => $siteMap->getUrl('/TeamGraphicalGraphics/'),
         'lastmod' => $siteMap->getLastModified('/TeamGraphicalGraphics/'),
         'changefreq' => 'yearly',
