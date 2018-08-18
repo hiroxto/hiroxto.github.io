@@ -4,7 +4,7 @@ node_js:
     - "10"
 
 before_script :
-    - npm install
+    - yarn install
 
 script :
     - ":"
