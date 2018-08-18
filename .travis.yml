@@ -15,8 +15,4 @@ cache :
 
 notifications :
     email: false
-    slack:
-        on_success: always
-        on_failure: always
-        rooms:
-            - "PxN73j5oOigQN0ynfe5JfMoCPeM9VB8+nxxndvYKsw6ii9D8N4CzrR1jK3X73rw1p4R/bRVoZF03WtFoImHSdY0uaRrZOg194GqK5rxASInRRpZRNLIOSnEh12HiO2wgCjrjY6rvZ48/UDMr+Rfa1YlTyxD2/hKa7ifALNorOKO/yTBvdI8yQ3vJAuncPSZs8kHGdbYF3v25apnaZCA2ul9DIPBwzBemghPzIxaTHg3P9DnkrH/+2OBSgIHHl/OB6u48F4GpYSjt+J7LN+jUiK+pwHmgliQRibM9KKyvwODDPQGjG7tY7PW1xMpxSrKWNKDTtTkQDafUl9xemLXZbAigDRY7omGz2uvHcCV6PISQtZPo+JsVAQZq5laSfgp+TjdBYLwbf1X0gto1qxvmopqUklpRqR2V8aUas5j4eCX+AjVC2kZkk7Qh/r97SdI4v/+6f3R4cpqzFTx27RdRcx5QyMBiJtUG/z6N+rzYw77pMxT8W8jEik01QQ4OO/6x0de+FoBoQH1RTEAEPwzLMjh7+pOSxfcVEiWS8Maxxwoy6XTyZbzgs6rzlRbuwWz2T1hz95DMo+hw0NS5rFL+YvpYCy9y8Gkb4GhAAyO+m1GRl7o9m/iK5DVMzSPRYf8Yv8mAf1TDgloGrLoudMrVBxriyeX4LhZZUf6Dn4EQdGU="
+    slack: hiroto-k:qaEHAnkjKDUGnCE6zAiHDT4m
