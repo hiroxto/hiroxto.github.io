@@ -2,5 +2,10 @@
     "extends": [
         "config:base"
     ],
-    "timezone": "Asia/Tokyo"
+    "timezone": "Asia/Tokyo",
+    "schedule": [
+        "after 10pm every weekday",
+        "before 10am every weekday",
+        "every weekend"
+    ]
 }
