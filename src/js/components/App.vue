@@ -74,19 +74,19 @@
           },
           {
             name: 'Profile',
-            url: 'https://hiroto-k.net/profile'
+            url: 'https://hiroto-k.net/profile',
           },
           {
             name: 'Project',
-            url: 'https://hiroto-k.net/project'
+            url: 'https://hiroto-k.net/project',
           },
           {
             name: 'Blog (Programming)',
-            url: 'https://hiroto-k.hatenablog.com/'
+            url: 'https://hiroto-k.hatenablog.com/',
           },
           {
             name: 'Blog (Train)',
-            url: 'https://hiroto-k.github.io/blog/'
+            url: 'https://hiroto-k.github.io/blog/',
           },
         ],
         repos: [],
