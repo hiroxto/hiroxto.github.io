@@ -9,12 +9,12 @@
         <h2>Links</h2>
         <div class="list-group">
           <a
-            v-for="(link, name, index) in links"
+            v-for="(link, index) in links"
             :key="index"
-            :href="link"
+            :href="link.url"
             class="list-group-item list-group-item-action"
           >
-            {{ name }}
+            {{ link.name }}
           </a>
         </div>
 
