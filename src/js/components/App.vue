@@ -67,13 +67,28 @@
     name: 'App',
     data () {
       return {
-        links: {
-          'Home Page': 'https://hiroto-k.net/',
-          'Profile': 'https://hiroto-k.net/profile',
-          'Project': 'https://hiroto-k.net/project',
-          'Blog (Programming)': 'https://hiroto-k.hatenablog.com/',
-          'Blog (Train)': 'https://hiroto-k.github.io/blog/',
-        },
+        links: [
+          {
+            name: 'Home Page',
+            url: 'https://hiroto-k.net/',
+          },
+          {
+            name: 'Profile',
+            url: 'https://hiroto-k.net/profile'
+          },
+          {
+            name: 'Project',
+            url: 'https://hiroto-k.net/project'
+          },
+          {
+            name: 'Blog (Programming)',
+            url: 'https://hiroto-k.hatenablog.com/'
+          },
+          {
+            name: 'Blog (Train)',
+            url: 'https://hiroto-k.github.io/blog/'
+          },
+        ],
         repos: [],
         gitHubPages: [],
         hasError: false,
