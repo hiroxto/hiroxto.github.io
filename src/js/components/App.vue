@@ -111,6 +111,11 @@
         return response.json();
       }).then((json) => {
         json.forEach((repo) => {
+          // Ignore hiroto-k/hiroto-k.github.io
+          if (repo.id === 38377426) {
+            return;
+          }
+
           this.repos.push(repo);
 
           if (repo.has_pages) {
