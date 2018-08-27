@@ -20,7 +20,12 @@
 
         <hr>
 
-        <div v-if="!hasError">
+        <div v-if="hasError">
+          <h2>Public Repositories</h2>
+          <h3>Error</h3>
+          <p class="text-danger">Sorry, An error has occurred.</p>
+        </div>
+        <div v-else>
           <div class="repos-list">
             <h2>Public Repositories <span class="badge badge-primary">{{ reposLength }}</span></h2>
 
@@ -48,11 +53,6 @@
               </a>
             </div>
           </div>
-        </div>
-        <div v-else>
-          <h2>Public Repositories</h2>
-          <h3>Error</h3>
-          <p class="text-danger">Sorry, An error has occurred.</p>
         </div>
 
       </div>
