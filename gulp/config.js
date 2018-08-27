@@ -1,6 +1,10 @@
 const minimist = require('minimist');
 const options = minimist(process.argv.slice(2));
-const isProduction = options.env === 'production';
+const isProduction = (() => {
+  const env = options.env;
+
+  return env === undefined ? false : env.startsWith('prod');
+})();
 
 let config = {
   console_options: options,
