@@ -234,12 +234,6 @@ $sites = [
         'priority' => '0.4',
     ],
     [
-        'loc' => $siteMap->getUrl('/TeamGraphicalGraphics/'),
-        'lastmod' => $siteMap->getLastModified('/TeamGraphicalGraphics/'),
-        'changefreq' => 'yearly',
-        'priority' => '0.4',
-    ],
-    [
         'loc' => $siteMap->getUrl('/CC-Lemon/'),
         'lastmod' => $siteMap->getLastModified('/CC-Lemon/'),
         'changefreq' => 'yearly',
