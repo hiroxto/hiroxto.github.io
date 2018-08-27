@@ -49,7 +49,8 @@ gulp.task('compile:vue', ['lint:es'], () => {
       .pipe($.if(!isProduction, $.sourcemaps.init()))
       .pipe($.if(isProduction, $.uglify()))
       .pipe($.if(!isProduction, $.sourcemaps.write(config.map)))
-      .pipe(gulp.dest(config.dist.js));
+      .pipe(gulp.dest(config.dist.js))
+      .pipe($.connect.reload());
   });
 });
 
@@ -62,5 +63,6 @@ gulp.task('compile:scss', () => {
       .on('error', $.sass.logError))
     .pipe($.if(isProduction, $.cssmin()))
     .pipe($.if(!isProduction, $.sourcemaps.write(config.map)))
-    .pipe(gulp.dest(config.dist.css));
+    .pipe(gulp.dest(config.dist.css))
+    .pipe($.connect.reload());;
 });
