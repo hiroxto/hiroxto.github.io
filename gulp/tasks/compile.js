@@ -15,7 +15,7 @@ gulp.task('compile', [
   'compile:scss',
 ]);
 
-gulp.task('compile:vue', () => {
+gulp.task('compile:vue', ['lint:es'], () => {
   const vues = config.src.vue;
 
   Object.keys(vues).forEach((src) => {
