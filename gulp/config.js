@@ -6,6 +6,10 @@ const isProduction = (() => {
   return env === undefined ? false : env.startsWith('prod');
 })();
 
+if (isProduction) {
+  console.log('Enable production mode.');
+}
+
 let config = {
   console_options: options,
   isProduction: isProduction,
