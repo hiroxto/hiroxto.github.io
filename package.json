@@ -78,6 +78,6 @@
     "vueify": "9.4.1"
   },
   "dependencies": {
-    "popper.js": "^1.14.4"
+    "popper.js": "1.14.4"
   }
 }
