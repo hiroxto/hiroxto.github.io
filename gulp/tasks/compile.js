@@ -64,5 +64,5 @@ gulp.task('compile:scss', () => {
     .pipe($.if(isProduction, $.cssmin()))
     .pipe($.if(!isProduction, $.sourcemaps.write(config.map)))
     .pipe(gulp.dest(config.dist.css))
-    .pipe($.connect.reload());;
+    .pipe($.connect.reload());
 });
