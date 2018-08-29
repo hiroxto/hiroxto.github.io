@@ -180,8 +180,8 @@ $sites = [
         'priority' => '0.8',
     ],
     [
-        'loc' => $siteMap->getUrl('/Anime-push/'),
-        'lastmod' => $siteMap->getLastModified('/Anime-push/'),
+        'loc' => $siteMap->getUrl('/anime-push/'),
+        'lastmod' => $siteMap->getLastModified('/anime-push/'),
         'changefreq' => 'yearly',
         'priority' => '0.8',
     ],
