@@ -32,8 +32,8 @@ gulp.task('compile:vue', ['lint:es'], () => {
 
     if (isProduction) {
       browser = browser.transform(
-        {global: true},
-        envify({NODE_ENV: 'production'})
+        { global: true },
+        envify({ NODE_ENV: 'production' })
       );
     }
 
@@ -59,7 +59,7 @@ gulp.task('compile:scss', () => {
     .src(config.src.scss)
     .pipe($.plumber())
     .pipe($.if(!isProduction, $.sourcemaps.init()))
-    .pipe($.sass({outputStyle: 'expanded'})
+    .pipe($.sass({ outputStyle: 'expanded' })
       .on('error', $.sass.logError))
     .pipe($.if(isProduction, $.cssmin()))
     .pipe($.if(!isProduction, $.sourcemaps.write(config.map)))
