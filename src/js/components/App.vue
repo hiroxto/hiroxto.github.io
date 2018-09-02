@@ -6,6 +6,20 @@
         <h1>Hiroto-K.github.io</h1>
         <p class="lead">This is a web pages of <a href="https://github.com/hiroto-k">hiroto-k</a>.</p>
 
+        <div class="mb-3">
+          <h2>Apps</h2>
+          <div class="list-group">
+            <a
+              v-for="(app, index) in apps"
+              :key="index"
+              :href="app.url"
+              class="list-group-item list-group-item-action"
+            >
+              {{ app.name }}
+            </a>
+          </div>
+        </div>
+
         <h2>Links</h2>
         <div class="list-group">
           <a
@@ -67,6 +81,12 @@
     name: 'App',
     data () {
       return {
+        apps: [
+          {
+            name: 'Train number calc',
+            url: '/train-number-calc.html',
+          },
+        ],
         links: [
           {
             name: 'Home Page',
