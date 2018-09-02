@@ -8,6 +8,7 @@ before_script:
 
 script:
   - yarn run deploy
+  - yarn run lint:fix
 
 cache:
   directories:
