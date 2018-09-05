@@ -78,6 +78,7 @@
     "vueify": "9.4.1"
   },
   "dependencies": {
+    "babel-upgrade": "^0.0.23",
     "popper.js": "1.14.4"
   }
 }
