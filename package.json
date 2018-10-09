@@ -38,7 +38,6 @@
     "eslint-plugin-standard": "4.0.0",
     "eslint-plugin-vue": "4.7.1",
     "jquery": "3.3.1",
-    "minimist": "1.2.0",
     "node-sass": "^4.9.3",
     "require-dir": "1.1.0",
     "sass-loader": "^7.1.0",
