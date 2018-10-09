@@ -26,7 +26,7 @@
     "clean": "gulp clean",
     "clean:js": "gulp clean:js",
     "clean:css": "gulp clean:css",
-    "clean:map": "gulp clean:map",
+    "clean:map": "gulp clean:map"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
