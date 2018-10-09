@@ -18,6 +18,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
+    "build": "NODE_ENV=production webpack --mode production",
     "deploy": "gulp clean && gulp compile --env production && gulp lib --env production",
     "lint:fix": "eslint --ext .js,.vue --fix gulp/ src/ gulpfile.js .eslintrc.js --ignore-pattern '!.eslintrc.js'",
     "gulp": "gulp",
