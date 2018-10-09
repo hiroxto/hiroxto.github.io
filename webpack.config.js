@@ -1,6 +1,9 @@
 const path = require('path');
+const NODE_ENV = process.env.NODE_ENV;
 
 module.exports = {
+  mode: NODE_ENV || 'production',
+
   entry: {
     'app': './src/js/app.js',
     'train-number-calc': './src/js/train-number-calc.js',
