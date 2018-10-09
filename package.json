@@ -27,12 +27,6 @@
     "clean:js": "gulp clean:js",
     "clean:css": "gulp clean:css",
     "clean:map": "gulp clean:map",
-    "lint": "gulp lint",
-    "lint:es": "gulp lint:es",
-    "server": "gulp server",
-    "watch": "gulp watch",
-    "watch:vue": "gulp watch:vue",
-    "watch:scss": "gulp watch:scss"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
