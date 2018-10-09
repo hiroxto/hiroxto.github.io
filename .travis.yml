@@ -7,8 +7,9 @@ before_script:
   - yarn install
 
 script:
-  - yarn run deploy
-  - yarn run lint:fix
+#  - yarn run deploy
+#  - yarn run lint:fix
+  - echo
 
 cache:
   directories:
