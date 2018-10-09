@@ -22,11 +22,7 @@
     "dev": "NODE_ENV=development webpack-dev-server --config ./webpack.config.js --hot --inline",
     "deploy": "gulp clean && gulp compile --env production && gulp lib --env production",
     "lint:fix": "eslint --ext .js,.vue --fix gulp/ src/ gulpfile.js .eslintrc.js --ignore-pattern '!.eslintrc.js'",
-    "gulp": "gulp",
-    "clean": "gulp clean",
-    "clean:js": "gulp clean:js",
-    "clean:css": "gulp clean:css",
-    "clean:map": "gulp clean:map"
+    "gulp": "gulp"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
