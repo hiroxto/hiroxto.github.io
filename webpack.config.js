@@ -1,5 +1,6 @@
 const path = require('path');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const NODE_ENV = process.env.NODE_ENV;
 
 module.exports = {
@@ -31,10 +32,16 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: ['css-loader', 'sass-loader'],
-        }),
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader',
+            options: {
+              url: false,
+            },
+          },
+          'sass-loader',
+        ],
       },
     ],
   },
@@ -51,6 +58,13 @@ module.exports = {
     watchContentBase: true,
   },
   plugins: [
-    new ExtractTextPlugin('style.css'),
+    new MiniCssExtractPlugin({
+      filename: 'style.css',
+    }),
   ],
+  optimization: {
+    minimizer: [
+      new OptimizeCSSAssetsPlugin({}),
+    ],
+  },
 };
