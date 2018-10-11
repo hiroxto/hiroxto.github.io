@@ -50,4 +50,7 @@ module.exports = {
     inline: true,
     watchContentBase: true,
   },
+  plugins: [
+    new ExtractTextPlugin('style.css'),
+  ],
 };
