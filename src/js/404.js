@@ -1,6 +1,6 @@
 import Vue from 'vue';
 
-require('./bootstrap');
+import './bootstrap';
 
 new Vue({
   el: '#app',

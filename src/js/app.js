@@ -1,8 +1,8 @@
 import Vue from 'vue';
 import App from './components/App';
 
-require('./bootstrap');
-require('./google-analytics');
+import './bootstrap';
+import './google-analytics';
 
 new Vue({
   el: '#app',
