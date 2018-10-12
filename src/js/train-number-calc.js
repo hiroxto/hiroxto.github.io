@@ -1,8 +1,8 @@
 import Vue from 'vue';
 import TrainNumberCalc from './components/TrainNumberCalc';
 
-require('./bootstrap');
-require('./google-analytics');
+import './bootstrap';
+import './google-analytics';
 
 new Vue({
   el: '#app',
