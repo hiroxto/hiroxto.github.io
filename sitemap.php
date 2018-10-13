@@ -133,27 +133,6 @@ class SiteMap
     }
 
     /**
-     * Get api gen document pages.
-     *
-     * @param string $repoName
-     *
-     * @return array
-     */
-    public function getApiGenPages($repoName)
-    {
-        $url = $this->getUrl($repoName);
-        $content = file_get_contents($url);
-        preg_match_all('/<a href="(.+)">/', $content, $m);
-        $m = $m[1];
-        array_pop($m);
-        $urls = array_map(function ($u) use ($repoName) {
-            return $repoName.$u;
-        }, $m);
-
-        return $urls;
-    }
-
-    /**
      * Cast to string.
      *
      * @return string
@@ -240,23 +219,6 @@ $sites = [
         'priority' => '0.4',
     ],
 ];
-
-foreach (['JSON5-php'] as $name) {
-    $sites[] = [
-        'loc' => $siteMap->getUrl("/${name}/"),
-        'lastmod' => $siteMap->getLastModified("/${name}/"),
-        'changefreq' => 'yearly',
-        'priority' => '0.6',
-    ];
-    foreach ($siteMap->getApiGenPages("/{$name}/") as $link) {
-        $sites[] = [
-            'loc' => $siteMap->getUrl($link),
-            'lastmod' => $siteMap->getLastModified($link),
-            'changefreq' => 'monthly',
-            'priority' => '0.5',
-        ];
-    }
-}
 
 $siteMap->addUrls($sites);
 
