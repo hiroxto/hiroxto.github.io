@@ -48,16 +48,6 @@ class SiteMap
     }
 
     /**
-     * Get date format.
-     *
-     * @return string
-     */
-    public function getDateFormat()
-    {
-        return $this->dateFormat;
-    }
-
-    /**
      * Add url.
      *
      * @param array $info
@@ -129,7 +119,7 @@ class SiteMap
         }));
         preg_match("/Last-Modified:\s+(.+)/i", $header[0], $matches);
 
-        return date($this->getDateFormat(), strtotime($matches[1]));
+        return date($this->dateFormat, strtotime($matches[1]));
     }
 
     /**
