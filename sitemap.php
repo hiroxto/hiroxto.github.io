@@ -17,12 +17,12 @@ class SiteMap
     /**
      * DOMDocument instance.
      *
-     * @var DOMDocument
+     * @var \DOMDocument
      */
     protected $domDocument;
 
     /**
-     * \DOMElement instance.
+     * DOMElement instance.
      *
      * @var \DOMElement
      */
