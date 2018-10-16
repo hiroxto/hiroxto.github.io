@@ -20,8 +20,8 @@
   "scripts": {
     "build": "NODE_ENV=production webpack --mode production",
     "dev": "NODE_ENV=development webpack-dev-server --hot",
-    "lint": "eslint --ext .js,.vue src/ .eslintrc.js webpack.config.js --ignore-pattern '!.eslintrc.js'",
-    "lint:fix": "eslint --fix --ext .js,.vue src/ .eslintrc.js webpack.config.js --ignore-pattern '!.eslintrc.js'"
+    "lint": "eslint --ext .js,.vue --ignore-pattern '!.eslintrc.js' src/ .eslintrc.js webpack.config.js",
+    "lint:fix": "eslint --fix --ext .js,.vue --ignore-pattern '!.eslintrc.js' src/ .eslintrc.js webpack.config.js"
   },
   "devDependencies": {
     "@babel/core": "7.1.2",
