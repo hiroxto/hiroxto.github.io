@@ -20,6 +20,7 @@
   "scripts": {
     "build": "NODE_ENV=production webpack --mode production",
     "dev": "NODE_ENV=development webpack-dev-server --hot",
+    "lint": "eslint --ext .js,.vue src/ .eslintrc.js webpack.config.js --ignore-pattern '!.eslintrc.js'",
     "lint:fix": "eslint --ext .js,.vue --fix src/ .eslintrc.js webpack.config.js --ignore-pattern '!.eslintrc.js'"
   },
   "devDependencies": {
