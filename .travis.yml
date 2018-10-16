@@ -8,7 +8,7 @@ before_script:
 
 script:
   - yarn run build
-  - yarn run lint:fix
+  - yarn run lint
 
 cache:
   directories:
