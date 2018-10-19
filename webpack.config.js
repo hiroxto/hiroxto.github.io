@@ -20,24 +20,12 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.vue$/,
-        loader: 'vue-loader',
-      },
-      {
         test: /\.js$/,
         loader: 'babel-loader',
       },
       {
-        test: /\.css$/,
-        use: [
-          'style-loader',
-          {
-            loader: 'css-loader',
-            options: {
-              url: false,
-            },
-          },
-        ],
+        test: /\.vue$/,
+        loader: 'vue-loader',
       },
       {
         test: /\.scss$/,
@@ -57,7 +45,9 @@ module.exports = {
               ],
             },
           },
-          'sass-loader',
+          {
+            loader: 'sass-loader',
+          },
         ],
       },
     ],
