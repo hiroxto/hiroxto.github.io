@@ -49,6 +49,14 @@ module.exports = {
               url: false,
             },
           },
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins: [
+                require('autoprefixer')({ grid: true }),
+              ],
+            },
+          },
           'sass-loader',
         ],
       },
