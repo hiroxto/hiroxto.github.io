@@ -35,11 +35,13 @@ module.exports = {
             loader: 'css-loader',
             options: {
               url: false,
+              sourceMap: true,
             },
           },
           {
             loader: 'postcss-loader',
             options: {
+              sourceMap: true,
               plugins: [
                 require('autoprefixer')({ grid: true }),
               ],
@@ -47,6 +49,9 @@ module.exports = {
           },
           {
             loader: 'sass-loader',
+            options: {
+              sourceMap: true,
+            },
           },
         ],
       },
