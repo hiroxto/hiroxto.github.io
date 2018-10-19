@@ -38,6 +38,14 @@ module.exports = {
             },
           },
           {
+            loader: 'postcss-loader',
+            options: {
+              plugins: [
+                require('autoprefixer')({ grid: true }),
+              ],
+            },
+          },
+          {
             loader: 'sass-loader',
           },
         ],
