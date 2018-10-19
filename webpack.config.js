@@ -64,6 +64,7 @@ module.exports = {
       vue$: 'vue/dist/vue.esm.js',
     },
   },
+  devtool: 'source-map',
   devServer: {
     contentBase: path.resolve(__dirname, './'),
     port: 8888,
