@@ -36,6 +36,7 @@ module.exports = {
             options: {
               url: false,
               sourceMap: true,
+              importLoaders: 2,
             },
           },
           {
