@@ -77,7 +77,7 @@
     methods: {
       changeInput: function () {
         this.$validator.validate().then(result => {
-          if (!result) {
+          if (!result || this.trainNumber === '') {
             this.trainType = null;
 
             return;
