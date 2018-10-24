@@ -28,10 +28,7 @@
               id="freightNumber"
               placeholder="列車番号"
             >
-            <div
-              v-show="hasErrors"
-              class="invalid-feedback"
-            >
+            <div v-show="hasErrors" class="invalid-feedback">
               {{ errorMessage }}
             </div>
 
