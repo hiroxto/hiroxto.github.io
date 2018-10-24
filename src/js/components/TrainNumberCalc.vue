@@ -80,13 +80,13 @@
           return null;
         }
 
-        const valid = this.validateNumber();
+        // const valid = this.validateNumber();
 
-        if (valid === false) {
-          this.trainType = null;
-
-          return;
-        }
+        // if (valid === false) {
+        //   this.trainType = null;
+        //
+        //   return;
+        // }
 
         this.trainType = this.getType();
       },
