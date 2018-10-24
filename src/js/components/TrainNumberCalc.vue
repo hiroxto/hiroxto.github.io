@@ -21,20 +21,20 @@
               data-vv-as="列車番号"
               @keyup="changeInput"
               @keydown="changeInput"
-              :class="[errors.length === 0 ? 'is-valid' : 'is-invalid']"
-              type="number"
+              :class="inputClass"
+              type="text"
               class="form-control"
+              name="freightNumber"
               id="freightNumber"
               placeholder="列車番号"
             >
             <div
-              v-if="errors.length !== 0"
-              v-for="(error, index) in errors"
-              :key="index"
+              v-show="hasErrors"
               class="invalid-feedback"
             >
-              {{ error }}
+              {{ errorMessage }}
             </div>
+
           </div>
         </form>
 
@@ -55,6 +55,15 @@
       };
     },
     computed: {
+      hasErrors: function () {
+        return this.errors.has('freightNumber');
+      },
+      errorMessage: function () {
+        return this.errors.first('freightNumber');
+      },
+      inputClass: function () {
+        return this.hasErrors ? 'is-invalid' : 'is-valid';
+      },
       splitNumber: function () {
         return this.trainNumber.toString().padStart(4, '0').split('').map((s) => parseInt(s));
       },
@@ -67,25 +76,17 @@
     },
     methods: {
       changeInput: function () {
-        this.updateType();
+        this.$validator.validate().then(result => {
+          if (!result) {
+            this.trainType = null;
+
+            return;
+          }
+
+          this.updateType();
+        });
       },
       updateType: function () {
-        const number = this.trainNumber;
-
-        if (number === null || number === '') {
-          this.trainType = null;
-
-          return null;
-        }
-
-        // const valid = this.validateNumber();
-
-        // if (valid === false) {
-        //   this.trainType = null;
-        //
-        //   return;
-        // }
-
         this.trainType = this.getType();
       },
       getType: function () {
