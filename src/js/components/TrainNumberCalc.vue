@@ -50,7 +50,6 @@
     name: 'TrainNumberCalc',
     data () {
       return {
-        errors: [],
         trainNumber: null,
         trainType: null,
       };
@@ -75,7 +74,6 @@
 
         if (number === null || number === '') {
           this.trainType = null;
-          this.errors = [];
 
           return null;
         }
