@@ -65,7 +65,12 @@
         return this.hasErrors ? 'is-invalid' : 'is-valid';
       },
       splitNumber: function () {
-        return this.trainNumber.toString().padStart(4, '0').split('').map((s) => parseInt(s));
+        return this
+          .trainNumber
+          .toString()
+          .padStart(4, '0')
+          .split('')
+          .map((s) => parseInt(s));
       },
       isSpecial: function () {
         return this.splitNumber[0] >= 6;
