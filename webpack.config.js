@@ -3,9 +3,10 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const NODE_ENV = process.env.NODE_ENV;
+const mode = NODE_ENV || 'production';
 
 module.exports = {
-  mode: NODE_ENV || 'production',
+  mode: mode,
 
   entry: {
     'app': './src/js/app.js',
