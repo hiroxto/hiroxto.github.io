@@ -17,7 +17,7 @@
             <label for="freightNumber">列車番号 (1〜4ケタの数字)</label>
             <input
               v-model.number="trainNumber"
-              v-validate="'numeric|between:1,9999'"
+              v-validate="validateRules()"
               data-vv-as="列車番号"
               @keyup="changeInput"
               @keydown="changeInput"
@@ -77,6 +77,15 @@
       },
     },
     methods: {
+      validateRules: function () {
+        return {
+          numeric: true,
+          between: {
+            min: 1,
+            max: 9999,
+          },
+        };
+      },
       changeInput: function () {
         this.$validator.validate().then(result => {
           if (!result || this.trainNumber === '') {
