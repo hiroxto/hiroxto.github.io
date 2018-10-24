@@ -2,6 +2,8 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const WebpackBuildNotifierPlugin = require('webpack-build-notifier');
+
 const NODE_ENV = process.env.NODE_ENV;
 const mode = NODE_ENV || 'production';
 
@@ -81,6 +83,10 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin({
       filename: 'style.css',
+    }),
+    new WebpackBuildNotifierPlugin({
+      title: 'Webpack Build',
+      suppressSuccess: 'always',
     }),
   ],
   optimization: {
