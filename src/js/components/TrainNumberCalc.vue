@@ -17,22 +17,21 @@
             <label for="freightNumber">列車番号 (1〜4ケタの数字)</label>
             <input
               v-model.number="trainNumber"
+              v-validate="validateRules()"
+              data-vv-as="列車番号"
               @keyup="changeInput"
               @keydown="changeInput"
-              :class="[errors.length === 0 ? 'is-valid' : 'is-invalid']"
-              type="number"
+              :class="inputClass"
+              type="text"
               class="form-control"
+              name="freightNumber"
               id="freightNumber"
               placeholder="列車番号"
             >
-            <div
-              v-if="errors.length !== 0"
-              v-for="(error, index) in errors"
-              :key="index"
-              class="invalid-feedback"
-            >
-              {{ error }}
+            <div v-show="hasErrors" class="invalid-feedback">
+              {{ errorMessage }}
             </div>
+
           </div>
         </form>
 
@@ -48,14 +47,27 @@
     name: 'TrainNumberCalc',
     data () {
       return {
-        errors: [],
         trainNumber: null,
         trainType: null,
       };
     },
     computed: {
+      hasErrors: function () {
+        return this.errors.has('freightNumber');
+      },
+      errorMessage: function () {
+        return this.errors.first('freightNumber');
+      },
+      inputClass: function () {
+        return this.hasErrors ? 'is-invalid' : 'is-valid';
+      },
       splitNumber: function () {
-        return this.trainNumber.toString().padStart(4, '0').split('').map((s) => parseInt(s));
+        return this
+          .trainNumber
+          .toString()
+          .padStart(4, '0')
+          .split('')
+          .map((s) => parseInt(s));
       },
       isSpecial: function () {
         return this.splitNumber[0] >= 6;
@@ -65,41 +77,28 @@
       },
     },
     methods: {
+      validateRules: function () {
+        return {
+          numeric: true,
+          between: {
+            min: 1,
+            max: 9999,
+          },
+        };
+      },
       changeInput: function () {
-        this.updateType();
+        this.$validator.validate().then(result => {
+          if (!result || this.trainNumber === '') {
+            this.trainType = null;
+
+            return;
+          }
+
+          this.updateType();
+        });
       },
       updateType: function () {
-        const number = this.trainNumber;
-
-        if (number === null || number === '') {
-          this.trainType = null;
-          this.errors = [];
-
-          return null;
-        }
-
-        const valid = this.validateNumber();
-
-        if (valid === false) {
-          this.trainType = null;
-
-          return;
-        }
-
         this.trainType = this.getType();
-      },
-      validateNumber: function () {
-        const number = this.trainNumber;
-
-        this.errors = [];
-
-        if (!Number.isInteger(number)) {
-          this.errors.push('入力された数が整数ではありません。');
-        } else if (number < 1 || number > 9999) {
-          this.errors.push('入力された数が列車番号の範囲ではありません。');
-        }
-
-        return this.errors.length === 0;
       },
       getType: function () {
         const splitNumber = this.splitNumber;
