@@ -39,76 +39,28 @@ const getLastModified = async url => {
 
   return headers['last-modified'];
 };
-const createUrlElement = (url, lastmod, changefreq, priority) => {
+const createUrlElement = (url, changefreq, priority) => {
   return {
-    url,
-    lastmod,
-    changefreq,
-    priority,
+    url: getUrl(url),
+    lastmod: null,
+    changefreq: changefreq,
+    priority: priority,
   };
 };
 
 const urls = [
-  {
-    loc: getUrl('/'),
-    changefreq: changefreq.monthly,
-    priority: '1.0',
-  },
-  {
-    loc: getUrl('/train-number-calc.html'),
-    changefreq: changefreq.monthly,
-    priority: '0.8',
-  },
-  {
-    loc: getUrl('/anime-push/'),
-    changefreq: changefreq.yearly,
-    priority: '0.8',
-  },
-  {
-    loc: getUrl('/hk_sub_/'),
-    changefreq: changefreq.yearly,
-    priority: '0.4',
-  },
-  {
-    loc: getUrl('/trysail-blog-notification/'),
-    changefreq: changefreq.yearly,
-    priority: '0.8',
-  },
-  {
-    loc: getUrl('/trysail-blog-notification/plugin.html'),
-    changefreq: changefreq.yearly,
-    priority: '0.4',
-  },
-  {
-    loc: getUrl('/console-wrapper/'),
-    changefreq: changefreq.yearly,
-    priority: '0.8',
-  },
-  {
-    loc: getUrl('/HkApps/'),
-    changefreq: changefreq.yearly,
-    priority: '0.4',
-  },
-  {
-    loc: getUrl('/SaveTweet/'),
-    changefreq: changefreq.yearly,
-    priority: '0.4',
-  },
-  {
-    loc: getUrl('/ShortURL/'),
-    changefreq: changefreq.yearly,
-    priority: '0.4',
-  },
-  {
-    loc: getUrl('/twitter-r4s/'),
-    changefreq: changefreq.yearly,
-    priority: '0.4',
-  },
-  {
-    loc: getUrl('/CC-Lemon/'),
-    changefreq: changefreq.yearly,
-    priority: '0.4',
-  },
+  createUrlElement('/', changefreq.monthly, '1.0'),
+  createUrlElement('/train-number-calc.html', changefreq.monthly, '0.8'),
+  createUrlElement('/anime-push/', changefreq.yearly, '0.8'),
+  createUrlElement('/hk_sub_/', changefreq.yearly, '0.4'),
+  createUrlElement('/trysail-blog-notification/', changefreq.yearly, '0.8'),
+  createUrlElement('/trysail-blog-notification/plugin.html', changefreq.yearly, '0.4'),
+  createUrlElement('/console-wrapper/', changefreq.yearly, '0.8'),
+  createUrlElement('/HkApps/', changefreq.yearly, '0.4'),
+  createUrlElement('/SaveTweet/', changefreq.yearly, '0.4'),
+  createUrlElement('/ShortURL/', changefreq.yearly, '0.4'),
+  createUrlElement('/twitter-r4s/', changefreq.yearly, '0.4'),
+  createUrlElement('/CC-Lemon/', changefreq.yearly, '0.4'),
 ];
 
 getLastModified(getUrl('/'))
