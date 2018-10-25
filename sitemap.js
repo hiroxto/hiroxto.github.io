@@ -34,5 +34,13 @@ const getUrl = path => {
 };
 const getLastModified = url => {
 };
+const createUrlElement = (url, lastmod, changefreq, priority) => {
+  return {
+    url,
+    lastmod,
+    changefreq,
+    priority,
+  };
+};
 
 console.log(convert.js2xml(sitemap, options));
