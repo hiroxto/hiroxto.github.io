@@ -4,8 +4,13 @@ const convert = require('xml-js');
 const axios = require('axios');
 
 const changefreq = {
-  yearly: 'yearly',
+  always: 'always',
+  hourly: 'hourly',
+  daily: 'daily',
+  weekly: 'weekly',
   monthly: 'monthly',
+  yearly: 'yearly',
+  never: 'never',
 };
 
 const options = {
