@@ -64,16 +64,18 @@ const urls = [
   createUrlElement('/CC-Lemon/', changefreq.yearly, '0.4'),
 ];
 
-Promise.all(urls.map(
-  el => getLastModified(el.loc).then((lastModified) => {
+const values = urls.map(el => {
+  return getLastModified(el.loc).then((lastModified) => {
     const date = new Date(lastModified);
     const year = date.getFullYear();
     const month = date.getMonth() + 1;
     const day = date.getDate();
 
     el.lastmod = `${year}-${month}-${day}`;
-  })
-)).then(
+  });
+});
+
+Promise.all(values).then(
   () => {
     sitemap.urlset.url = urls;
     console.log(convert.js2xml(sitemap, options));
