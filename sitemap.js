@@ -32,5 +32,7 @@ const sitemap = {
 const url = path => {
   return `https://hiroto-k.github.io${path}`;
 };
+const getLastModified = url => {
+};
 
 console.log(convert.js2xml(sitemap, options));
