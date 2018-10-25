@@ -50,62 +50,62 @@ const createUrlElement = (url, lastmod, changefreq, priority) => {
 
 const urls = [
   {
-    path: getUrl('/'),
+    loc: getUrl('/'),
     changefreq: changefreq.monthly,
     priority: '1.0',
   },
   {
-    path: getUrl('/train-number-calc.html'),
+    loc: getUrl('/train-number-calc.html'),
     changefreq: changefreq.monthly,
     priority: '0.8',
   },
   {
-    path: getUrl('/anime-push/'),
+    loc: getUrl('/anime-push/'),
     changefreq: changefreq.yearly,
     priority: '0.8',
   },
   {
-    path: getUrl('/hk_sub_/'),
+    loc: getUrl('/hk_sub_/'),
     changefreq: changefreq.yearly,
     priority: '0.4',
   },
   {
-    path: getUrl('/trysail-blog-notification/'),
+    loc: getUrl('/trysail-blog-notification/'),
     changefreq: changefreq.yearly,
     priority: '0.8',
   },
   {
-    path: getUrl('/trysail-blog-notification/plugin.html'),
+    loc: getUrl('/trysail-blog-notification/plugin.html'),
     changefreq: changefreq.yearly,
     priority: '0.4',
   },
   {
-    path: getUrl('/console-wrapper/'),
+    loc: getUrl('/console-wrapper/'),
     changefreq: changefreq.yearly,
     priority: '0.8',
   },
   {
-    path: getUrl('/HkApps/'),
+    loc: getUrl('/HkApps/'),
     changefreq: changefreq.yearly,
     priority: '0.4',
   },
   {
-    path: getUrl('/SaveTweet/'),
+    loc: getUrl('/SaveTweet/'),
     changefreq: changefreq.yearly,
     priority: '0.4',
   },
   {
-    path: getUrl('/ShortURL/'),
+    loc: getUrl('/ShortURL/'),
     changefreq: changefreq.yearly,
     priority: '0.4',
   },
   {
-    path: getUrl('/twitter-r4s/'),
+    loc: getUrl('/twitter-r4s/'),
     changefreq: changefreq.yearly,
     priority: '0.4',
   },
   {
-    path: getUrl('/CC-Lemon/'),
+    loc: getUrl('/CC-Lemon/'),
     changefreq: changefreq.yearly,
     priority: '0.4',
   },
