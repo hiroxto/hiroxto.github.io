@@ -41,7 +41,7 @@ const getLastModified = async url => {
 };
 const createUrlElement = (url, changefreq, priority) => {
   return {
-    url: getUrl(url),
+    loc: getUrl(url),
     lastmod: null,
     changefreq: changefreq,
     priority: priority,
@@ -56,21 +56,25 @@ const urls = [
   createUrlElement('/trysail-blog-notification/', changefreq.yearly, '0.8'),
   createUrlElement('/trysail-blog-notification/plugin.html', changefreq.yearly, '0.4'),
   createUrlElement('/console-wrapper/', changefreq.yearly, '0.8'),
-  createUrlElement('/HkApps/', changefreq.yearly, '0.4'),
   createUrlElement('/SaveTweet/', changefreq.yearly, '0.4'),
   createUrlElement('/ShortURL/', changefreq.yearly, '0.4'),
   createUrlElement('/twitter-r4s/', changefreq.yearly, '0.4'),
   createUrlElement('/CC-Lemon/', changefreq.yearly, '0.4'),
 ];
 
-getLastModified(getUrl('/'))
-  .then((lastModified) => {
+Promise.all(urls.map(
+  el => getLastModified(el.loc).then((lastModified) => {
     const date = new Date(lastModified);
     const year = date.getFullYear();
     const month = date.getMonth() + 1;
     const day = date.getDate();
 
-    return `${year}-${month}-${day}`;
-  });
-
-console.log(convert.js2xml(sitemap, options));
+    el.lastmod = `${year}-${month}-${day}`;
+  })
+)).then(
+  () => {
+    sitemap.urlset.url = urls;
+    console.log(convert.js2xml(sitemap, options));
+  },
+  e => console.error(e)
+);
