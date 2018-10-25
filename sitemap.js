@@ -41,9 +41,9 @@ const getLastModified = async url => {
   return headers['last-modified'];
 };
 
-const createUrlElement = (url, changefreq, priority) => {
+const createUrlElement = (path, changefreq, priority) => {
   return {
-    loc: getUrl(url),
+    loc: getUrl(path),
     lastmod: null,
     changefreq: changefreq,
     priority: priority,
