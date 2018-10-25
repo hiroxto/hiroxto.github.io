@@ -33,12 +33,14 @@ const sitemap = {
 const getUrl = path => {
   return `https://hiroto-k.github.io${path}`;
 };
+
 const getLastModified = async url => {
   const response = await axios.get(url);
   const headers = response.headers;
 
   return headers['last-modified'];
 };
+
 const createUrlElement = (url, changefreq, priority) => {
   return {
     loc: getUrl(url),
