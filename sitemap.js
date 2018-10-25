@@ -29,4 +29,8 @@ const sitemap = {
   },
 };
 
+const url = path => {
+  return `https://hiroto-k.github.io${path}`;
+};
+
 console.log(convert.js2xml(sitemap, options));
