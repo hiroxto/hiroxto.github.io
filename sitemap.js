@@ -1,6 +1,7 @@
 'use strict';
 
 const convert = require('xml-js');
+const axios = require('axios');
 
 const changefreq = {
   yearly: 'yearly',
@@ -32,7 +33,11 @@ const sitemap = {
 const getUrl = path => {
   return `https://hiroto-k.github.io${path}`;
 };
-const getLastModified = url => {
+const getLastModified = async url => {
+  const response = await axios.get(url);
+  const headers = response.headers;
+
+  return headers['last-modified'];
 };
 const createUrlElement = (url, lastmod, changefreq, priority) => {
   return {
@@ -42,5 +47,15 @@ const createUrlElement = (url, lastmod, changefreq, priority) => {
     priority,
   };
 };
+
+getLastModified(getUrl('/'))
+  .then((lastModified) => {
+    const date = new Date(lastModified);
+    const year = date.getFullYear();
+    const month = date.getMonth() + 1;
+    const day = date.getDate();
+
+    return `${year}-${month}-${day}`;
+  });
 
 console.log(convert.js2xml(sitemap, options));
