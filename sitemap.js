@@ -48,6 +48,69 @@ const createUrlElement = (url, lastmod, changefreq, priority) => {
   };
 };
 
+const urls = [
+  {
+    path: getUrl('/'),
+    changefreq: changefreq.monthly,
+    priority: '1.0',
+  },
+  {
+    path: getUrl('/train-number-calc.html'),
+    changefreq: changefreq.monthly,
+    priority: '0.8',
+  },
+  {
+    path: getUrl('/anime-push/'),
+    changefreq: changefreq.yearly,
+    priority: '0.8',
+  },
+  {
+    path: getUrl('/hk_sub_/'),
+    changefreq: changefreq.yearly,
+    priority: '0.4',
+  },
+  {
+    path: getUrl('/trysail-blog-notification/'),
+    changefreq: changefreq.yearly,
+    priority: '0.8',
+  },
+  {
+    path: getUrl('/trysail-blog-notification/plugin.html'),
+    changefreq: changefreq.yearly,
+    priority: '0.4',
+  },
+  {
+    path: getUrl('/console-wrapper/'),
+    changefreq: changefreq.yearly,
+    priority: '0.8',
+  },
+  {
+    path: getUrl('/HkApps/'),
+    changefreq: changefreq.yearly,
+    priority: '0.4',
+  },
+  {
+    path: getUrl('/SaveTweet/'),
+    changefreq: changefreq.yearly,
+    priority: '0.4',
+  },
+  {
+    path: getUrl('/ShortURL/'),
+    changefreq: changefreq.yearly,
+    priority: '0.4',
+  },
+  {
+    path: getUrl('/twitter-r4s/'),
+    changefreq: changefreq.yearly,
+    priority: '0.4',
+  },
+  {
+    path: getUrl('/CC-Lemon/'),
+    changefreq: changefreq.yearly,
+    priority: '0.4',
+  },
+];
+
 getLastModified(getUrl('/'))
   .then((lastModified) => {
     const date = new Date(lastModified);
