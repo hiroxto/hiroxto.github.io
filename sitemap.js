@@ -29,7 +29,7 @@ const sitemap = {
   },
 };
 
-const url = path => {
+const getUrl = path => {
   return `https://hiroto-k.github.io${path}`;
 };
 const getLastModified = url => {
