@@ -68,8 +68,8 @@ const values = urls.map(el => {
   return getLastModified(el.loc).then((lastModified) => {
     const date = new Date(lastModified);
     const year = date.getFullYear();
-    const month = date.getMonth() + 1;
-    const day = date.getDate();
+    const month = (date.getMonth() + 1).toString().padStart(2, '0');
+    const day = date.getDate().toString().padStart(2, '0');
 
     el.lastmod = `${year}-${month}-${day}`;
   });
