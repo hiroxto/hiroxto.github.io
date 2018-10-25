@@ -18,7 +18,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "build": "NODE_ENV=production webpack --mode production --progress",
+    "prod": "NODE_ENV=production webpack --mode production --progress",
     "dev": "NODE_ENV=development webpack-dev-server --hot",
     "lint": "eslint --ext .js,.vue --ignore-pattern '!.eslintrc.js' src/ .eslintrc.js webpack.config.js",
     "lint:fix": "eslint --fix --ext .js,.vue --ignore-pattern '!.eslintrc.js' src/ .eslintrc.js webpack.config.js"
