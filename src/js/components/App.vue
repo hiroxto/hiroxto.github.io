@@ -127,30 +127,29 @@
       },
     },
     methods: {
-      updateRepos: async function () {
-        fetch('https://api.github.com/users/hiroto-k/repos?per_page=100').then((response) => {
-          if (!response.ok) {
-            throw Error(response.statusText);
-          }
+      updateRepos: function () {
+        axios
+          .get('https://api.github.com/users/hiroto-k/repos?per_page=100')
+          .then((response) => {
+            return response.data;
+          })
+          .then(repos => {
+            /** @type {Object[]} repos */
+            repos.forEach((repo) => {
+              this.repos.push(repo);
 
-          return response.json();
-        }).then((json) => {
-          json.forEach((repo) => {
-            this.repos.push(repo);
+              // Ignore hiroto-k/hiroto-k.github.io (38377426)
+              if (repo.has_pages && repo.id !== 38377426) {
+                this.gitHubPages.push(repo);
+              }
+            });
 
-            // Ignore hiroto-k/hiroto-k.github.io
-            if (repo.has_pages && repo.id !== 38377426) {
-              this.gitHubPages.push(repo);
-            }
-          });
+            this.hasError = false;
+          })
+          .catch((e) => {
+            console.log(e);
 
-          this.hasError = false;
-
-          return json;
-        }).catch((e) => {
-          console.log(e);
-
-          this.hasError = true;
+            this.hasError = true;
         });
       },
     },
