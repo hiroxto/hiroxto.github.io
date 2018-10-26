@@ -15,6 +15,9 @@
   "bugs": {
     "url": "https://github.com/hiroto-k/hiroto-k.github.io/issues"
   },
+  "engines": {
+    "node": ">=9.0"
+  },
   "license": "MIT",
   "private": true,
   "scripts": {
