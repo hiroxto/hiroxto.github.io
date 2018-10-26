@@ -133,7 +133,7 @@
           .then(response => response.data)
           .then(repos => {
             /** @type {Object[]} repos */
-            repos.forEach((repo) => {
+            repos.forEach(repo => {
               this.repos.push(repo);
 
               // Ignore hiroto-k/hiroto-k.github.io (38377426)
