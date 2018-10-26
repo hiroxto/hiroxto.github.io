@@ -144,7 +144,7 @@
 
             this.hasError = false;
           })
-          .catch((e) => {
+          .catch(e => {
             console.log(e);
 
             this.hasError = true;
