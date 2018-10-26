@@ -128,6 +128,9 @@
     },
     methods: {
       updateRepos: function () {
+        this.repos = [];
+        this.gitHubPages = [];
+
         axios
           .get('https://api.github.com/users/hiroto-k/repos?per_page=100')
           .then(response => response.data)
