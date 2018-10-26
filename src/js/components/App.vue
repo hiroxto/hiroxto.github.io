@@ -130,9 +130,7 @@
       updateRepos: function () {
         axios
           .get('https://api.github.com/users/hiroto-k/repos?per_page=100')
-          .then((response) => {
-            return response.data;
-          })
+          .then(response => response.data)
           .then(repos => {
             /** @type {Object[]} repos */
             repos.forEach((repo) => {
