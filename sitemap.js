@@ -85,5 +85,8 @@ Promise.all(values).then(
     sitemap.urlset.url = urls;
     console.log(convert.js2xml(sitemap, options));
   },
-  e => console.error(e)
+  e => {
+    console.error(e);
+    process.exit(1);
+  }
 );
