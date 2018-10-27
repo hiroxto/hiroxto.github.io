@@ -87,6 +87,6 @@ Promise.all(values).then(
   },
   e => {
     console.error(e);
-    process.exit(1);
+    process.on('exit', () => process.exit(1));
   }
 );
