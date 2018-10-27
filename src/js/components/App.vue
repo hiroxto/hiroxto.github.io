@@ -79,6 +79,8 @@
 </template>
 
 <script>
+  import axios from 'axios';
+
   export default {
     name: 'App',
     data () {
@@ -126,29 +128,31 @@
     },
     methods: {
       updateRepos: function () {
-        fetch('https://api.github.com/users/hiroto-k/repos?per_page=100').then((response) => {
-          if (!response.ok) {
-            throw Error(response.statusText);
-          }
+        this.repos = [];
+        this.gitHubPages = [];
 
-          return response.json();
-        }).then((json) => {
-          json.forEach((repo) => {
-            this.repos.push(repo);
+        axios
+          .get('https://api.github.com/users/hiroto-k/repos?per_page=100')
+          .then(response => response.data)
+          .then(repos => {
+            /** @type {Object[]} repos **/
+            repos.forEach(repo => {
+              /** @type {Object} repo **/
 
-            // Ignore hiroto-k/hiroto-k.github.io
-            if (repo.has_pages && repo.id !== 38377426) {
-              this.gitHubPages.push(repo);
-            }
-          });
+              this.repos.push(repo);
 
-          this.hasError = false;
+              // Ignore hiroto-k/hiroto-k.github.io (38377426)
+              if (repo.has_pages && repo.id !== 38377426) {
+                this.gitHubPages.push(repo);
+              }
+            });
 
-          return json;
-        }).catch((e) => {
-          console.log(e);
+            this.hasError = false;
+          })
+          .catch(e => {
+            console.log(e);
 
-          this.hasError = true;
+            this.hasError = true;
         });
       },
     },
