@@ -1,5 +1,8 @@
 #!/bin/bash
 # Use "bash update-sitemap.sh"
+
+set -eu
+
 node sitemap.js > sitemap.xml
 d=`date +"%Y/%m/%d %k:%M:%S %z"`
 git add sitemap.xml
