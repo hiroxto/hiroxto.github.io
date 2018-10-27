@@ -23,8 +23,8 @@
   "scripts": {
     "prod": "NODE_ENV=production webpack --mode production --progress",
     "dev": "NODE_ENV=development webpack-dev-server --hot",
-    "lint": "eslint --ext .js,.vue --ignore-pattern '!.eslintrc.js' src/ .eslintrc.js webpack.config.js",
-    "lint:fix": "eslint --fix --ext .js,.vue --ignore-pattern '!.eslintrc.js' src/ .eslintrc.js webpack.config.js"
+    "lint": "eslint --ext .js,.vue --ignore-pattern '!.eslintrc.js' src/ .eslintrc.js sitemap.js webpack.config.js",
+    "lint:fix": "eslint --fix --ext .js,.vue --ignore-pattern '!.eslintrc.js' src/ .eslintrc.js sitemap.js webpack.config.js"
   },
   "devDependencies": {
     "@babel/core": "7.1.2",
