@@ -135,8 +135,10 @@
           .get('https://api.github.com/users/hiroto-k/repos?per_page=100')
           .then(response => response.data)
           .then(repos => {
-            /** @type {Object[]} repos */
+            /** @type {Object[]} repos **/
             repos.forEach(repo => {
+              /** @type {Object} repo **/
+
               this.repos.push(repo);
 
               // Ignore hiroto-k/hiroto-k.github.io (38377426)
