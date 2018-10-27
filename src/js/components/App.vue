@@ -130,6 +130,7 @@
     },
     methods: {
       reloadRepos: function () {
+        this.hasError = false;
         this.updateRepos();
       },
       updateRepos: function () {
