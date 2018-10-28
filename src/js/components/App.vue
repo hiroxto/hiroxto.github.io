@@ -71,6 +71,8 @@
           </div>
         </div>
 
+        <button @click="reloadRepos()" type="button" class="btn btn-primary btn-sm float-right mb-5">Reload repos</button>
+
       </div>
     </div>
 
@@ -127,6 +129,10 @@
       },
     },
     methods: {
+      reloadRepos: function () {
+        this.hasError = false;
+        this.updateRepos();
+      },
       updateRepos: function () {
         this.repos = [];
         this.gitHubPages = [];
