@@ -106,7 +106,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'style.css',
+      filename: '[name].css',
     }),
     new WebpackBuildNotifierPlugin({
       title: 'Webpack Build',
