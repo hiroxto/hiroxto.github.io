@@ -22,7 +22,7 @@
   "private": true,
   "scripts": {
     "prod": "NODE_ENV=production webpack --mode production --progress",
-    "dev": "NODE_ENV=development webpack-dev-server --hot",
+    "dev": "NODE_ENV=development webpack-dev-server --hot --progress",
     "lint": "eslint --ext .js,.vue --ignore-pattern '!.eslintrc.js' src/ .eslintrc.js sitemap.js webpack.config.js",
     "lint:fix": "eslint --fix --ext .js,.vue --ignore-pattern '!.eslintrc.js' src/ .eslintrc.js sitemap.js webpack.config.js"
   },
