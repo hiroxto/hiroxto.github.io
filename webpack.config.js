@@ -7,6 +7,9 @@ const WebpackBuildNotifierPlugin = require('webpack-build-notifier');
 const NODE_ENV = process.env.NODE_ENV;
 const mode = NODE_ENV || 'production';
 
+const autoprefixer = require('autoprefixer')({ grid: true });
+const postcssPlugins = [autoprefixer];
+
 module.exports = {
   mode: mode,
 
@@ -53,9 +56,7 @@ module.exports = {
             loader: 'postcss-loader',
             options: {
               sourceMap: true,
-              plugins: [
-                require('autoprefixer')({ grid: true }),
-              ],
+              plugins: postcssPlugins,
             },
           },
           {
@@ -82,9 +83,7 @@ module.exports = {
             loader: 'postcss-loader',
             options: {
               sourceMap: true,
-              plugins: [
-                require('autoprefixer')({ grid: true }),
-              ],
+              plugins: postcssPlugins,
             },
           },
         ],
