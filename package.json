@@ -27,6 +27,7 @@
     "lint:fix": "eslint --fix --ext .js,.vue --ignore-pattern '!.eslintrc.js' src/ .eslintrc.js sitemap.js webpack.config.js"
   },
   "devDependencies": {
+    "@babel/cli": "^7.1.2",
     "@babel/core": "7.1.2",
     "@babel/preset-env": "7.1.0",
     "autoprefixer": "9.3.1",
