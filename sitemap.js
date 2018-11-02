@@ -1,7 +1,7 @@
 'use strict';
 
-const convert = require('xml-js');
-const axios = require('axios');
+import convert from 'xml-js';
+import axios from 'axios';
 
 const changefreq = {
   always: 'always',
