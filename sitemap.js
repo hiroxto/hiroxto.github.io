@@ -47,11 +47,14 @@ const getLastModified = async url => {
 };
 
 const createUrlElement = (path, changefreq, priority) => {
+  const loc = getUrl(path);
+  const lastmod = null;
+
   return {
-    loc: getUrl(path),
-    lastmod: null,
-    changefreq: changefreq,
-    priority: priority,
+    loc,
+    lastmod,
+    changefreq,
+    priority,
   };
 };
 
