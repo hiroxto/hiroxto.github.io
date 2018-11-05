@@ -34,13 +34,15 @@
 
       <hr>
 
-      <div class="mt-3 mb-3">
-        <div v-if="hasError">
+      <div v-if="hasError">
+        <div class="mt-3 mb-3">
           <h2>Public Repositories</h2>
           <h3>Error</h3>
           <p class="text-danger">Sorry, An error has occurred.</p>
         </div>
-        <div v-else>
+      </div>
+      <div v-else>
+        <div class="mt-3 mb-3">
           <h2>Public Repositories <span class="badge badge-primary">{{ reposLength }}</span></h2>
 
           <b-list-group>
