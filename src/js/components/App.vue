@@ -43,7 +43,7 @@
       </div>
       <div v-else>
         <div class="mt-3 mb-3">
-          <h2>Public Repositories <span class="badge badge-primary">{{ reposLength }}</span></h2>
+          <h2>Public Repositories <b-badge variant="primary">{{ reposLength }}</b-badge></h2>
 
           <b-list-group>
             <a
@@ -58,7 +58,7 @@
         </div>
 
         <div class="mt-3">
-          <h2>GitHub Pages <span class="badge badge-primary">{{ gitHubPagesLength }}</span></h2>
+          <h2>GitHub Pages <b-badge variant="primary">{{ gitHubPagesLength }}</b-badge></h2>
           <b-list-group>
             <a
               v-for="gh_page in gitHubPages"
