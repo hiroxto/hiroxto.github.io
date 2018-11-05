@@ -3,7 +3,7 @@
 import convert from 'xml-js';
 import axios from 'axios';
 
-const changefreq = {
+const freq = {
   always: 'always',
   hourly: 'hourly',
   daily: 'daily',
@@ -56,17 +56,17 @@ const createUrlElement = (path, changefreq, priority) => {
 };
 
 const urls = [
-  createUrlElement('/', changefreq.monthly, '1.0'),
-  createUrlElement('/train-number-calc.html', changefreq.monthly, '0.8'),
-  createUrlElement('/anime-push/', changefreq.yearly, '0.8'),
-  createUrlElement('/hk_sub_/', changefreq.yearly, '0.4'),
-  createUrlElement('/trysail-blog-notification/', changefreq.yearly, '0.8'),
-  createUrlElement('/trysail-blog-notification/plugin.html', changefreq.yearly, '0.4'),
-  createUrlElement('/console-wrapper/', changefreq.yearly, '0.8'),
-  createUrlElement('/SaveTweet/', changefreq.yearly, '0.4'),
-  createUrlElement('/ShortURL/', changefreq.yearly, '0.4'),
-  createUrlElement('/twitter-r4s/', changefreq.yearly, '0.4'),
-  createUrlElement('/CC-Lemon/', changefreq.yearly, '0.4'),
+  createUrlElement('/', freq.monthly, '1.0'),
+  createUrlElement('/train-number-calc.html', freq.monthly, '0.8'),
+  createUrlElement('/anime-push/', freq.yearly, '0.8'),
+  createUrlElement('/hk_sub_/', freq.yearly, '0.4'),
+  createUrlElement('/trysail-blog-notification/', freq.yearly, '0.8'),
+  createUrlElement('/trysail-blog-notification/plugin.html', freq.yearly, '0.4'),
+  createUrlElement('/console-wrapper/', freq.yearly, '0.8'),
+  createUrlElement('/SaveTweet/', freq.yearly, '0.4'),
+  createUrlElement('/ShortURL/', freq.yearly, '0.4'),
+  createUrlElement('/twitter-r4s/', freq.yearly, '0.4'),
+  createUrlElement('/CC-Lemon/', freq.yearly, '0.4'),
 ];
 
 const values = urls.map(el => {
