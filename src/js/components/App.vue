@@ -6,7 +6,7 @@
 
       <div class="mb-3">
         <h2>Apps</h2>
-        <div class="list-group">
+        <b-list-group>
           <a
             v-for="(app, index) in apps"
             :key="index"
@@ -15,12 +15,12 @@
           >
             {{ app.name }}
           </a>
-        </div>
+        </b-list-group>
       </div>
 
       <div class="mb-4">
         <h2>Links</h2>
-        <div class="list-group">
+        <b-list-group>
           <a
             v-for="(link, index) in links"
             :key="index"
@@ -29,7 +29,7 @@
           >
             {{ link.name }}
           </a>
-        </div>
+        </b-list-group>
       </div>
 
       <hr>
@@ -43,7 +43,7 @@
         <div v-else>
           <h2>Public Repositories <span class="badge badge-primary">{{ reposLength }}</span></h2>
 
-          <div class="list-group">
+          <b-list-group>
             <a
               v-for="repo in repos"
               :key="repos.id"
@@ -52,12 +52,12 @@
             >
               {{ repo.full_name }}
             </a>
-          </div>
+          </b-list-group>
         </div>
 
         <div class="mt-3">
           <h2>GitHub Pages <span class="badge badge-primary">{{ gitHubPagesLength }}</span></h2>
-          <div class="list-group">
+          <b-list-group>
             <a
               v-for="gh_page in gitHubPages"
               :key="gitHubPages.id"
@@ -65,7 +65,7 @@
               class="list-group-item list-group-item-action">
               {{ gh_page.full_name }}
             </a>
-          </div>
+          </b-list-group>
         </div>
       </div>
 
