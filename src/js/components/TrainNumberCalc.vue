@@ -4,11 +4,13 @@
       <h1>列車番号から種別計算</h1>
       <p class="lead">1〜4ケタの列番から列車種別を計算。</p>
 
-      <div v-if="trainType !== null">
-        <div class="alert alert-info" role="alert">
-          {{ trainType }}
-        </div>
-      </div>
+      <b-alert
+        v-if="trainType !== null"
+        variant="info"
+        show
+      >
+        {{ trainType }}
+      </b-alert>
 
       <form>
         <div class="form-group">
