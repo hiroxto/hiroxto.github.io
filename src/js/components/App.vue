@@ -71,7 +71,13 @@
         </div>
       </div>
 
-      <button @click="reloadRepos()" type="button" class="btn btn-primary btn-sm float-right mb-5">Reload repos</button>
+      <b-button
+        @click="reloadRepos()"
+        variant="primary"
+        class="btn-sm float-right mb-5"
+      >
+        Reload repos
+      </b-button>
     </b-jumbotron>
 
     <page-footer></page-footer>
