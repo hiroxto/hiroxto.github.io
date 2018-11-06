@@ -57,7 +57,7 @@
           </b-list-group>
         </div>
 
-        <div class="mt-3">
+        <div class="mt-3 mb-3">
           <h2>GitHub Pages <b-badge variant="primary">{{ gitHubPagesLength }}</b-badge></h2>
           <b-list-group>
             <a
