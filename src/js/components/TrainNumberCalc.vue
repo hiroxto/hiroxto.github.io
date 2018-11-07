@@ -19,7 +19,7 @@
           label-for="freightNumber"
         >
           <b-form-input
-            v-model.number="trainNumber"
+            v-model="trainNumber"
             v-validate="validateRules()"
             data-vv-as="列車番号"
             @keyup.native="changeInput"
