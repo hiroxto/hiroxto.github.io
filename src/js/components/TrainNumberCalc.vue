@@ -35,7 +35,6 @@
           <div v-show="hasErrors" class="invalid-feedback">
             {{ errorMessage }}
           </div>
-
         </b-form-group>
       </b-form>
 
