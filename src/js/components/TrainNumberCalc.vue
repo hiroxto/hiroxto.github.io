@@ -12,7 +12,7 @@
         {{ trainType }}
       </b-alert>
 
-      <b-form>
+      <b-form @submit.prevent="false">
         <b-form-group
           id="inputGroup1"
           label="列車番号 (1〜4ケタの数字)"
