@@ -12,10 +12,13 @@
         {{ trainType }}
       </b-alert>
 
-      <form>
-        <div class="form-group">
-          <label for="freightNumber">列車番号 (1〜4ケタの数字)</label>
-          <input
+      <b-form>
+        <b-form-group
+          id="inputGroup1"
+          label="列車番号 (1〜4ケタの数字)"
+          label-for="freightNumber"
+        >
+          <b-form-input
             v-model.number="trainNumber"
             v-validate="validateRules()"
             data-vv-as="列車番号"
@@ -28,12 +31,14 @@
             id="freightNumber"
             placeholder="列車番号"
           >
+          </b-form-input>
           <div v-show="hasErrors" class="invalid-feedback">
             {{ errorMessage }}
           </div>
 
-        </div>
-      </form>
+        </b-form-group>
+      </b-form>
+
     </b-jumbotron>
 
     <page-footer></page-footer>
