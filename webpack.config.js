@@ -109,7 +109,7 @@ module.exports = {
     }),
     new WebpackBuildNotifierPlugin({
       title: 'Webpack Build',
-      suppressSuccess: true,
+      suppressSuccess: false,
     }),
   ],
   optimization: {
