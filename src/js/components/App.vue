@@ -50,6 +50,7 @@
               v-for="repo in repos"
               :key="repos.id"
               :href="repo.html_url"
+              v-b-popover.hover.focus.bottom="repo.description"
               class="list-group-item list-group-item-action"
             >
               {{ repo.full_name }}
