@@ -7,28 +7,28 @@
       <div class="mb-3">
         <h2>Apps</h2>
         <b-list-group>
-          <a
+          <b-link
             v-for="(app, index) in apps"
             :key="index"
             :href="app.url"
+            v-text="app.name"
             class="list-group-item list-group-item-action"
           >
-            {{ app.name }}
-          </a>
+          </b-link>
         </b-list-group>
       </div>
 
       <div class="mb-4">
         <h2>Links</h2>
         <b-list-group>
-          <a
+          <b-link
             v-for="(link, index) in links"
             :key="index"
             :href="link.url"
+            v-text="link.name"
             class="list-group-item list-group-item-action"
           >
-            {{ link.name }}
-          </a>
+          </b-link>
         </b-list-group>
       </div>
 
@@ -46,28 +46,28 @@
           <h2>Public Repositories <b-badge variant="primary">{{ reposLength }}</b-badge></h2>
 
           <b-list-group>
-            <a
+            <b-link
               v-for="repo in repos"
               :key="repos.id"
               :href="repo.html_url"
+              v-text="repo.full_name"
               v-b-popover.hover.focus.bottom="repo.description"
               class="list-group-item list-group-item-action"
             >
-              {{ repo.full_name }}
-            </a>
+            </b-link>
           </b-list-group>
         </div>
 
         <div class="mt-3 mb-3">
           <h2>GitHub Pages <b-badge variant="primary">{{ gitHubPagesLength }}</b-badge></h2>
           <b-list-group>
-            <a
+            <b-link
               v-for="gh_page in gitHubPages"
               :key="gitHubPages.id"
               :href="['https://hiroto-k.github.io/' + gh_page.name]"
-              class="list-group-item list-group-item-action">
-              {{ gh_page.full_name }}
-            </a>
+              v-text="gh_page.full_name"
+              class="list-group-item list-group-item-action"
+            ></b-link>
           </b-list-group>
         </div>
       </div>
