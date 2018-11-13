@@ -1,5 +1,7 @@
 import Vue from 'vue';
 import Footer from './components/Footer';
-import 'bootstrap/dist/js/bootstrap.bundle';
+import BootstrapVue from 'bootstrap-vue';
+
+Vue.use(BootstrapVue);
 
 Vue.component('page-footer', Footer);
