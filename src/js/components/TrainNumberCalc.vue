@@ -110,20 +110,21 @@
       },
       getPassengerType: function () {
         const splitNumber = this.splitNumber;
+        const isSpecial = this.isPassengerSpecial;
         let type = '';
 
         if (splitNumber[1] === 0) {
           // Check 特急客
 
-          type = `${this.isPassengerSpecial ? '臨' : ''}特急客`;
+          type = `${isSpecial ? '臨' : ''}特急客`;
         } else if ((splitNumber[0] !== 0 || splitNumber[1] !== 0) && splitNumber[2] <= 1) {
           // Checks 急客
 
-          type = `${this.isPassengerSpecial ? '臨' : ''}急客`;
+          type = `${isSpecial ? '臨' : ''}急客`;
         } else if (splitNumber[1] !== 0 && splitNumber[2] >= 2) {
           // Checks 客
 
-          type = `${this.isPassengerSpecial ? '臨' : ''}客`;
+          type = `${isSpecial ? '臨' : ''}客`;
         } else {
           type = '不明';
         }
@@ -132,25 +133,26 @@
       },
       getFreightType: function () {
         const splitNumber = this.splitNumber;
+        const isSpecial = this.isFreightSpecial;
         let type = '';
 
         if (splitNumber[1] === 0) {
           // Checks 高速貨A,B
 
           let ab = (splitNumber[2] <= 6) ? 'A' : 'B';
-          type = `${this.isFreightSpecial ? '臨' : ''}高速貨${ab}`;
-        } else if ((splitNumber[0] <= 1 || this.isFreightSpecial) && splitNumber[2] === 5) {
+          type = `${isSpecial ? '臨' : ''}高速貨${ab}`;
+        } else if ((splitNumber[0] <= 1 || isSpecial) && splitNumber[2] === 5) {
           // Checks 高速貨C
 
-          type = `${this.isFreightSpecial ? '臨' : ''}高速貨C`;
+          type = `${isSpecial ? '臨' : ''}高速貨C`;
         } else if (splitNumber[2] >= 6 && splitNumber[2] <= 8) {
           // Checks 専貨A
 
-          type = `${this.isFreightSpecial ? '臨' : ''}専貨A`;
+          type = `${isSpecial ? '臨' : ''}専貨A`;
         } else if (splitNumber[2] === 9) {
           // Checks 専貨B
 
-          type = `${this.isFreightSpecial ? '臨' : ''}専貨B`;
+          type = `${isSpecial ? '臨' : ''}専貨B`;
         } else {
           // Undefined
           type = '不明';
