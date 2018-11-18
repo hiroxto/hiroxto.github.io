@@ -1,7 +1,7 @@
 <template>
   <div id="footer">
     <div class="container">
-      <p class="footer-text">© {{ sinceYear }}-{{ currentYear }} Hiroto-K</p>
+      <p class="footer-text">© 2015-{{ currentYear }} Hiroto-K</p>
     </div>
   </div>
 </template>
@@ -9,11 +9,6 @@
 <script>
   export default {
     name: 'Footer',
-    data () {
-      return {
-        sinceYear: '2015',
-      };
-    },
     computed: {
       currentYear: function () {
         return (new Date()).getFullYear().toString();
