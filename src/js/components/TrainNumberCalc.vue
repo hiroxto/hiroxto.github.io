@@ -5,7 +5,7 @@
       <p class="lead">1〜4ケタの列番から列車種別を計算。</p>
 
       <b-alert
-        v-if="trainType !== null"
+        v-if="isRenderTrainType"
         variant="info"
         show
       >
@@ -54,6 +54,9 @@
       };
     },
     computed: {
+      isRenderTrainType: function () {
+        return this.trainType !== null;
+      },
       hasErrors: function () {
         return this.errors.has('freightNumber');
       },
