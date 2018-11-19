@@ -64,7 +64,7 @@
             <b-link
               v-for="gh_page in gitHubPages"
               :key="gitHubPages.id"
-              :href="['https://hiroto-k.github.io/' + gh_page.name]"
+              :href="gh_page.gh_page_url"
               v-text="gh_page.full_name"
               class="list-group-item list-group-item-action"
             ></b-link>
