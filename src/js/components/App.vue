@@ -154,6 +154,7 @@
 
               // Ignore hiroto-k/hiroto-k.github.io (38377426)
               if (repo.has_pages && repo.id !== 38377426) {
+                repo.gh_page_url = `https://hiroto-k.github.io/${repo.name}`;
                 this.gitHubPages.push(repo);
               }
             });
