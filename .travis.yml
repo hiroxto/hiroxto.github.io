@@ -10,6 +10,7 @@ before_script:
 script:
   - yarn run prod
   - yarn run lint
+  - git diff --exit-code --quiet || echo "Has changes"
 
 cache:
   directories:
