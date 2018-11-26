@@ -165,7 +165,7 @@
             console.log(e);
 
             this.hasError = true;
-        });
+          });
       },
     },
     mounted: function () {
