@@ -10,8 +10,13 @@
 </template>
 
 <script>
+  import QrcodeVue from 'qrcode.vue';
+
   export default {
     name: 'QrCode',
+    components: {
+      QrcodeVue,
+    },
   };
 </script>
 
