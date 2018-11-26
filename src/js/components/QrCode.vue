@@ -3,6 +3,8 @@
     <b-jumbotron>
       <h1>QR Code</h1>
       <p class="lead">QR Code generator.</p>
+
+      <qrcode-vue :value="value" size="200" level="H"></qrcode-vue>
     </b-jumbotron>
 
     <page-footer></page-footer>
@@ -14,6 +16,11 @@
 
   export default {
     name: 'QrCode',
+    data () {
+      return {
+        value: '',
+      };
+    },
     components: {
       QrcodeVue,
     },
