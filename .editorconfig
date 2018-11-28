@@ -9,9 +9,7 @@ indent_style = space
 indent_size = 4
 
 [*.{html,js,vue,scss,yml}]
-indent_style = space
 indent_size = 2
 
 [package.json]
-indent_style = space
 indent_size = 2
