@@ -13,6 +13,8 @@ const postcssPlugins = [autoprefixer];
 module.exports = {
   mode: mode,
 
+  context: path.resolve(__dirname),
+
   entry: {
     'app': './src/js/app.js',
     'train-number-calc': './src/js/train-number-calc.js',
