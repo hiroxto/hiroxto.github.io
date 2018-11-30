@@ -54,10 +54,10 @@
     computed: {
       levelsSelectOptions: function () {
         return [
-          { value: 'L', text: 'Level L' },
-          { value: 'M', text: 'Level M' },
-          { value: 'Q', text: 'Level Q' },
-          { value: 'H', text: 'Level H' },
+          { value: 'L', text: 'Level L (7%)' },
+          { value: 'M', text: 'Level M (15%)' },
+          { value: 'Q', text: 'Level Q (25%)' },
+          { value: 'H', text: 'Level H (30%)' },
         ];
       },
     },
