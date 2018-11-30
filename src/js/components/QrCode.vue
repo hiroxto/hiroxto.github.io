@@ -18,9 +18,22 @@
           >
           </b-form-input>
         </b-form-group>
+
+        <b-form-group
+          id="qrCodeLevelInputGroup"
+          label="Error correction level :"
+          label-for="qrCodeLevelInput"
+        >
+          <b-form-select
+            id="qrCodeLevelInput"
+            v-model="level"
+            :options="levelsSelectOptions"
+          >
+          </b-form-select>
+        </b-form-group>
       </b-form>
 
-      <qrcode-vue :value="value" size="200" level="H"></qrcode-vue>
+      <qrcode-vue :value="value" size="200" :level="level"></qrcode-vue>
     </b-jumbotron>
 
     <page-footer></page-footer>
@@ -35,7 +48,18 @@
     data () {
       return {
         value: '',
+        level: 'H',
       };
+    },
+    computed: {
+      levelsSelectOptions: function () {
+        return [
+          { value: 'L', text: 'Level L' },
+          { value: 'M', text: 'Level M' },
+          { value: 'Q', text: 'Level Q' },
+          { value: 'H', text: 'Level H' },
+        ];
+      },
     },
     components: {
       QrcodeVue,
