@@ -13,7 +13,7 @@ const freq = {
   never: 'never',
 };
 
-const options = {
+const convertXmlOptions = {
   compact: true,
   spaces: 2,
   indentText: true,
@@ -83,7 +83,7 @@ const values = urls.map(el => {
 Promise.all(values).then(
   () => {
     sitemap.urlset.url = urls;
-    console.log(convert.js2xml(sitemap, options));
+    console.log(convert.js2xml(sitemap, convertXmlOptions));
   },
   e => {
     console.error(e);
