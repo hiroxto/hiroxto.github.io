@@ -33,6 +33,8 @@
         </b-form-group>
       </b-form>
 
+      <hr>
+
       <qrcode-vue :value="value" size="200" :level="level"></qrcode-vue>
     </b-jumbotron>
 
