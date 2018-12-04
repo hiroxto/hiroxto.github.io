@@ -33,7 +33,7 @@
       </div>
 
       <div class="mb-3">
-        <div class="list-inline">
+        <ul class="list-inline">
           <li
             v-for="(icon, index) in icons"
             :key="index"
@@ -43,7 +43,7 @@
               <i :class="icon.className" class="fa-2x"></i>
             </a>
           </li>
-        </div>
+        </ul>
       </div>
 
       <hr>
