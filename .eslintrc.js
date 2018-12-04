@@ -25,6 +25,7 @@ module.exports = {
     'vue/html-indent': ['error', 2, { attribute: 1, closeBracket: 0, baseIndent: 1 }],
     'vue/html-closing-bracket-newline': ['error', { 'singleline': 'never', multiline: 'always' }],
     'vue/html-quotes': ['error', 'double'],
+    'vue/no-multi-spaces': ['error', { ignoreProperties: true }],
   },
   overrides: [
     {
