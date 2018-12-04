@@ -26,6 +26,7 @@ module.exports = {
     'vue/html-closing-bracket-newline': ['error', { 'singleline': 'never', multiline: 'always' }],
     'vue/html-quotes': ['error', 'double'],
     'vue/no-multi-spaces': ['error', { ignoreProperties: true }],
+    'vue/v-bind-style': ['error', 'shorthand'],
   },
   overrides: [
     {
