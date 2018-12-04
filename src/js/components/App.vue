@@ -32,6 +32,20 @@
         </b-list-group>
       </div>
 
+      <div class="mb-3">
+        <div class="list-inline">
+          <li
+            v-for="(icon, index) in icons"
+            :key="index"
+            class="list-inline-item"
+          >
+            <a :href="icon.url" class="text-muted">
+              <i :class="icon.className" class="fa-2x"></i>
+            </a>
+          </li>
+        </div>
+      </div>
+
       <hr>
 
       <div v-if="hasError">
