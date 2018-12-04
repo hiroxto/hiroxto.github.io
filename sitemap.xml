@@ -2,15 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://hiroto-k.github.io/</loc>
-    <lastmod>2018-11-16</lastmod>
+    <lastmod>2018-12-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://hiroto-k.github.io/train-number-calc.html</loc>
-    <lastmod>2018-11-16</lastmod>
+    <lastmod>2018-12-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hiroto-k.github.io/qr-code.html</loc>
+    <lastmod>2018-12-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://hiroto-k.github.io/anime-push/</loc>
@@ -38,7 +44,7 @@
   </url>
   <url>
     <loc>https://hiroto-k.github.io/console-wrapper/</loc>
-    <lastmod>2018-09-29</lastmod>
+    <lastmod>2018-11-29</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
