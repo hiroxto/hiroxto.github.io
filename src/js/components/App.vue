@@ -2,7 +2,11 @@
   <div>
     <b-jumbotron>
       <h1>Hiroto-K.github.io</h1>
-      <p class="lead">This is a web pages of <a href="https://github.com/hiroto-k">hiroto-k</a>.</p>
+      <p class="lead">
+        This is a web pages of <a href="https://github.com/hiroto-k">
+          hiroto-k
+        </a>.
+      </p>
 
       <div class="mb-3">
         <h2>Apps</h2>
@@ -38,12 +42,19 @@
         <div class="mt-3 mb-3">
           <h2>Public Repositories</h2>
           <h3>Error</h3>
-          <p class="text-danger">Sorry, An error has occurred.</p>
+          <p class="text-danger">
+            Sorry, An error has occurred.
+          </p>
         </div>
       </div>
       <div v-else>
         <div class="mt-3 mb-3">
-          <h2>Public Repositories <b-badge variant="primary">{{ reposLength }}</b-badge></h2>
+          <h2>
+            Public Repositories
+            <b-badge variant="primary">
+              {{ reposLength }}
+            </b-badge>
+          </h2>
 
           <b-list-group>
             <b-link
@@ -59,7 +70,12 @@
         </div>
 
         <div class="mt-3 mb-3">
-          <h2>GitHub Pages <b-badge variant="primary">{{ gitHubPagesLength }}</b-badge></h2>
+          <h2>
+            GitHub Pages
+            <b-badge variant="primary">
+              {{ gitHubPagesLength }}
+            </b-badge>
+          </h2>
           <b-list-group>
             <b-link
               v-for="gh_page in gitHubPages"
@@ -67,7 +83,8 @@
               :href="gh_page.gh_page_url"
               v-text="gh_page.full_name"
               class="list-group-item list-group-item-action"
-            ></b-link>
+            >
+            </b-link>
           </b-list-group>
         </div>
       </div>
