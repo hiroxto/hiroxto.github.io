@@ -9,6 +9,7 @@ module.exports = {
   },
   extends: [
     'plugin:vue/essential',
+    'plugin:vue/strongly-recommended',
     'standard',
   ],
   plugins: [
