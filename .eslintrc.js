@@ -27,6 +27,7 @@ module.exports = {
     'vue/no-multi-spaces': ['error', { ignoreProperties: true }],
     'vue/v-bind-style': ['error', 'shorthand'],
     'vue/component-name-in-template-casing': ['error', 'kebab-case'],
+    'vue/html-self-closing': ['error', { html: { 'void': 'never', 'normal': 'never', 'component': 'never' } }],
   },
   overrides: [
     {
