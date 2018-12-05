@@ -111,6 +111,10 @@
             name: 'Train number calc',
             url: '/train-number-calc.html',
           },
+          {
+            name: 'QR Code generator',
+            url: '/qr-code.html',
+          },
         ],
         links: [
           {
