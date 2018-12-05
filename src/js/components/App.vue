@@ -32,6 +32,20 @@
         </b-list-group>
       </div>
 
+      <div class="mb-3">
+        <ul class="list-inline">
+          <li
+            v-for="(icon, index) in icons"
+            :key="index"
+            class="list-inline-item"
+          >
+            <a :href="icon.url" class="text-muted">
+              <i :class="icon.className" class="fa-2x"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+
       <hr>
 
       <div v-if="hasError">
@@ -122,6 +136,38 @@
           {
             name: 'Blog (Train)',
             url: 'https://hiroto-k.github.io/blog/',
+          },
+        ],
+        icons: [
+          {
+            name: 'Home page',
+            url: 'https://hiroto-k.net/',
+            className: 'fas fa-home',
+          },
+          {
+            name: 'Profile',
+            url: 'https://hiroto-k.net/profile',
+            className: 'fas fa-user-alt',
+          },
+          {
+            name: 'Twitter',
+            url: 'https://twitter.com/hiroto_k_',
+            className: 'fab fa-twitter',
+          },
+          {
+            name: 'GitHub',
+            url: 'https://github.com/hiroto-k',
+            className: 'fab fa-github',
+          },
+          {
+            name: 'GitLab',
+            url: 'https://gitlab.com/hiroto-k',
+            className: 'fab fa-gitlab',
+          },
+          {
+            name: 'Bitbucket',
+            url: 'https://bitbucket.org/hiroto-k/',
+            className: 'fab fa-bitbucket',
           },
         ],
         repos: [],
