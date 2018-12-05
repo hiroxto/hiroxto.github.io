@@ -48,7 +48,7 @@
           <b-list-group>
             <b-link
               v-for="repo in repos"
-              :key="repos.id"
+              :key="repo.id"
               :href="repo.html_url"
               v-text="repo.full_name"
               v-b-popover.hover.focus.bottom="repo.description"
@@ -63,7 +63,7 @@
           <b-list-group>
             <b-link
               v-for="gh_page in gitHubPages"
-              :key="gitHubPages.id"
+              :key="gh_page.id"
               :href="gh_page.gh_page_url"
               v-text="gh_page.full_name"
               class="list-group-item list-group-item-action"
