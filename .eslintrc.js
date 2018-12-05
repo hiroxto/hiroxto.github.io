@@ -26,6 +26,7 @@ module.exports = {
     'vue/html-quotes': ['error', 'double'],
     'vue/no-multi-spaces': ['error', { ignoreProperties: true }],
     'vue/v-bind-style': ['error', 'shorthand'],
+    'vue/component-name-in-template-casing': ['error', 'kebab-case'],
   },
   overrides: [
     {
