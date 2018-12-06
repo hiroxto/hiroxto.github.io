@@ -6,9 +6,9 @@ import './google-analytics';
 new Vue({
   el: '#app',
   template: `
-    <div class="container">
+    <b-container>
       <TrainNumberCalc></TrainNumberCalc>
-    </div>
+    </b-container>
   `,
   components: {
     TrainNumberCalc,
