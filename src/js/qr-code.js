@@ -5,5 +5,12 @@ import './google-analytics';
 
 new Vue({
   el: '#app',
-  render: h => h(QrCode),
+  template: `
+    <div class="container">
+      <QrCode></QrCode>
+    </div>
+  `,
+  components: {
+    QrCode,
+  },
 });
