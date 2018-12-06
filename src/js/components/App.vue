@@ -43,15 +43,8 @@
             :key="index"
             class="list-inline-item"
           >
-            <a
-              :href="icon.url"
-              class="text-muted"
-            >
-              <i
-                :class="icon.className"
-                class="fa-2x"
-              >
-              </i>
+            <a :href="icon.url" class="text-muted">
+              <i :class="icon.className" class="fa-2x"></i>
             </a>
           </li>
         </ul>

@@ -37,6 +37,7 @@
             placeholder="列車番号"
           >
           </b-form-input>
+
           <div
             v-show="hasErrors"
             class="invalid-feedback"
