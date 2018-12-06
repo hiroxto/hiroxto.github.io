@@ -2,7 +2,9 @@
   <div>
     <b-jumbotron>
       <h1>QR Code</h1>
-      <p class="lead">QR Code generator.</p>
+      <p class="lead">
+        QR Code generator.
+      </p>
 
       <b-form @submit.prevent="false">
         <b-form-group
@@ -35,7 +37,12 @@
 
       <hr>
 
-      <qrcode-vue :value="value" size="200" :level="level"></qrcode-vue>
+      <qrcode-vue
+        :value="value"
+        size="200"
+        :level="level"
+      >
+      </qrcode-vue>
     </b-jumbotron>
 
     <page-footer></page-footer>
