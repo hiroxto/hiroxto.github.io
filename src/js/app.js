@@ -5,5 +5,12 @@ import './google-analytics';
 
 new Vue({
   el: '#app',
-  render: h => h(App),
+  template: `
+    <div class="container">
+      <App></App>
+    </div>
+  `,
+  components: {
+    App,
+  },
 });
