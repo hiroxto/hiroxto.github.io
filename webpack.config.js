@@ -112,6 +112,7 @@ module.exports = {
     }),
     new WebpackBuildNotifierPlugin({
       title: 'Webpack Build',
+      logo: path.resolve('./apple-touch-icon.png'),
       suppressSuccess: false,
     }),
   ],
