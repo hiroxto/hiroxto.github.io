@@ -1,7 +1,9 @@
 <template>
   <div id="footer">
     <div class="container">
-      <p class="footer-text">© 2015-{{ currentYear }} Hiroto-K</p>
+      <p class="footer-text">
+        © 2015-{{ currentYear }} Hiroto-K
+      </p>
     </div>
   </div>
 </template>

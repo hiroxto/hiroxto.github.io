@@ -2,7 +2,9 @@
   <div>
     <b-jumbotron>
       <h1>列車番号から種別計算</h1>
-      <p class="lead">1〜4ケタの列番から列車種別を計算。</p>
+      <p class="lead">
+        1〜4ケタの列番から列車種別を計算。
+      </p>
 
       <b-alert
         v-if="isRenderTrainType"
@@ -12,7 +14,10 @@
         {{ trainType }}
       </b-alert>
 
-      <b-form @submit.prevent="false" autocomplete="off">
+      <b-form
+        @submit.prevent="false"
+        autocomplete="off"
+      >
         <b-form-group
           id="inputGroup1"
           label="列車番号 (1〜4ケタの数字)"
@@ -32,12 +37,14 @@
             placeholder="列車番号"
           >
           </b-form-input>
-          <div v-show="hasErrors" class="invalid-feedback">
+          <div
+            v-show="hasErrors"
+            class="invalid-feedback"
+          >
             {{ errorMessage }}
           </div>
         </b-form-group>
       </b-form>
-
     </b-jumbotron>
 
     <page-footer></page-footer>
