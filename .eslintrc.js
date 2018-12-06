@@ -26,6 +26,7 @@ module.exports = {
     'vue/html-closing-bracket-newline': ['error', { 'singleline': 'never', 'multiline': 'always' }],
     'vue/component-name-in-template-casing': ['error', 'kebab-case'],
     'vue/html-self-closing': ['error', { 'html': { 'void': 'never', 'normal': 'never', 'component': 'never' } }],
+    'vue/max-attributes-per-line': ['error', { 'singleline': 2 }],
     'vue/this-in-template': ['error'],
   },
   overrides: [
