@@ -123,17 +123,14 @@
     name: 'App',
     data () {
       return {
-        apps: [
-          {
-            name: 'Train number calc',
-            url: '/train-number-calc.html',
-          },
-          {
-            name: 'QR Code generator',
-            url: '/qr-code.html',
-          },
-        ],
-        links: [
+        repos: [],
+        gitHubPages: [],
+        hasError: false,
+      };
+    },
+    computed: {
+      links: function () {
+        return [
           {
             name: 'Home Page',
             url: 'https://hiroto-k.net/',
@@ -154,8 +151,10 @@
             name: 'Blog (Train)',
             url: 'https://hiroto-k.github.io/blog/',
           },
-        ],
-        icons: [
+        ];
+      },
+      icons: function () {
+        return [
           {
             name: 'Home page',
             url: 'https://hiroto-k.net/',
@@ -186,13 +185,20 @@
             url: 'https://bitbucket.org/hiroto-k/',
             className: 'fab fa-bitbucket',
           },
-        ],
-        repos: [],
-        gitHubPages: [],
-        hasError: false,
-      };
-    },
-    computed: {
+        ];
+      },
+      apps: function () {
+        return [
+          {
+            name: 'Train number calc',
+            url: '/train-number-calc.html',
+          },
+          {
+            name: 'QR Code generator',
+            url: '/qr-code.html',
+          },
+        ];
+      },
       reposLength: function () {
         return this.repos.length;
       },
