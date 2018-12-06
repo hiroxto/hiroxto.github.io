@@ -52,7 +52,7 @@
 
       <hr>
 
-      <div v-if="hasError">
+      <template v-if="hasError">
         <div class="mt-3 mb-3">
           <h2>Public Repositories</h2>
           <h3>Error</h3>
@@ -60,8 +60,8 @@
             Sorry, An error has occurred.
           </p>
         </div>
-      </div>
-      <div v-else>
+      </template>
+      <template v-else>
         <div class="mt-3 mb-3">
           <h2>
             Public Repositories
@@ -101,7 +101,7 @@
             </b-link>
           </b-list-group>
         </div>
-      </div>
+      </template>
 
       <b-button
         @click="reloadRepos()"
