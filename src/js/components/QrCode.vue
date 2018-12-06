@@ -1,10 +1,7 @@
 <template>
   <div>
     <b-jumbotron>
-      <h1>QR Code</h1>
-      <p class="lead">
-        QR Code generator.
-      </p>
+      <h1>QR Code Generator</h1>
 
       <b-form @submit.prevent="false">
         <b-form-group
