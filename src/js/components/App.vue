@@ -9,20 +9,6 @@
       </p>
 
       <div class="mb-3">
-        <h2>Apps</h2>
-        <b-list-group>
-          <b-link
-            v-for="(app, index) in apps"
-            :key="index"
-            :href="app.url"
-            v-text="app.name"
-            class="list-group-item list-group-item-action"
-          >
-          </b-link>
-        </b-list-group>
-      </div>
-
-      <div class="mb-4">
         <h2>Links</h2>
         <b-list-group>
           <b-link
@@ -48,6 +34,20 @@
             </a>
           </li>
         </ul>
+      </div>
+
+      <div class="mb-3">
+        <h2>Apps</h2>
+        <b-list-group>
+          <b-link
+            v-for="(app, index) in apps"
+            :key="index"
+            :href="app.url"
+            v-text="app.name"
+            class="list-group-item list-group-item-action"
+          >
+          </b-link>
+        </b-list-group>
       </div>
 
       <hr>
