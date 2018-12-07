@@ -41,8 +41,6 @@
       >
       </qrcode-vue>
     </b-jumbotron>
-
-    <page-footer></page-footer>
   </div>
 </template>
 

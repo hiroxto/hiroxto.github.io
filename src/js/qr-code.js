@@ -8,6 +8,7 @@ new Vue({
   template: `
     <b-container>
       <QrCode></QrCode>
+      <page-footer></page-footer>
     </b-container>
   `,
   components: {
