@@ -194,7 +194,7 @@
             url: '/train-number-calc.html',
           },
           {
-            name: 'QR Code generator',
+            name: 'QR Code Generator',
             url: '/qr-code.html',
           },
         ];
