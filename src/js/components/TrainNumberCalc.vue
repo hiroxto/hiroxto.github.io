@@ -47,8 +47,6 @@
         </b-form-group>
       </b-form>
     </b-jumbotron>
-
-    <page-footer></page-footer>
   </div>
 </template>
 

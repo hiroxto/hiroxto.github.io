@@ -8,6 +8,7 @@ new Vue({
   template: `
     <b-container>
       <TrainNumberCalc></TrainNumberCalc>
+      <page-footer></page-footer>
     </b-container>
   `,
   components: {
