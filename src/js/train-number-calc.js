@@ -5,5 +5,12 @@ import './google-analytics';
 
 new Vue({
   el: '#app',
-  render: h => h(TrainNumberCalc),
+  template: `
+    <b-container>
+      <TrainNumberCalc></TrainNumberCalc>
+    </b-container>
+  `,
+  components: {
+    TrainNumberCalc,
+  },
 });
