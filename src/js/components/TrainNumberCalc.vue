@@ -1,53 +1,51 @@
 <template>
-  <div>
-    <b-jumbotron>
-      <h1>列車番号から種別計算</h1>
-      <p class="lead">
-        1〜4ケタの列番から列車種別を計算。
-      </p>
+  <b-jumbotron>
+    <h1>列車番号から種別計算</h1>
+    <p class="lead">
+      1〜4ケタの列番から列車種別を計算。
+    </p>
 
-      <b-alert
-        v-if="isRenderTrainType"
-        variant="info"
-        show
-      >
-        {{ trainType }}
-      </b-alert>
+    <b-alert
+      v-if="isRenderTrainType"
+      variant="info"
+      show
+    >
+      {{ trainType }}
+    </b-alert>
 
-      <b-form
-        @submit.prevent="false"
-        autocomplete="off"
+    <b-form
+      @submit.prevent="false"
+      autocomplete="off"
+    >
+      <b-form-group
+        id="inputGroup1"
+        label="列車番号 (1〜4ケタの数字)"
+        label-for="freightNumber"
       >
-        <b-form-group
-          id="inputGroup1"
-          label="列車番号 (1〜4ケタの数字)"
-          label-for="freightNumber"
+        <b-form-input
+          v-model="trainNumber"
+          v-validate="validateRules()"
+          data-vv-as="列車番号"
+          @keyup.native="changeInput"
+          @keydown.native="changeInput"
+          :class="inputClass"
+          type="text"
+          class="form-control"
+          name="freightNumber"
+          id="freightNumber"
+          placeholder="列車番号"
         >
-          <b-form-input
-            v-model="trainNumber"
-            v-validate="validateRules()"
-            data-vv-as="列車番号"
-            @keyup.native="changeInput"
-            @keydown.native="changeInput"
-            :class="inputClass"
-            type="text"
-            class="form-control"
-            name="freightNumber"
-            id="freightNumber"
-            placeholder="列車番号"
-          >
-          </b-form-input>
+        </b-form-input>
 
-          <div
-            v-show="hasErrors"
-            class="invalid-feedback"
-          >
-            {{ errorMessage }}
-          </div>
-        </b-form-group>
-      </b-form>
-    </b-jumbotron>
-  </div>
+        <div
+          v-show="hasErrors"
+          class="invalid-feedback"
+        >
+          {{ errorMessage }}
+        </div>
+      </b-form-group>
+    </b-form>
+  </b-jumbotron>
 </template>
 
 <script>
