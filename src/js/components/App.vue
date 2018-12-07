@@ -111,8 +111,6 @@
         Reload repos
       </b-button>
     </b-jumbotron>
-
-    <page-footer></page-footer>
   </div>
 </template>
 
