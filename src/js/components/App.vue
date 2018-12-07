@@ -9,20 +9,6 @@
       </p>
 
       <div class="mb-3">
-        <h2>Apps</h2>
-        <b-list-group>
-          <b-link
-            v-for="(app, index) in apps"
-            :key="index"
-            :href="app.url"
-            v-text="app.name"
-            class="list-group-item list-group-item-action"
-          >
-          </b-link>
-        </b-list-group>
-      </div>
-
-      <div class="mb-4">
         <h2>Links</h2>
         <b-list-group>
           <b-link
@@ -50,9 +36,23 @@
         </ul>
       </div>
 
+      <div class="mb-3">
+        <h2>Apps</h2>
+        <b-list-group>
+          <b-link
+            v-for="(app, index) in apps"
+            :key="index"
+            :href="app.url"
+            v-text="app.name"
+            class="list-group-item list-group-item-action"
+          >
+          </b-link>
+        </b-list-group>
+      </div>
+
       <hr>
 
-      <div v-if="hasError">
+      <template v-if="hasError">
         <div class="mt-3 mb-3">
           <h2>Public Repositories</h2>
           <h3>Error</h3>
@@ -60,8 +60,8 @@
             Sorry, An error has occurred.
           </p>
         </div>
-      </div>
-      <div v-else>
+      </template>
+      <template v-else>
         <div class="mt-3 mb-3">
           <h2>
             Public Repositories
@@ -101,7 +101,7 @@
             </b-link>
           </b-list-group>
         </div>
-      </div>
+      </template>
 
       <b-button
         @click="reloadRepos()"
@@ -123,17 +123,14 @@
     name: 'App',
     data () {
       return {
-        apps: [
-          {
-            name: 'Train number calc',
-            url: '/train-number-calc.html',
-          },
-          {
-            name: 'QR Code generator',
-            url: '/qr-code.html',
-          },
-        ],
-        links: [
+        repos: [],
+        gitHubPages: [],
+        hasError: false,
+      };
+    },
+    computed: {
+      links: function () {
+        return [
           {
             name: 'Home Page',
             url: 'https://hiroto-k.net/',
@@ -154,8 +151,10 @@
             name: 'Blog (Train)',
             url: 'https://hiroto-k.github.io/blog/',
           },
-        ],
-        icons: [
+        ];
+      },
+      icons: function () {
+        return [
           {
             name: 'Home page',
             url: 'https://hiroto-k.net/',
@@ -186,13 +185,20 @@
             url: 'https://bitbucket.org/hiroto-k/',
             className: 'fab fa-bitbucket',
           },
-        ],
-        repos: [],
-        gitHubPages: [],
-        hasError: false,
-      };
-    },
-    computed: {
+        ];
+      },
+      apps: function () {
+        return [
+          {
+            name: 'Train number calc',
+            url: '/train-number-calc.html',
+          },
+          {
+            name: 'QR Code generator',
+            url: '/qr-code.html',
+          },
+        ];
+      },
       reposLength: function () {
         return this.repos.length;
       },
