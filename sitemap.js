@@ -78,16 +78,20 @@ const values = urls.map(el => {
     const day = date.getDate().toString().padStart(2, '0');
 
     el.lastmod = `${year}-${month}-${day}`;
+
+    return el;
   });
 });
 
-Promise.all(values).then(
-  () => {
+Promise
+  .all(values)
+  .then(() => {
     sitemap.urlset.url = urls;
     console.log(convert.js2xml(sitemap, convertXmlOptions));
-  },
-  e => {
+
+    return sitemap;
+  })
+  .catch(e => {
     console.error(e);
     process.on('exit', () => process.exit(1));
-  }
-);
+  });
