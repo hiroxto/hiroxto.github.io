@@ -8,6 +8,7 @@ new Vue({
   template: `
     <b-container>
       <App></App>
+      <page-footer></page-footer>
     </b-container>
   `,
   components: {

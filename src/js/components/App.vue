@@ -1,119 +1,115 @@
 <template>
-  <div>
-    <b-jumbotron>
-      <h1>Hiroto-K.github.io</h1>
-      <p class="lead">
-        This is a web pages of <a href="https://github.com/hiroto-k">
-          hiroto-k
-        </a>.
-      </p>
+  <b-jumbotron>
+    <h1>Hiroto-K.github.io</h1>
+    <p class="lead">
+      This is a web pages of <a href="https://github.com/hiroto-k">
+        hiroto-k
+      </a>.
+    </p>
 
-      <div class="mb-3">
-        <h2>Links</h2>
+    <div class="mb-3">
+      <h2>Links</h2>
+      <b-list-group>
+        <b-link
+          v-for="(link, index) in links"
+          :key="index"
+          :href="link.url"
+          v-text="link.name"
+          class="list-group-item list-group-item-action"
+        >
+        </b-link>
+      </b-list-group>
+    </div>
+
+    <div class="mb-3">
+      <ul class="list-inline">
+        <li
+          v-for="(icon, index) in icons"
+          :key="index"
+          class="list-inline-item"
+        >
+          <a :href="icon.url" class="text-muted">
+            <i :class="icon.className" class="fa-2x"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="mb-3">
+      <h2>Apps</h2>
+      <b-list-group>
+        <b-link
+          v-for="(app, index) in apps"
+          :key="index"
+          :href="app.url"
+          v-text="app.name"
+          class="list-group-item list-group-item-action"
+        >
+        </b-link>
+      </b-list-group>
+    </div>
+
+    <hr>
+
+    <template v-if="hasError">
+      <div class="mt-3 mb-3">
+        <h2>Public Repositories</h2>
+        <h3>Error</h3>
+        <p class="text-danger">
+          Sorry, An error has occurred.
+        </p>
+      </div>
+    </template>
+    <template v-else>
+      <div class="mt-3 mb-3">
+        <h2>
+          Public Repositories
+          <b-badge variant="primary">
+            {{ reposLength }}
+          </b-badge>
+        </h2>
+
         <b-list-group>
           <b-link
-            v-for="(link, index) in links"
-            :key="index"
-            :href="link.url"
-            v-text="link.name"
+            v-for="repo in repos"
+            :key="repo.id"
+            :href="repo.html_url"
+            v-text="repo.full_name"
+            v-b-popover.hover.focus.bottom="repo.description"
             class="list-group-item list-group-item-action"
           >
           </b-link>
         </b-list-group>
       </div>
 
-      <div class="mb-3">
-        <ul class="list-inline">
-          <li
-            v-for="(icon, index) in icons"
-            :key="index"
-            class="list-inline-item"
-          >
-            <a :href="icon.url" class="text-muted">
-              <i :class="icon.className" class="fa-2x"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="mb-3">
-        <h2>Apps</h2>
+      <div class="mt-3 mb-3">
+        <h2>
+          GitHub Pages
+          <b-badge variant="primary">
+            {{ gitHubPagesLength }}
+          </b-badge>
+        </h2>
         <b-list-group>
           <b-link
-            v-for="(app, index) in apps"
-            :key="index"
-            :href="app.url"
-            v-text="app.name"
+            v-for="gh_page in gitHubPages"
+            :key="gh_page.id"
+            :href="gh_page.gh_page_url"
+            v-text="gh_page.full_name"
             class="list-group-item list-group-item-action"
           >
           </b-link>
         </b-list-group>
       </div>
+    </template>
 
-      <hr>
-
-      <template v-if="hasError">
-        <div class="mt-3 mb-3">
-          <h2>Public Repositories</h2>
-          <h3>Error</h3>
-          <p class="text-danger">
-            Sorry, An error has occurred.
-          </p>
-        </div>
-      </template>
-      <template v-else>
-        <div class="mt-3 mb-3">
-          <h2>
-            Public Repositories
-            <b-badge variant="primary">
-              {{ reposLength }}
-            </b-badge>
-          </h2>
-
-          <b-list-group>
-            <b-link
-              v-for="repo in repos"
-              :key="repo.id"
-              :href="repo.html_url"
-              v-text="repo.full_name"
-              v-b-popover.hover.focus.bottom="repo.description"
-              class="list-group-item list-group-item-action"
-            >
-            </b-link>
-          </b-list-group>
-        </div>
-
-        <div class="mt-3 mb-3">
-          <h2>
-            GitHub Pages
-            <b-badge variant="primary">
-              {{ gitHubPagesLength }}
-            </b-badge>
-          </h2>
-          <b-list-group>
-            <b-link
-              v-for="gh_page in gitHubPages"
-              :key="gh_page.id"
-              :href="gh_page.gh_page_url"
-              v-text="gh_page.full_name"
-              class="list-group-item list-group-item-action"
-            >
-            </b-link>
-          </b-list-group>
-        </div>
-      </template>
-
-      <b-button
-        @click="reloadRepos()"
-        variant="primary"
-        class="btn-sm float-right mb-5"
-      >
-        Reload repos
-      </b-button>
-    </b-jumbotron>
-
-    <page-footer></page-footer>
-  </div>
+    <b-button
+      @click="reloadRepos()"
+      variant="primary"
+      class="btn-sm float-right mb-5"
+    >
+      Reload repos
+    </b-button>
+  </b-jumbotron>
 </template>
 
 <script>
