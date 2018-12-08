@@ -30,6 +30,7 @@ module.exports = {
     'vue/html-self-closing': ['error', { 'html': { 'void': 'never', 'normal': 'never', 'component': 'never' } }],
     'vue/max-attributes-per-line': ['error', { 'singleline': 2 }],
     'vue/this-in-template': ['error'],
+    'promise/catch-or-return': ['error', { 'allowThen': true }],
   },
   overrides: [
     {
