@@ -14,6 +14,7 @@ module.exports = {
   ],
   plugins: [
     'vue',
+    'promise',
   ],
   rules: {
     'comma-dangle': ['error', 'always-multiline'],
