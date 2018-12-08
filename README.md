@@ -5,7 +5,7 @@
 
 [hiroto-k](https://github.com/hiroto-k)'s github pages.
 
-[https://hiroto-k.github.io/](https://hiroto-k.github.io/)
+[hiroto-k.github.io](https://hiroto-k.github.io/)
 
 ## License
 
