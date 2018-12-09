@@ -229,6 +229,8 @@
             });
 
             this.hasError = false;
+
+            return repos;
           })
           .catch(e => {
             console.log(e);

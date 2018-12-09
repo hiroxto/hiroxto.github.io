@@ -96,15 +96,19 @@
         };
       },
       changeInput: function () {
-        this.$validator.validate().then(result => {
-          if (!result || this.trainNumber === '') {
-            this.trainType = null;
+        this
+          .$validator
+          .validate()
+          .then(result => {
+            if (!result || this.trainNumber === '') {
+              this.trainType = null;
+            } else {
+              this.updateType();
+            }
 
-            return;
-          }
-
-          this.updateType();
-        });
+            return result;
+          })
+          .catch(() => {});
       },
       updateType: function () {
         this.trainType = this.getType();
