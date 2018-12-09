@@ -2,7 +2,10 @@
   <div id="footer">
     <div class="container">
       <p class="footer-text">
-        © 2015-{{ currentYear }} Hiroto-K
+        © 2015-{{ currentYear }}
+          <a :href="gitHubUserLink">
+            Hiroto-K
+          </a>
       </p>
     </div>
   </div>
@@ -14,6 +17,9 @@
     computed: {
       currentYear: function () {
         return (new Date()).getFullYear().toString();
+      },
+      gitHubUserLink () {
+        return 'https://github.com/hiroto-k';
       },
     },
   };
