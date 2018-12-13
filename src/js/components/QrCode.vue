@@ -63,6 +63,8 @@
       :value="value"
       size="200"
       :level="level"
+      :background="backGround"
+      :foreground="foreGround"
     >
     </qrcode-vue>
   </b-jumbotron>
