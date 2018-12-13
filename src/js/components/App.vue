@@ -2,7 +2,7 @@
   <b-jumbotron>
     <h1>Hiroto-K.github.io</h1>
     <p class="lead">
-      This is a web pages of <a href="https://github.com/hiroto-k">
+      This site is a github pages of <a href="https://github.com/hiroto-k">
         hiroto-k
       </a>.
     </p>
