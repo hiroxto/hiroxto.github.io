@@ -42,6 +42,19 @@
         >
         </b-form-input>
       </b-form-group>
+
+      <b-form-group
+        id="qrCodeForeGroundInputGroup"
+        label="Foreground color :"
+        label-for="qrCodeForeGroundInput"
+      >
+        <b-form-input
+          id="qrCodeForeGroundInput"
+          type="color"
+          v-model="foreGround"
+        >
+        </b-form-input>
+      </b-form-group>
     </b-form>
 
     <hr>
@@ -65,6 +78,7 @@
         value: '',
         level: 'H',
         backGround: '#ffffff',
+        foreGround: '#000000',
       };
     },
     computed: {
