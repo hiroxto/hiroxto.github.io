@@ -32,7 +32,7 @@
 
       <b-form-group
         id="qrCodeBackGroundInputGroup"
-        label="Background color :"
+        :label="backGroundColorFormLabel"
         label-for="qrCodeBackGroundInput"
       >
         <b-form-input
@@ -45,7 +45,7 @@
 
       <b-form-group
         id="qrCodeForeGroundInputGroup"
-        label="Foreground color :"
+        :label="foreGroundColorFormLabel"
         label-for="qrCodeForeGroundInput"
       >
         <b-form-input
@@ -91,6 +91,12 @@
           { value: 'Q', text: 'Level Q (25%)' },
           { value: 'H', text: 'Level H (30%)' },
         ];
+      },
+      backGroundColorFormLabel: function () {
+        return `Background color : ${this.backGround}`;
+      },
+      foreGroundColorFormLabel: function () {
+        return `Foreground color : ${this.foreGround}`;
       },
     },
     components: {
