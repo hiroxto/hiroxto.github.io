@@ -24,7 +24,7 @@
       >
         <b-form-input
           v-model="trainNumber"
-          v-validate="validateRules()"
+          v-validate="validateRules"
           data-vv-as="列車番号"
           @keyup.native="changeInput"
           @keydown.native="changeInput"
@@ -58,6 +58,15 @@
       };
     },
     computed: {
+      validateRules: function () {
+        return {
+          numeric: true,
+          between: {
+            min: 1,
+            max: 9999,
+          },
+        };
+      },
       isRenderTrainType: function () {
         return this.trainType !== null;
       },
@@ -86,15 +95,6 @@
       },
     },
     methods: {
-      validateRules: function () {
-        return {
-          numeric: true,
-          between: {
-            min: 1,
-            max: 9999,
-          },
-        };
-      },
       changeInput: function () {
         this
           .$validator
