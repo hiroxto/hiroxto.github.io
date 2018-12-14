@@ -93,7 +93,7 @@
     data () {
       return {
         value: '',
-        size: 200,
+        size: 250,
         level: 'H',
         backGround: '#ffffff',
         foreGround: '#000000',
