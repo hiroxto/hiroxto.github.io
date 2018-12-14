@@ -18,6 +18,21 @@
       </b-form-group>
 
       <b-form-group
+        id="qrCodeSizeInputGroup"
+        :label="sizeFormLabel"
+        label-for="qrCodeSizeInput"
+      >
+        <b-form-input
+          id="qrCodeSizeInput"
+          type="range"
+          v-model="size"
+          min="1"
+          max="500"
+        >
+        </b-form-input>
+      </b-form-group>
+
+      <b-form-group
         id="qrCodeLevelInputGroup"
         label="Error correction level :"
         label-for="qrCodeLevelInput"
@@ -61,7 +76,7 @@
 
     <qrcode-vue
       :value="value"
-      size="200"
+      :size="size"
       :level="level"
       :background="backGround"
       :foreground="foreGround"
@@ -78,6 +93,7 @@
     data () {
       return {
         value: '',
+        size: 200,
         level: 'H',
         backGround: '#ffffff',
         foreGround: '#000000',
@@ -91,6 +107,9 @@
           { value: 'Q', text: 'Level Q (25%)' },
           { value: 'H', text: 'Level H (30%)' },
         ];
+      },
+      sizeFormLabel: function () {
+        return `Size : ${this.size}`;
       },
       backGroundColorFormLabel: function () {
         return `Background color : ${this.backGround}`;
