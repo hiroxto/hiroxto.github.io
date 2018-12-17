@@ -7,7 +7,7 @@ new Vue({
   el: '#app',
   template: `
     <b-container>
-      <App></App>
+      <app></app>
       <page-footer></page-footer>
     </b-container>
   `,

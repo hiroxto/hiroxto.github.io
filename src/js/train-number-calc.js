@@ -7,7 +7,7 @@ new Vue({
   el: '#app',
   template: `
     <b-container>
-      <TrainNumberCalc></TrainNumberCalc>
+      <train-number-calc></train-number-calc>
       <page-footer></page-footer>
     </b-container>
   `,

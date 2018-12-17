@@ -7,7 +7,7 @@ new Vue({
   el: '#app',
   template: `
     <b-container>
-      <QrCode></QrCode>
+      <qr-code></qr-code>
       <page-footer></page-footer>
     </b-container>
   `,
