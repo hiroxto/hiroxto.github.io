@@ -11,6 +11,7 @@
 
 <script>
   import NumberCalc from './TrainNumberCalc/NumberCalc';
+
   export default {
     name: 'TrainNumberCalc',
     components: {
