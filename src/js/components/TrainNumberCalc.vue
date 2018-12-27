@@ -6,15 +6,22 @@
     </p>
 
     <number-calc></number-calc>
+
+    <hr>
+
+    <h3>計算方法</h3>
+    <how-to-calc></how-to-calc>
   </b-jumbotron>
 </template>
 
 <script>
+  import HowToCalc from './TrainNumberCalc/HowToCalc';
   import NumberCalc from './TrainNumberCalc/NumberCalc';
 
   export default {
     name: 'TrainNumberCalc',
     components: {
+      HowToCalc,
       NumberCalc,
     },
   };
