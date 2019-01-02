@@ -13,7 +13,7 @@
       autocomplete="off"
     >
       <b-form-group
-        id="inputGroup1"
+        id="trainNumberInputGroup"
         label="列車番号 (1〜4ケタの数字)"
         label-for="freightNumber"
       >
