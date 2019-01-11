@@ -65,7 +65,7 @@
     "webpack-build-notifier": "0.1.30",
     "webpack-cli": "3.2.1",
     "webpack-dev-server": "3.1.14",
-    "xml-js": "1.6.8"
+    "xml-js": "1.6.9"
   },
   "browserslist": [
     ">0.25%",
