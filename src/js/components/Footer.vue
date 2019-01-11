@@ -3,9 +3,9 @@
     <div class="container">
       <p class="footer-text">
         © 2015-{{ currentYear }}
-          <a :href="gitHubUserLink">
-            Hiroto-K
-          </a>
+        <a :href="gitHubUserLink">
+          Hiroto-K
+        </a>
       </p>
     </div>
   </div>
