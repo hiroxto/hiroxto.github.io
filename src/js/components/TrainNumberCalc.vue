@@ -9,7 +9,7 @@
 
     <hr>
 
-    <h3>計算方法</h3>
+    <h3>列車種別の求め方</h3>
     <how-to-calc></how-to-calc>
   </b-jumbotron>
 </template>
