@@ -136,8 +136,8 @@
             url: 'https://hiroto-k.net/profile',
           },
           {
-            name: 'Project',
-            url: 'https://hiroto-k.net/project',
+            name: 'Projects',
+            url: 'https://hiroto-k.net/projects',
           },
           {
             name: 'Blog (Programming)',
@@ -170,16 +170,6 @@
             name: 'GitHub',
             url: 'https://github.com/hiroto-k',
             className: 'fab fa-github',
-          },
-          {
-            name: 'GitLab',
-            url: 'https://gitlab.com/hiroto-k',
-            className: 'fab fa-gitlab',
-          },
-          {
-            name: 'Bitbucket',
-            url: 'https://bitbucket.org/hiroto-k/',
-            className: 'fab fa-bitbucket',
           },
         ];
       },
