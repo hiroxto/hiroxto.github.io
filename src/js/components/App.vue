@@ -29,7 +29,11 @@
           class="list-inline-item"
         >
           <a :href="icon.url" class="text-muted">
-            <i :class="icon.className" class="fa-2x"></i>
+            <font-awesome-icon
+              :icon="icon.icon"
+              class="fa-2x"
+            >
+            </font-awesome-icon>
           </a>
         </li>
       </ul>
@@ -154,22 +158,22 @@
           {
             name: 'Home page',
             url: 'https://hiroto-k.net/',
-            className: 'fas fa-home',
+            icon: ['fas', 'home'],
           },
           {
             name: 'Profile',
             url: 'https://hiroto-k.net/profile',
-            className: 'fas fa-user-alt',
+            icon: ['fas', 'user-alt'],
           },
           {
             name: 'Twitter',
             url: 'https://twitter.com/hiroto_k_',
-            className: 'fab fa-twitter',
+            icon: ['fab', 'twitter'],
           },
           {
             name: 'GitHub',
             url: 'https://github.com/hiroto-k',
-            className: 'fab fa-github',
+            icon: ['fab', 'github'],
           },
         ];
       },
