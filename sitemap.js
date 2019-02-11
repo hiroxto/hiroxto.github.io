@@ -64,10 +64,10 @@ const urls = [
   createUrlElement('/trysail-blog-notification/', freq.yearly, '0.8'),
   createUrlElement('/trysail-blog-notification/plugin.html', freq.yearly, '0.4'),
   createUrlElement('/console-wrapper/', freq.yearly, '0.8'),
-  createUrlElement('/SaveTweet/', freq.yearly, '0.4'),
-  createUrlElement('/ShortURL/', freq.yearly, '0.4'),
+  // createUrlElement('/SaveTweet/', freq.yearly, '0.4'),
+  // createUrlElement('/ShortURL/', freq.yearly, '0.4'),
   createUrlElement('/twitter-r4s/', freq.yearly, '0.4'),
-  createUrlElement('/CC-Lemon/', freq.yearly, '0.4'),
+  // createUrlElement('/CC-Lemon/', freq.yearly, '0.4'),
 ];
 
 const values = urls.map(el => {
