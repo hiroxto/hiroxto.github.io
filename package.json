@@ -47,7 +47,7 @@
     "eslint-plugin-promise": "4.0.1",
     "eslint-plugin-standard": "4.0.0",
     "eslint-plugin-vue": "5.1.0",
-    "hard-source-webpack-plugin": "^0.13.1",
+    "hard-source-webpack-plugin": "0.13.1",
     "jquery": "3.3.1",
     "mini-css-extract-plugin": "0.5.0",
     "node-sass": "4.11.0",
