@@ -3,6 +3,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const WebpackBuildNotifierPlugin = require('webpack-build-notifier');
+const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
 
 const NODE_ENV = process.env.NODE_ENV;
 const mode = NODE_ENV || 'production';
@@ -115,6 +116,7 @@ module.exports = {
       logo: path.resolve('./apple-touch-icon.png'),
       suppressSuccess: false,
     }),
+    new HardSourceWebpackPlugin(),
   ],
   optimization: {
     minimizer: [
