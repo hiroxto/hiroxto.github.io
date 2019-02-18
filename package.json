@@ -67,7 +67,7 @@
     "vue": "2.6.6",
     "vue-loader": "14.2.3",
     "vue-template-compiler": "2.6.6",
-    "webpack": "4.29.4",
+    "webpack": "4.29.5",
     "webpack-build-notifier": "0.1.30",
     "webpack-cli": "3.2.3",
     "webpack-dev-server": "3.1.14",
