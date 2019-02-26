@@ -180,7 +180,7 @@
       apps: function () {
         return [
           {
-            name: 'Train number calc',
+            name: '列車番号から種別計算',
             url: '/train-number-calc.html',
           },
           {
