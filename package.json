@@ -63,7 +63,7 @@
     "sass-loader": "7.1.0",
     "style-loader": "0.23.1",
     "uglifyjs-webpack-plugin": "2.1.2",
-    "vee-validate": "2.1.7",
+    "vee-validate": "2.2.0",
     "vue": "2.6.9",
     "vue-loader": "14.2.3",
     "vue-template-compiler": "2.6.9",
