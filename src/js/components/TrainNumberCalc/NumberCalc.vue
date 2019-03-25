@@ -4,8 +4,8 @@
       v-if="isRenderTrainType"
       variant="info"
       show
+      v-text="trainType"
     >
-      {{ trainType }}
     </b-alert>
 
     <b-form
@@ -35,8 +35,8 @@
         <div
           v-show="hasErrors"
           class="invalid-feedback"
+          v-text="errorMessage"
         >
-          {{ errorMessage }}
         </div>
       </b-form-group>
     </b-form>
