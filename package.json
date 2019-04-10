@@ -70,7 +70,7 @@
     "webpack": "4.29.6",
     "webpack-build-notifier": "0.1.31",
     "webpack-cli": "3.3.0",
-    "webpack-dev-server": "3.2.1",
+    "webpack-dev-server": "3.3.1",
     "xml-js": "1.6.11"
   },
   "browserslist": [
