@@ -100,7 +100,7 @@
       };
     },
     computed: {
-      levelsSelectOptions: function () {
+      levelsSelectOptions () {
         return [
           { value: 'L', text: 'Level L (7%)' },
           { value: 'M', text: 'Level M (15%)' },
@@ -108,13 +108,13 @@
           { value: 'H', text: 'Level H (30%)' },
         ];
       },
-      sizeFormLabel: function () {
+      sizeFormLabel () {
         return `Size : ${this.size}`;
       },
-      backGroundColorFormLabel: function () {
+      backGroundColorFormLabel () {
         return `Background color : ${this.backGround}`;
       },
-      foreGroundColorFormLabel: function () {
+      foreGroundColorFormLabel () {
         return `Foreground color : ${this.foreGround}`;
       },
     },
