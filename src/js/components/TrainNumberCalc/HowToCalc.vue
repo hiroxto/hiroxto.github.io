@@ -40,7 +40,7 @@
   export default {
     name: 'HowToCalc',
     computed: {
-      passengerListHtmls: function () {
+      passengerListHtmls () {
         return [
           '桁数が1,2,4桁で、4桁のときの百位が<code>0</code>の場合、<strong>特急客</strong>。',
           '桁数が3,4桁かつ、百位が<code>0</code>以外で下2桁が<code>00〜19</code>の場合、<strong>急客</strong>',
@@ -48,7 +48,7 @@
           '千位が<code>6</code>以上の場合は種別の頭に<code>臨</code>が付く。(e.g. <strong>臨特急</strong>, <strong>臨急客</strong>, <strong>臨客</strong>)',
         ];
       },
-      freightListHtmls: function () {
+      freightListHtmls () {
         return [
           {
             html: '千位が<code>0～5</code>、百位が<code>0</code>の場合、<strong>高速貨</strong>。下2桁で<strong>高速貨A</strong>と<strong>高速貨B</strong>に分かれる。',
