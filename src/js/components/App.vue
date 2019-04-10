@@ -129,7 +129,7 @@
       };
     },
     computed: {
-      links: function () {
+      links () {
         return [
           {
             name: 'Home Page',
@@ -153,7 +153,7 @@
           },
         ];
       },
-      icons: function () {
+      icons () {
         return [
           {
             name: 'Home page',
@@ -177,7 +177,7 @@
           },
         ];
       },
-      apps: function () {
+      apps () {
         return [
           {
             name: '列車番号から種別計算',
@@ -189,19 +189,19 @@
           },
         ];
       },
-      reposLength: function () {
+      reposLength () {
         return this.repos.length;
       },
-      gitHubPagesLength: function () {
+      gitHubPagesLength () {
         return this.gitHubPages.length;
       },
     },
     methods: {
-      reloadRepos: function () {
+      reloadRepos () {
         this.hasError = false;
         this.updateRepos();
       },
-      updateRepos: function () {
+      updateRepos () {
         this.repos = [];
         this.gitHubPages = [];
 
@@ -233,7 +233,7 @@
           });
       },
     },
-    mounted: function () {
+    mounted () {
       this.updateRepos();
     },
   };
