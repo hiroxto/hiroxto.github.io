@@ -53,7 +53,7 @@
       };
     },
     computed: {
-      validateRules: function () {
+      validateRules () {
         return {
           numeric: true,
           between: {
@@ -62,19 +62,19 @@
           },
         };
       },
-      isRenderTrainType: function () {
+      isRenderTrainType () {
         return this.trainType !== null;
       },
-      hasErrors: function () {
+      hasErrors () {
         return this.errors.has('freightNumber');
       },
-      errorMessage: function () {
+      errorMessage () {
         return this.errors.first('freightNumber');
       },
-      inputClass: function () {
+      inputClass () {
         return this.hasErrors ? 'is-invalid' : 'is-valid';
       },
-      splitNumber: function () {
+      splitNumber () {
         return this
           .trainNumber
           .toString()
@@ -82,15 +82,15 @@
           .split('')
           .map(s => parseInt(s));
       },
-      isPassengerSpecial: function () {
+      isPassengerSpecial () {
         return this.splitNumber[0] >= 6;
       },
-      isFreightSpecial: function () {
+      isFreightSpecial () {
         return this.splitNumber[0] >= 8;
       },
     },
     methods: {
-      changeInput: function () {
+      changeInput () {
         this
           .$validator
           .validate()
@@ -105,16 +105,16 @@
           })
           .catch(() => {});
       },
-      updateType: function () {
+      updateType () {
         this.trainType = this.getType();
       },
-      getType: function () {
+      getType () {
         const splitNumber = this.splitNumber;
         const isPassengerNumber = splitNumber[2] < 5;
 
         return isPassengerNumber ? this.getPassengerType() : this.getFreightType();
       },
-      getPassengerType: function () {
+      getPassengerType () {
         const splitNumber = this.splitNumber;
         const isSpecial = this.isPassengerSpecial;
         let type = '';
@@ -137,7 +137,7 @@
 
         return type;
       },
-      getFreightType: function () {
+      getFreightType () {
         const splitNumber = this.splitNumber;
         const isSpecial = this.isFreightSpecial;
         let type = '';
