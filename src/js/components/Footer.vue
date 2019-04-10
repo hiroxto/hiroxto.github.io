@@ -15,7 +15,7 @@
   export default {
     name: 'Footer',
     computed: {
-      currentYear: function () {
+      currentYear () {
         return (new Date()).getFullYear().toString();
       },
       gitHubUserLink () {
