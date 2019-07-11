@@ -45,7 +45,7 @@
     "bootstrap-vue": "2.0.0-rc.22",
     "css-loader": "1.0.1",
     "eslint": "5.16.0",
-    "eslint-config-standard": "12.0.0",
+    "eslint-config-standard": "13.0.1",
     "eslint-loader": "2.1.2",
     "eslint-plugin-import": "2.17.3",
     "eslint-plugin-node": "9.1.0",
