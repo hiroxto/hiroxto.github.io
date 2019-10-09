@@ -57,8 +57,6 @@ const createUrlElement = (path, changefreq, priority) => {
 
 const urls = [
   createUrlElement('/', freq.monthly, '1.0'),
-  createUrlElement('/train-number-calc.html', freq.monthly, '0.8'),
-  createUrlElement('/qr-code.html', freq.monthly, '0.3'),
   createUrlElement('/anime-push/', freq.yearly, '0.8'),
   createUrlElement('/hk_sub_/', freq.yearly, '0.4'),
   createUrlElement('/trysail-blog-notification/', freq.yearly, '0.8'),
