@@ -39,22 +39,6 @@
       </ul>
     </div>
 
-    <div class="mb-3">
-      <h2>Apps</h2>
-      <b-list-group>
-        <b-link
-          v-for="(app, index) in apps"
-          :key="index"
-          :href="app.url"
-          v-text="app.name"
-          class="list-group-item list-group-item-action"
-        >
-        </b-link>
-      </b-list-group>
-    </div>
-
-    <hr>
-
     <template v-if="hasError">
       <div class="mt-3 mb-3">
         <h2>Public Repositories</h2>
@@ -174,18 +158,6 @@
             name: 'GitHub',
             url: 'https://github.com/hiroto-k',
             icon: ['fab', 'github'],
-          },
-        ];
-      },
-      apps () {
-        return [
-          {
-            name: '列車番号から種別計算',
-            url: '/train-number-calc.html',
-          },
-          {
-            name: 'QR Code Generator',
-            url: '/qr-code.html',
           },
         ];
       },
