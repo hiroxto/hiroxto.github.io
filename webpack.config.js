@@ -18,7 +18,6 @@ module.exports = {
 
   entry: {
     'app': './src/js/app.js',
-    'train-number-calc': './src/js/train-number-calc.js',
     '404': './src/js/404.js',
     'style': './src/js/style.js',
   },
