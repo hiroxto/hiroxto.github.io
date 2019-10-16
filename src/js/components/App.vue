@@ -124,16 +124,12 @@
             url: 'https://hiroto-k.net/profile',
           },
           {
-            name: 'Projects',
-            url: 'https://hiroto-k.net/projects',
-          },
-          {
             name: 'Blog (Programming)',
             url: 'https://hiroto-k.hatenablog.com/',
           },
           {
-            name: 'Blog (Train)',
-            url: 'https://hiroto-k.github.io/blog/',
+            name: 'Blog (Train photo)',
+            url: 'https://train-photo-blog.hiroto-k.net/',
           },
         ];
       },
