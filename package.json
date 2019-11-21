@@ -1,20 +1,7 @@
 {
-  "name": "hiroto-k.github.io",
+  "name": "hiroxto.github.io",
   "version": "0.0.1",
   "description": "GitHub pages.",
-  "homepage": "https://hiroto-k.github.io/",
-  "author": {
-    "name": "Hiroto Kitazawa",
-    "email": "hiroto.ktzw@gmail.com",
-    "url": "https://hiroto-k.net/"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/hiroto-k/hiroto-k.github.io.git"
-  },
-  "bugs": {
-    "url": "https://github.com/hiroto-k/hiroto-k.github.io/issues"
-  },
   "engines": {
     "node": ">= 9.0"
   },
