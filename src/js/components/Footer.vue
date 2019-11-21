@@ -4,7 +4,7 @@
       <p class="footer-text">
         © 2015-{{ currentYear }}
         <a :href="gitHubUserLink">
-          Hiroto-K
+          hiroxto
         </a>
       </p>
     </div>
@@ -19,7 +19,7 @@
         return (new Date()).getFullYear().toString();
       },
       gitHubUserLink () {
-        return 'https://github.com/hiroto-k';
+        return 'https://github.com/hiroxto';
       },
     },
   };

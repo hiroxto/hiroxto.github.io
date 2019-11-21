@@ -1,9 +1,9 @@
 <template>
   <b-jumbotron>
-    <h1>Hiroto-K.github.io</h1>
+    <h1>hiroxto.github.io</h1>
     <p class="lead">
-      This site is a github pages of <a href="https://github.com/hiroto-k">
-        hiroto-k
+      This site is a github pages of <a href="https://github.com/hiroxto">
+        hiroxto
       </a>.
     </p>
 
@@ -152,7 +152,7 @@
           },
           {
             name: 'GitHub',
-            url: 'https://github.com/hiroto-k',
+            url: 'https://github.com/hiroxto',
             icon: ['fab', 'github'],
           },
         ];
@@ -174,7 +174,7 @@
         this.gitHubPages = [];
 
         axios
-          .get('https://api.github.com/users/hiroto-k/repos?per_page=100')
+          .get('https://api.github.com/users/hiroxto/repos?per_page=100')
           .then(response => response.data)
           .then(repos => {
             /** @type {Object[]} repos **/
@@ -183,9 +183,9 @@
 
               this.repos.push(repo);
 
-              // Ignore hiroto-k/hiroto-k.github.io (38377426)
+              // Ignore hiroxto/hiroxto.github.io (38377426)
               if (repo.has_pages && repo.id !== 38377426) {
-                repo.gh_page_url = `https://hiroto-k.github.io/${repo.name}`;
+                repo.gh_page_url = `https://hiroxto.github.io/${repo.name}`;
                 this.gitHubPages.push(repo);
               }
             });
