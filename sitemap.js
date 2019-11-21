@@ -36,7 +36,7 @@ const sitemap = {
 };
 
 const getUrl = path => {
-  return `https://hiroto-k.github.io${path}`;
+  return `https://hiroxto.github.io${path}`;
 };
 
 const getLastModified = async url => {
