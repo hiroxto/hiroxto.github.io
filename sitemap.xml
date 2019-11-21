@@ -1,45 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://hiroto-k.github.io/</loc>
-    <lastmod>2019-10-09</lastmod>
+    <loc>https://hiroxto.github.io/</loc>
+    <lastmod>2019-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://hiroto-k.github.io/anime-push/</loc>
-    <lastmod>2018-08-30</lastmod>
+    <loc>https://hiroxto.github.io/anime-push/</loc>
+    <lastmod>2019-11-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hiroto-k.github.io/hk_sub_/</loc>
-    <lastmod>2018-08-15</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://hiroto-k.github.io/trysail-blog-notification/</loc>
-    <lastmod>2019-01-23</lastmod>
+    <loc>https://hiroxto.github.io/trysail-blog-notification/</loc>
+    <lastmod>2019-11-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hiroto-k.github.io/trysail-blog-notification/plugin.html</loc>
-    <lastmod>2019-01-23</lastmod>
+    <loc>https://hiroxto.github.io/trysail-blog-notification/plugin.html</loc>
+    <lastmod>2019-11-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://hiroto-k.github.io/console-wrapper/</loc>
-    <lastmod>2019-04-02</lastmod>
+    <loc>https://hiroxto.github.io/console-wrapper/</loc>
+    <lastmod>2019-11-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://hiroto-k.github.io/twitter-r4s/</loc>
-    <lastmod>2018-08-15</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
   </url>
 </urlset>
