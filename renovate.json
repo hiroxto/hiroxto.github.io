@@ -6,5 +6,11 @@
   "schedule": [
     "every weekend"
   ],
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": [
+      "before 10am on the first day of the month"
+    ]
+  },
   "patch": { "automerge": true }
 }
