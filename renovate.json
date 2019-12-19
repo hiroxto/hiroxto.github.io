@@ -5,5 +5,6 @@
   "timezone": "Asia/Tokyo",
   "schedule": [
     "every weekend"
-  ]
+  ],
+  "patch": { "automerge": true }
 }
