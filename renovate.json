@@ -4,9 +4,6 @@
   ],
   "timezone": "Asia/Tokyo",
   "schedule": [
-    "before 7am every weekday",
-    "after 7pm every weekday",
-    "before 7am every weekend",
-    "after 7pm every weekend"
+    "every weekend"
   ]
 }
