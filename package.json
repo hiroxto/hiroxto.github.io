@@ -14,8 +14,8 @@
     "lint:fix": "eslint --fix --ext .js,.vue ."
   },
   "devDependencies": {
-    "@babel/cli": "7.6.3",
-    "@babel/core": "7.6.3",
+    "@babel/cli": "7.6.4",
+    "@babel/core": "7.6.4",
     "@babel/node": "7.6.3",
     "@babel/preset-env": "7.6.3",
     "@fortawesome/fontawesome-free": "5.9.0",
