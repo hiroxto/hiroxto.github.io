@@ -50,7 +50,7 @@
     "style-loader": "0.23.1",
     "uglifyjs-webpack-plugin": "2.2.0",
     "vue": "2.6.10",
-    "vue-loader": "14.2.3",
+    "vue-loader": "14.2.4",
     "vue-template-compiler": "2.6.10",
     "webpack": "4.41.0",
     "webpack-build-notifier": "2.0.0",
