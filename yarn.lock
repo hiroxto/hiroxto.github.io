@@ -2696,9 +2696,9 @@ eslint-plugin-standard@4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/eslint-plugin-standard/-/eslint-plugin-standard-4.0.1.tgz#ff0519f7ffaff114f76d1bd7c3996eef0f6e20b4"
 
-eslint-plugin-vue@6.0.1:
-  version "6.0.1"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-vue/-/eslint-plugin-vue-6.0.1.tgz#166d3eb24cf290f3ff24d44fe9fca496f3924fc2"
+eslint-plugin-vue@6.0.2:
+  version "6.0.2"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-vue/-/eslint-plugin-vue-6.0.2.tgz#3c72fe58c5b1c2f77badccc075b81cfc23fd50ba"
   dependencies:
     vue-eslint-parser "^6.0.5"
 
@@ -6162,7 +6162,7 @@ schema-utils@^1.0.0:
     ajv-errors "^1.0.0"
     ajv-keywords "^3.1.0"
 
-schema-utils@^2.0.1:
+schema-utils@^2.0.1, schema-utils@^2.6.1:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/schema-utils/-/schema-utils-2.6.1.tgz#eb78f0b945c7bcfa2082b3565e8db3548011dc4f"
   dependencies:
@@ -6172,13 +6172,6 @@ schema-utils@^2.0.1:
 schema-utils@^2.1.0:
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/schema-utils/-/schema-utils-2.4.1.tgz#e89ade5d056dc8bcaca377574bb4a9c4e1b8be56"
-  dependencies:
-    ajv "^6.10.2"
-    ajv-keywords "^3.4.1"
-
-schema-utils@^2.6.1:
-  version "2.6.1"
-  resolved "https://registry.yarnpkg.com/schema-utils/-/schema-utils-2.6.1.tgz#eb78f0b945c7bcfa2082b3565e8db3548011dc4f"
   dependencies:
     ajv "^6.10.2"
     ajv-keywords "^3.4.1"
