@@ -17,9 +17,9 @@ module.exports = {
   context: path.resolve(__dirname),
 
   entry: {
-    'app': './src/js/app.js',
-    '404': './src/js/404.js',
-    'style': './src/js/style.js',
+    app: './src/js/app.js',
+    404: './src/js/404.js',
+    style: './src/js/style.js',
   },
   output: {
     path: path.resolve(__dirname, './dist'),
