@@ -14,10 +14,10 @@
     "lint:fix": "eslint --fix --ext .js,.vue ."
   },
   "devDependencies": {
-    "@babel/cli": "7.8.3",
-    "@babel/core": "7.8.3",
-    "@babel/node": "7.8.3",
-    "@babel/preset-env": "7.8.3",
+    "@babel/cli": "7.8.4",
+    "@babel/core": "7.8.4",
+    "@babel/node": "7.8.4",
+    "@babel/preset-env": "7.8.4",
     "@fortawesome/fontawesome-free": "5.12.0",
     "@fortawesome/fontawesome-svg-core": "1.2.26",
     "@fortawesome/free-brands-svg-icons": "5.12.0",
