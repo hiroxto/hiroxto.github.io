@@ -9,6 +9,7 @@
   "private": true,
   "scripts": {
     "build:css": "tailwindcss build tailwind.scss -o dist/style.css",
+    "serve": "http-server .",
     "prod": "NODE_ENV=production webpack --mode production --no-progress",
     "dev": "NODE_ENV=development webpack-dev-server --hot --progress",
     "lint": "eslint --ext .js,.vue .",
