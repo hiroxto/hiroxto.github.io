@@ -2952,7 +2952,6 @@ fsevents@^1.2.7:
   dependencies:
     bindings "^1.5.0"
     nan "^2.12.1"
-    node-pre-gyp "*"
 
 fstream@^1.0.0, fstream@^1.0.12:
   version "1.0.12"
@@ -6788,9 +6787,10 @@ wbuf@^1.1.0, wbuf@^1.7.3:
   dependencies:
     minimalistic-assert "^1.0.0"
 
-webpack-build-notifier@2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/webpack-build-notifier/-/webpack-build-notifier-2.0.0.tgz#4e2012f939dd3124d397fb881dbf3dc973596065"
+webpack-build-notifier@2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/webpack-build-notifier/-/webpack-build-notifier-2.0.1.tgz#4ca07ae27b0addb971e76a89c7c9f5e3b5288e3c"
+  integrity sha512-WBNKQmkixDdW0AyiYyRXMJIgQL5UxXxpwCELfO1mi3yVrQ9ZkzbN9ceSIEPjqQGr6wON3ndhCsq2/3ij/tR5cQ==
   dependencies:
     node-notifier "6.0.0"
     strip-ansi "^5.2.0"
