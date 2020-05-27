@@ -8,7 +8,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "build:css": "postcss tailwind.scss -o dist/style.css",
+    "build:css": "postcss tailwind.scss --verbose -o dist/style.css",
     "serve": "http-server .",
     "prod": "NODE_ENV=production postcss tailwind.scss --verbose -o dist/style.css",
     "dev": "NODE_ENV=development webpack-dev-server --hot --progress",
