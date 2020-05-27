@@ -10,7 +10,7 @@
   "scripts": {
     "build:css": "postcss tailwind.scss -o dist/style.css",
     "serve": "http-server .",
-    "prod": "NODE_ENV=production webpack --mode production --no-progress",
+    "prod": "NODE_ENV=production postcss tailwind.scss --verbose -o dist/style.css",
     "dev": "NODE_ENV=development webpack-dev-server --hot --progress",
     "watch:css": "NODE_ENV=development postcss tailwind.scss --watch --verbose -o dist/style.css",
     "lint": "eslint --ext .js,.vue .",
