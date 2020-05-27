@@ -57,7 +57,6 @@ const createUrlElement = (path, changefreq, priority) => {
 
 const urls = [
   createUrlElement('/', freq.monthly, '1.0'),
-  createUrlElement('/anime-push/', freq.yearly, '0.8'),
   createUrlElement('/blog-notification/', freq.yearly, '0.8'),
   createUrlElement('/blog-notification/plugin.html', freq.yearly, '0.4'),
   createUrlElement('/console-wrapper/', freq.yearly, '0.8'),
