@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "GitHub pages.",
   "engines": {
-    "node": ">= 9.0"
+    "node": ">= 12.0"
   },
   "license": "MIT",
   "private": true,
