@@ -12,6 +12,7 @@
     "serve": "http-server .",
     "prod": "NODE_ENV=production webpack --mode production --no-progress",
     "dev": "NODE_ENV=development webpack-dev-server --hot --progress",
+    "watch:css": "NODE_ENV=development postcss tailwind.scss --watch --verbose -o dist/style.css",
     "lint": "eslint --ext .js,.vue .",
     "lint:fix": "eslint --fix --ext .js,.vue ."
   },
