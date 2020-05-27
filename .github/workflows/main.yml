@@ -18,15 +18,14 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: Yarn cache
-        uses: actions/cache@v2
-        id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
+      - name: Cache node_modules
+        uses: actions/cache@v1
         with:
-          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-          key: yarn-${{ hashFiles('yarn.lock') }}
+          path: node_modules
+          key: hiroxto-ghio-yarn-${{ hashFiles('yarn.lock') }}
           restore-keys: |
-            yarn-${{ hashFiles('yarn.lock') }}
-            yarn-
+            hiroxto-ghio-yarn-${{ hashFiles('yarn.lock') }}
+            hiroxto-ghio-yarn-
 
       - name: Run yarn install
         run: yarn install
