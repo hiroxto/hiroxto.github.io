@@ -17,10 +17,10 @@
     "lint:fix": "eslint --fix --ext .js,.vue ."
   },
   "devDependencies": {
-    "@babel/cli": "7.10.3",
-    "@babel/core": "7.10.3",
-    "@babel/node": "7.10.3",
-    "@babel/preset-env": "7.10.3",
+    "@babel/cli": "7.10.4",
+    "@babel/core": "7.10.4",
+    "@babel/node": "7.10.4",
+    "@babel/preset-env": "7.10.4",
     "@fullhuman/postcss-purgecss": "2.3.0",
     "autoprefixer": "9.8.4",
     "axios": "0.19.2",
