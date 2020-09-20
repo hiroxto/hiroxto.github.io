@@ -21,7 +21,7 @@
     "@babel/core": "7.10.5",
     "@babel/node": "7.10.5",
     "@babel/preset-env": "7.10.4",
-    "@fullhuman/postcss-purgecss": "2.3.0",
+    "@fullhuman/postcss-purgecss": "3.0.0",
     "autoprefixer": "9.8.6",
     "axios": "0.19.2",
     "babel-eslint": "10.1.0",
