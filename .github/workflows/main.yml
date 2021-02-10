@@ -11,15 +11,15 @@ jobs:
         node-version: [12.x]
 
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
 
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
 
       - name: Cache node_modules
-        uses: actions/cache@v1
+        uses: actions/cache@v2
         with:
           path: node_modules
           key: hiroxto-ghio-yarn-${{ hashFiles('yarn.lock') }}
@@ -43,7 +43,7 @@ jobs:
           CI: true
 
       - name: Slack Notification
-        uses: homoluctus/slatify@v1.5
+        uses: homoluctus/slatify@v1.6
         if: always()
         with:
           job_name: '*Node CI*'
