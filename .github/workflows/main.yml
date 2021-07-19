@@ -44,7 +44,7 @@ jobs:
 
       - name: Slack Notification
         uses: homoluctus/slatify@v1.6
-        if: always()
+        if: failure()
         with:
           job_name: '*Node CI*'
           type: ${{ job.status }}
