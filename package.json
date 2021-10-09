@@ -10,8 +10,8 @@
   "scripts": {
     "dev": "NODE_ENV=development npm-run-all --parallel serve",
     "serve": "http-server .",
-    "lint": "eslint --ext .js,.vue .",
-    "lint:fix": "eslint --fix --ext .js,.vue ."
+    "lint": "eslint --ext .js .",
+    "lint:fix": "eslint --fix --ext .js ."
   },
   "devDependencies": {
     "@babel/cli": "7.14.8",
