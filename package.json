@@ -8,11 +8,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "prod": "NODE_ENV=production postcss src/tailwind.scss --verbose -o dist/style.css",
-    "dev": "NODE_ENV=development npm-run-all --parallel serve watch:css",
+    "dev": "NODE_ENV=development npm-run-all --parallel serve",
     "serve": "http-server .",
-    "build:css": "postcss src/tailwind.scss --verbose -o dist/style.css",
-    "watch:css": "NODE_ENV=development postcss src/tailwind.scss --watch --verbose -o dist/style.css",
     "lint": "eslint --ext .js,.vue .",
     "lint:fix": "eslint --fix --ext .js,.vue ."
   },
