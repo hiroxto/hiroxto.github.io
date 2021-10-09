@@ -37,11 +37,6 @@ jobs:
         env:
           CI: true
 
-      - name: Run yarn prod
-        run: yarn run prod
-        env:
-          CI: true
-
       - name: Slack Notification
         uses: homoluctus/slatify@v1.6
         if: failure()
