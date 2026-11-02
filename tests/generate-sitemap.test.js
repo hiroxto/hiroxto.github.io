@@ -3,7 +3,7 @@ import { spawnSync } from 'node:child_process';
 import test from 'node:test';
 import convert from 'xml-js';
 
-const generatorUrl = new URL('../src/generate-sitemap.js', import.meta.url);
+const generatorUrl = new URL('../src/generate-sitemap.ts', import.meta.url);
 
 const runGenerator = fetchBody => spawnSync(process.execPath, [
   '--input-type=module',

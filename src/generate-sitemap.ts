@@ -8,7 +8,16 @@ const freq = {
   monthly: 'monthly',
   yearly: 'yearly',
   never: 'never',
-};
+} as const;
+
+type ChangeFrequency = (typeof freq)[keyof typeof freq];
+
+interface SitemapUrl {
+  loc: string;
+  lastmod: string | null;
+  changefreq: ChangeFrequency;
+  priority: string;
+}
 
 const convertXmlOptions = {
   compact: true,
@@ -27,16 +36,15 @@ const sitemap = {
     _attributes: {
       xmlns: 'http://www.sitemaps.org/schemas/sitemap/0.9',
     },
-    url: [
-    ],
+    url: [] as SitemapUrl[],
   },
 };
 
-const getUrl = path => {
+const getUrl = (path: string): string => {
   return `https://hiroxto.github.io${path}`;
 };
 
-const getLastModified = async url => {
+const getLastModified = async (url: string): Promise<string> => {
   const response = await fetch(url);
   if (!response.ok) {
     throw new Error(`Failed to fetch ${url}: HTTP ${response.status}`);
@@ -50,7 +58,11 @@ const getLastModified = async url => {
   return lastModified;
 };
 
-const createUrlElement = (path, changefreq, priority) => {
+const createUrlElement = (
+  path: string,
+  changefreq: ChangeFrequency,
+  priority: string,
+): SitemapUrl => {
   return {
     loc: getUrl(path),
     lastmod: null,
