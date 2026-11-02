@@ -18,3 +18,6 @@ jobs:
 
       - name: Check JavaScript syntax
         run: node --check src/generate-sitemap.js
+
+      - name: Test sitemap generation
+        run: npm test

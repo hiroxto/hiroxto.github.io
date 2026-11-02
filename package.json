@@ -11,7 +11,8 @@
   "scripts": {
     "dev": "npm run serve",
     "serve": "http-server docs -p 8080",
-    "generate:sitemap": "node src/generate-sitemap.js"
+    "generate:sitemap": "node src/generate-sitemap.js",
+    "test": "node --test"
   },
   "devDependencies": {
     "http-server": "14.1.1",

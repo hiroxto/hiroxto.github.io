@@ -60,10 +60,7 @@ const createUrlElement = (path, changefreq, priority) => {
 };
 
 const urls = [
-  createUrlElement('/', freq.monthly, '1.0'),
-  createUrlElement('/blog-notification/', freq.yearly, '0.8'),
-  createUrlElement('/blog-notification/plugin.html', freq.yearly, '0.4'),
-  createUrlElement('/console-wrapper/', freq.yearly, '0.8'),
+  createUrlElement('/', freq.yearly, '1.0'),
 ];
 
 const values = urls.map(el => {
