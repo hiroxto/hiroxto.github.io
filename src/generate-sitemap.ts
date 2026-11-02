@@ -1,7 +1,4 @@
-'use strict';
-
 import convert from 'xml-js';
-import axios from 'axios';
 
 const freq = {
   always: 'always',
@@ -11,7 +8,16 @@ const freq = {
   monthly: 'monthly',
   yearly: 'yearly',
   never: 'never',
-};
+} as const;
+
+type ChangeFrequency = (typeof freq)[keyof typeof freq];
+
+interface SitemapUrl {
+  loc: string;
+  lastmod: string | null;
+  changefreq: ChangeFrequency;
+  priority: string;
+}
 
 const convertXmlOptions = {
   compact: true,
@@ -30,23 +36,33 @@ const sitemap = {
     _attributes: {
       xmlns: 'http://www.sitemaps.org/schemas/sitemap/0.9',
     },
-    url: [
-    ],
+    url: [] as SitemapUrl[],
   },
 };
 
-const getUrl = path => {
+const getUrl = (path: string): string => {
   return `https://hiroxto.github.io${path}`;
 };
 
-const getLastModified = async url => {
-  const response = await axios.get(url);
-  const headers = response.headers;
+const getLastModified = async (url: string): Promise<string> => {
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch ${url}: HTTP ${response.status}`);
+  }
 
-  return headers['last-modified'];
+  const lastModified = response.headers.get('last-modified');
+  if (!lastModified || Number.isNaN(Date.parse(lastModified))) {
+    throw new Error(`Invalid Last-Modified header for ${url}`);
+  }
+
+  return lastModified;
 };
 
-const createUrlElement = (path, changefreq, priority) => {
+const createUrlElement = (
+  path: string,
+  changefreq: ChangeFrequency,
+  priority: string,
+): SitemapUrl => {
   return {
     loc: getUrl(path),
     lastmod: null,
@@ -55,15 +71,10 @@ const createUrlElement = (path, changefreq, priority) => {
   };
 };
 
-const urls = [
-  createUrlElement('/', freq.monthly, '1.0'),
-  createUrlElement('/blog-notification/', freq.yearly, '0.8'),
-  createUrlElement('/blog-notification/plugin.html', freq.yearly, '0.4'),
-  createUrlElement('/console-wrapper/', freq.yearly, '0.8'),
-];
+const urls = [createUrlElement('/', freq.yearly, '1.0')];
 
-const values = urls.map(el => {
-  return getLastModified(el.loc).then(lastModified => {
+const values = urls.map((el) => {
+  return getLastModified(el.loc).then((lastModified) => {
     const date = new Date(lastModified);
     const year = date.getFullYear();
     const month = (date.getMonth() + 1).toString().padStart(2, '0');
@@ -75,15 +86,14 @@ const values = urls.map(el => {
   });
 });
 
-Promise
-  .all(values)
+Promise.all(values)
   .then(() => {
     sitemap.urlset.url = urls;
     console.log(convert.js2xml(sitemap, convertXmlOptions));
 
     return sitemap;
   })
-  .catch(e => {
+  .catch((e) => {
     console.error(e);
-    process.on('exit', () => process.exit(1));
+    process.exitCode = 1;
   });
