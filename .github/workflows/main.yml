@@ -21,3 +21,6 @@ jobs:
 
       - name: Test sitemap generation
         run: npm test
+
+      - name: Check formatting and lint
+        run: npm run lint

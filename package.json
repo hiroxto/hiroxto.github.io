@@ -13,9 +13,13 @@
     "serve": "http-server docs -p 8080",
     "generate:sitemap": "node src/generate-sitemap.ts",
     "test": "node --test",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "format": "biome format --write ."
   },
   "devDependencies": {
+    "@biomejs/biome": "2.6.4",
     "@types/node": "26.6.6",
     "http-server": "14.1.1",
     "typescript": "7.0.2",

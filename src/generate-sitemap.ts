@@ -71,12 +71,10 @@ const createUrlElement = (
   };
 };
 
-const urls = [
-  createUrlElement('/', freq.yearly, '1.0'),
-];
+const urls = [createUrlElement('/', freq.yearly, '1.0')];
 
-const values = urls.map(el => {
-  return getLastModified(el.loc).then(lastModified => {
+const values = urls.map((el) => {
+  return getLastModified(el.loc).then((lastModified) => {
     const date = new Date(lastModified);
     const year = date.getFullYear();
     const month = (date.getMonth() + 1).toString().padStart(2, '0');
@@ -88,15 +86,14 @@ const values = urls.map(el => {
   });
 });
 
-Promise
-  .all(values)
+Promise.all(values)
   .then(() => {
     sitemap.urlset.url = urls;
     console.log(convert.js2xml(sitemap, convertXmlOptions));
 
     return sitemap;
   })
-  .catch(e => {
+  .catch((e) => {
     console.error(e);
     process.exitCode = 1;
   });
