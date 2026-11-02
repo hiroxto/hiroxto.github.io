@@ -3,31 +3,19 @@
   "version": "0.0.1",
   "description": "GitHub pages.",
   "engines": {
-    "node": ">= 12.0"
+    "node": ">=26.13.0",
+    "npm": ">=12.2.1"
   },
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "NODE_ENV=development npm-run-all --parallel serve",
-    "serve": "http-server .",
-    "lint": "eslint --ext .js .",
-    "lint:fix": "eslint --fix --ext .js ."
+    "dev": "npm run serve",
+    "serve": "http-server docs -p 8080",
+    "generate:sitemap": "node src/generate-sitemap.js"
   },
   "devDependencies": {
-    "@babel/cli": "7.23.9",
-    "@babel/core": "7.23.9",
-    "@babel/node": "7.23.9",
-    "@babel/preset-env": "7.23.9",
-    "@hiroxto/eslint-config": "1.0.1",
-    "axios": "1.6.0",
-    "eslint": "7.32.0",
     "http-server": "14.1.1",
-    "npm-run-all": "4.1.5",
     "xml-js": "1.6.11"
   },
-  "browserslist": [
-    ">0.25%",
-    "not ie 11",
-    "not op_mini all"
-  ]
+  "type": "module"
 }

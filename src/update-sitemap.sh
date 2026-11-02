@@ -3,7 +3,7 @@
 
 set -eu
 
-npx babel-node src/generate-sitemap.js > docs/sitemap.xml
+npm run --silent generate:sitemap > docs/sitemap.xml
 d=`date +"%Y/%m/%d %k:%M:%S %z"`
 git add docs/sitemap.xml
 git diff --cached --exit-code --quiet || git commit -m "Sitemap update at $d"

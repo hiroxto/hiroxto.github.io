@@ -1,7 +1,4 @@
-'use strict';
-
 import convert from 'xml-js';
-import axios from 'axios';
 
 const freq = {
   always: 'always',
@@ -40,10 +37,17 @@ const getUrl = path => {
 };
 
 const getLastModified = async url => {
-  const response = await axios.get(url);
-  const headers = response.headers;
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch ${url}: HTTP ${response.status}`);
+  }
 
-  return headers['last-modified'];
+  const lastModified = response.headers.get('last-modified');
+  if (!lastModified || Number.isNaN(Date.parse(lastModified))) {
+    throw new Error(`Invalid Last-Modified header for ${url}`);
+  }
+
+  return lastModified;
 };
 
 const createUrlElement = (path, changefreq, priority) => {
@@ -85,5 +89,5 @@ Promise
   })
   .catch(e => {
     console.error(e);
-    process.on('exit', () => process.exit(1));
+    process.exitCode = 1;
   });
